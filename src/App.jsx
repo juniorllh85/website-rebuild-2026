@@ -3,7 +3,7 @@ import React, { useState } from "react";
 /** ✅ Deja el número para el final */
 const WHATSAPP_PHONE = "13050000000";
 const WHATSAPP_MESSAGE =
-  "Hola, quiero información sobre The Golden Years Foundation (501(c)(3)).";
+  "Hello, I would like information about The Golden Years Foundation (501(c)(3)).";
 
 function WhatsAppFloatingButton() {
   const message = encodeURIComponent(WHATSAPP_MESSAGE);
@@ -15,7 +15,7 @@ function WhatsAppFloatingButton() {
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-5 right-5 z-50 rounded-full bg-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition px-5 py-3 font-semibold flex items-center gap-2"
-      aria-label="Chatear por WhatsApp"
+      aria-label="Chat on WhatsApp"
       title="WhatsApp"
     >
       <span className="text-lg">💬</span>
@@ -25,27 +25,27 @@ function WhatsAppFloatingButton() {
 }
 
 const impactStats = [
-  { value: "400–500", label: "Adultos mayores en el edificio piloto" },
-  { value: "3", label: "Edificios objetivo en el complejo" },
-  { value: "1,200–1,500", label: "Alcance potencial total (complejo)" },
+  { value: "400–500", label: "Seniors in the pilot building" },
+  { value: "3", label: "Target buildings in the complex" },
+  { value: "1,200–1,500", label: "Total potential reach (complex)" },
 ];
 
 const helpCards = [
   {
-    title: "Alimentación",
-    desc: "Entrega periódica de alimentos esenciales para proteger nutrición y estabilidad.",
+    title: "Food Security",
+    desc: "Regular delivery of essential groceries to protect nutrition and stability.",
     icon: "🥗",
     image: "/images/food.png",
   },
   {
-    title: "Medicinas",
-    desc: "Apoyo para acceso y continuidad de medicamentos, reduciendo crisis evitables.",
+    title: "Medicine Support",
+    desc: "Support for access and continuity of medications, reducing preventable crises.",
     icon: "💊",
     image: "/images/medicine.png",
   },
   {
-    title: "Aseo personal",
-    desc: "Kits de higiene para mantener salud, dignidad y bienestar diario.",
+    title: "Personal Hygiene",
+    desc: "Hygiene kits to maintain health, dignity, and daily well-being.",
     icon: "🧼",
     image: "/images/hygiene.png",
   },
@@ -53,22 +53,22 @@ const helpCards = [
 
 const supportCards = [
   {
-    title: "Donaciones (Especie)",
-    desc: "Tu aporte impulsa entregas de alimentos, apoyo en medicinas y kits de higiene.",
+    title: "In-Kind Donations",
+    desc: "Your contribution fuels food deliveries, medicine support, and hygiene kits.",
     icon: "❤️",
     type: "donacion_especie",
     image: "/images/donation.png"
   },
   {
-    title: "Voluntariado",
-    desc: "Ayuda en entregas, organización y acompañamiento. Tu tiempo cambia vidas.",
+    title: "Volunteering",
+    desc: "Help with deliveries, organization, and companionship. Your time changes lives.",
     icon: "🤝",
     type: "voluntariado",
     image: "/images/volunteer.png"
   },
   {
-    title: "Alianzas",
-    desc: "Empresas e instituciones pueden apoyar con recursos, logística y matching grants.",
+    title: "Partnerships",
+    desc: "Companies and institutions can support with resources, logistics, and matching grants.",
     icon: "🏢",
     type: "alianza",
     image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -91,7 +91,7 @@ const ImageCarousel = ({ images, overlayTexts, interval = 4000 }) => {
         <img
           key={img}
           src={img}
-          alt={`Imagen dinámica ${index + 1}`}
+          alt={`Dynamic image ${index + 1}`}
           className={`absolute inset-0 w-full h-full object-cover transform transition-all duration-1000 ease-in-out ${index === currentIndex ? 'opacity-80 group-hover:opacity-100 group-hover:scale-105 z-0' : 'opacity-0 scale-100 -z-10'
             }`}
         />
@@ -129,7 +129,7 @@ export default function App() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    alert("¡Gracias! Hemos recibido tu información exitosamente. Nos pondremos en contacto muy pronto.");
+    alert("Thank you! We have successfully received your information. We will contact you very soon.");
     handleCloseFormModal();
   };
 
@@ -150,37 +150,37 @@ export default function App() {
 
             <nav className="hidden lg:flex items-center gap-5 text-sm font-medium">
               <a href="#inicio" className="hover:text-emerald-700">
-                Inicio
+                Home
               </a>
               <a href="#impacto" className="hover:text-emerald-700">
-                Impacto
+                Impact
               </a>
               <a href="#metricas" className="hover:text-emerald-700">
-                Métricas
+                Metrics
               </a>
               <a href="#porque" className="hover:text-emerald-700">
-                Por qué
+                Why Us
               </a>
               <a href="#ayuda" className="hover:text-emerald-700">
-                Cómo ayudamos
+                How We Help
               </a>
               <a href="#vision" className="hover:text-emerald-700">
-                Visión
+                Vision
               </a>
               <a href="#plan" className="hover:text-emerald-700">
                 Plan
               </a>
               <a href="#piloto" className="hover:text-emerald-700">
-                Piloto
+                Pilot
               </a>
               <a href="#expansion" className="hover:text-emerald-700">
-                Expansión
+                Expansion
               </a>
               <a href="#donar" className="hover:text-emerald-700">
-                Donar
+                Donate
               </a>
               <a href="#contacto" className="hover:text-emerald-700">
-                Contacto
+                Contact
               </a>
             </nav>
 
@@ -188,7 +188,7 @@ export default function App() {
               onClick={() => handleOpenModal(50)}
               className="rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:bg-slate-800"
             >
-              Donar
+              Donate
             </button>
           </div>
         </header>
@@ -202,15 +202,15 @@ export default function App() {
               <div className="lg:col-span-5 order-2 lg:order-1">
                 <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-800 shadow-sm">
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse shadow" />
-                  501(c)(3) • Abrazando a Miami-Dade
+                  501(c)(3) • Embracing Miami-Dade
                 </div>
 
                 <h1 className="mt-8 text-5xl sm:text-6xl md:text-[4rem] font-extrabold leading-[1.1] tracking-tight text-slate-900">
-                  Rescatando del olvido a la generación que lo dio <span className="text-emerald-600 underline decoration-emerald-300 decoration-8 underline-offset-4">todo.</span>
+                  Rescuing from oblivion the generation that gave it <span className="text-emerald-600 underline decoration-emerald-300 decoration-8 underline-offset-4">all.</span>
                 </h1>
 
                 <p className="mt-8 text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
-                  The Golden Years Foundation va mucho más allá de entregar una caja de alimentos. <strong className="text-slate-900">Rescatamos a nuestros adultos mayores de la soledad, el aislamiento y la depresión.</strong> A través de apoyo físico y contención emocional continua, convertimos hogares grises en espacios de celebración, dignidad y verdadera alegría.
+                  The Golden Years Foundation goes far beyond delivering a box of food. <strong className="text-slate-900">We rescue our seniors from loneliness, isolation, and depression.</strong> Through continuous physical support and emotional care, we transform gray homes into spaces of celebration, dignity, and true joy.
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-4">
@@ -218,28 +218,28 @@ export default function App() {
                     onClick={() => handleOpenModal(50)}
                     className="rounded-full bg-emerald-600 text-white px-8 py-4 text-lg font-bold shadow-xl shadow-emerald-600/30 hover:shadow-2xl hover:bg-emerald-700 hover:-translate-y-1 transition-all duration-300"
                   >
-                    ❤️ Quiero Devolverles la Sonrisa
+                    ❤️ I Want to Give Them Their Smile Back
                   </button>
                   <a
                     href="#impacto"
                     className="rounded-full border-2 border-slate-200 bg-white px-8 py-4 text-lg font-bold text-slate-700 hover:border-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 transition-all duration-300"
                   >
-                    Ver Nuestro Plan
+                    View Our Plan
                   </a>
                 </div>
 
                 <div className="mt-12 grid gap-4 text-base sm:text-lg text-slate-700 font-semibold bg-slate-50 p-6 sm:p-8 rounded-[2rem] border border-slate-200 shadow-inner">
                   <div className="flex items-center gap-4">
                     <div className="bg-white p-2 text-emerald-600 rounded-xl shadow-sm"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg></div>
-                    <span>Dignidad Alimentaria y Cuidado Médico</span>
+                    <span>Food Dignity and Medical Care</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="bg-white p-2 text-emerald-600 rounded-xl shadow-sm"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg></div>
-                    <span>Salud Mental, Cumpleaños y Días Festivos</span>
+                    <span>Mental Health, Birthdays, and Holidays</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="bg-white p-2 text-emerald-600 rounded-xl shadow-sm"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg></div>
-                    <span>Transparencia y Evaluaciones de Bienestar</span>
+                    <span>Transparency and Wellness Evaluations</span>
                   </div>
                 </div>
               </div>
@@ -258,11 +258,11 @@ export default function App() {
                       "/images/festivo_3.png"
                     ]}
                     overlayTexts={[
-                      "Fomentando Lazos Inquebrantables",
-                      "Nuestras Madres, Nuestro Tesoro",
-                      "La Familia Que Elegimos",
-                      "Generaciones Unidas",
-                      "Alegría que Contagia"
+                      "Fostering Unbreakable Bonds",
+                      "Our Mothers, Our Treasure",
+                      "The Family We Choose",
+                      "Generations United",
+                      "Contagious Joy"
                     ]}
                     interval={4500}
                   />
@@ -271,10 +271,10 @@ export default function App() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent flex flex-col justify-end p-8 sm:p-12 z-10 pointer-events-none">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="h-3 w-3 rounded-full bg-rose-500 animate-pulse shadow-lg shadow-rose-500/50" />
-                      <span className="text-rose-300 text-sm sm:text-base font-black tracking-[0.2em] uppercase">Misión Emocional</span>
+                      <span className="text-rose-300 text-sm sm:text-base font-black tracking-[0.2em] uppercase">Emotional Mission</span>
                     </div>
                     <p className="text-white text-2xl sm:text-4xl font-extrabold leading-tight shadow-sm max-w-2xl italic">
-                      «Nuestra obra maestra no se construye con dádivas, se construye con amor puro, empatía y esperanza humana.»
+                      «Our masterpiece is not built with handouts, it is built with pure love, empathy, and human hope.»
                     </p>
                   </div>
 
@@ -283,14 +283,14 @@ export default function App() {
             </div>
           </section>
 
-          {/* IMPACTO */}
+          {/* IMPACT */}
           <section id="impacto" className="border-t bg-white">
             <div className="mx-auto max-w-6xl px-4 py-20 text-center">
-              <h2 className="text-3xl font-extrabold tracking-tight">Impacto y escala del enfoque</h2>
+              <h2 className="text-3xl font-extrabold tracking-tight">Impact and Scale of the Approach</h2>
               <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto">
-                Nuestro proyecto se concentra en un complejo residencial en Miami-Dade con tres edificios.
-                Iniciamos con un piloto en un edificio para atender entre 400 y 500 adultos mayores.
-                La expansión progresiva busca alcanzar entre 1,200 y 1,500 adultos mayores dentro del complejo.
+                Our project focuses on a residential complex in Miami-Dade with three buildings.
+                We started with a pilot in one building to serve between 400 and 500 seniors.
+                The progressive expansion seeks to reach between 1,200 and 1,500 seniors within the complex.
               </p>
 
               <div className="mt-12 grid sm:grid-cols-3 gap-8">
@@ -304,16 +304,16 @@ export default function App() {
             </div>
           </section>
 
-          {/* MÉTRICAS Y PROGRAMAS (CON SALUD MENTAL) */}
+          {/* METRICS AND PROGRAMS (WITH MENTAL HEALTH) */}
           <section id="metricas" className="border-t bg-slate-50 py-24 sm:py-32">
             <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-4xl mx-auto mb-20">
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-8 leading-tight">
-                  Más que Métricas:<br />
-                  <span className="text-emerald-600">Compañía y Dignidad Absoluta</span>
+                  More than Metrics:<br />
+                  <span className="text-emerald-600">Companionship and Absolute Dignity</span>
                 </h2>
                 <p className="text-xl text-slate-600 leading-relaxed font-medium">
-                  Para nuestros inversores sociales, reportamos datos duros con precisión milimétrica. Para nuestros adultos mayores, transformamos esos números en compañía real, dignidad, atención médica constante, y la certeza absoluta de que <strong>no son una carga, nos tienen a nosotros.</strong>
+                  For our social investors, we report hard data with absolute precision. For our seniors, we transform those numbers into real companionship, dignity, constant medical care, and the absolute certainty that <strong>they are not a burden, they have us.</strong>
                 </p>
               </div>
 
@@ -328,9 +328,9 @@ export default function App() {
                     <div className="bg-emerald-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
                       👥
                     </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Alcance de Vidas</h3>
+                    <h3 className="text-white text-2xl font-bold mb-3">Lives Reached</h3>
                     <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Censo riguroso de beneficiarios activos en el piloto, garantizando apoyo sostenido mes a mes sin exclusiones.
+                      Rigorous census of active beneficiaries in the pilot, ensuring sustained support month by month without exclusions.
                     </p>
                   </div>
                 </div>
@@ -343,9 +343,9 @@ export default function App() {
                     <div className="bg-amber-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
                       📦
                     </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Nutrición Segura</h3>
+                    <h3 className="text-white text-2xl font-bold mb-3">Safe Nutrition</h3>
                     <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Registro auditable de entregas de alimentos de alta calidad, previniendo malnutrición y debilitamiento severo.
+                      Auditable record of high-quality food deliveries, preventing malnutrition and severe weakening.
                     </p>
                   </div>
                 </div>
@@ -358,9 +358,9 @@ export default function App() {
                     <div className="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
                       🧼
                     </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Kits de Dignidad</h3>
+                    <h3 className="text-white text-2xl font-bold mb-3">Dignity Kits</h3>
                     <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Distribución metódica de artículos de higiene personal. El aseo continuo previene infecciones y protege su dignidad.
+                      Methodical distribution of personal hygiene items. Continuous grooming prevents infections and protects their dignity.
                     </p>
                   </div>
                 </div>
@@ -373,9 +373,9 @@ export default function App() {
                     <div className="bg-rose-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
                       💊
                     </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Continuidad Médica</h3>
+                    <h3 className="text-white text-2xl font-bold mb-3">Medical Continuity</h3>
                     <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Evitamos la interrupción de tratamientos críticos apoyando económicamente el copago de sus medicinas vitales.
+                      We prevent the interruption of critical treatments by financially supporting the co-pay for their vital medicines.
                     </p>
                   </div>
                 </div>
@@ -389,9 +389,9 @@ export default function App() {
                       "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     ]}
                     overlayTexts={[
-                      "¡Celebrando 80 Años!",
-                      "¡Sorpresa para María, 91 Años!",
-                      "Tú nos importas"
+                      "Celebrating 80 Years!",
+                      "Surprise for Maria, 91 Years Old!",
+                      "You matter to us"
                     ]}
                     interval={4500}
                   />
@@ -401,12 +401,12 @@ export default function App() {
                       <div className="bg-pink-500 text-white w-14 h-14 flex items-center justify-center rounded-2xl shadow-xl text-2xl">
                         🎂
                       </div>
-                      <span className="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full font-bold tracking-widest uppercase text-xs border border-pink-500/30">Salud Mental Activa</span>
+                      <span className="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full font-bold tracking-widest uppercase text-xs border border-pink-500/30">Active Mental Health</span>
                     </div>
-                    <h3 className="text-white text-3xl sm:text-4xl font-extrabold mb-4">Celebración por la Vida</h3>
+                    <h3 className="text-white text-3xl sm:text-4xl font-extrabold mb-4">Celebration of Life</h3>
                     <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
                       <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-medium">
-                        Cortamos en seco la cadena de la depresión organizando <strong>Cumpleaños Colectivos</strong> mensuales. Queremos que sepan que más nunca apagarán las velas solos, porque no son una carga: son el tesoro más grande de nuestra comunidad y merecen sonreír todos los días.
+                        We cut the chain of depression short by organizing monthly <strong>Collective Birthdays</strong>. We want them to know they will never blow out candles alone again, because they are not a burden: they are the greatest treasure of our community and deserve to smile every day.
                       </p>
                     </div>
                   </div>
@@ -426,14 +426,14 @@ export default function App() {
                       "/images/mothers_day_3.png"
                     ]}
                     overlayTexts={[
-                      "Gran Cena de Acción de Gracias",
-                      "Creando Lazos Comunitarios",
-                      "Hermosas Reuniones",
-                      "Cenas Inolvidables",
-                      "Festejando la Vida",
-                      "¡Feliz Día de Las Madres!",
-                      "Una Madre, Nuestro Tesoro",
-                      "Rosas, Amor y Alegría"
+                      "Great Thanksgiving Dinner",
+                      "Creating Community Ties",
+                      "Beautiful Gatherings",
+                      "Unforgettable Dinners",
+                      "Celebrating Life",
+                      "Happy Mother's Day!",
+                      "A Mother, Our Treasure",
+                      "Roses, Love, and Joy"
                     ]}
                     interval={4000}
                   />
@@ -444,10 +444,10 @@ export default function App() {
                         🎉
                       </div>
                     </div>
-                    <h3 className="text-white text-3xl sm:text-4xl font-extrabold mb-4">Eventos y Días Festivos</h3>
+                    <h3 className="text-white text-3xl sm:text-4xl font-extrabold mb-4">Events and Holidays</h3>
                     <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
                       <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-medium">
-                        Desde el Día de las Madres y Padres hasta emotivas cenas por Thanksgiving. Fomentamos hermosos espacios físicos para reír, crear nuevas amistades entre vecinos y combatir agresivamente el deterioro cognitivo provocado por el aislamiento.
+                        From Mother's and Father's Day to emotional Thanksgiving dinners. We foster beautiful physical spaces to laugh, create new friendships among neighbors, and aggressively combat cognitive decline caused by isolation.
                       </p>
                     </div>
                   </div>
@@ -461,9 +461,9 @@ export default function App() {
                     <div className="bg-teal-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
                       📈
                     </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Bienestar Reportado</h3>
+                    <h3 className="text-white text-2xl font-bold mb-3">Reported Wellness</h3>
                     <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Autorreportes periódicos cortos para medir científicamente la mejora humana percibida y ajustar el programa proactivamente.
+                      Short periodic self-reports to scientifically measure perceived human improvement and proactively adjust the program.
                     </p>
                   </div>
                 </div>
@@ -476,9 +476,9 @@ export default function App() {
                     <div className="bg-indigo-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
                       🤝
                     </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Tejido Voluntario</h3>
+                    <h3 className="text-white text-2xl font-bold mb-3">Volunteer Network</h3>
                     <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Construcción de una red de voluntarios empáticos, midiendo el enorme valor cálido y humano que inyectan en cada visita.
+                      Building a network of empathetic volunteers, measuring the enormous warm and human value they inject into each visit.
                     </p>
                   </div>
                 </div>
@@ -489,26 +489,26 @@ export default function App() {
               <div className="mt-20 rounded-[2.5rem] border border-slate-200 bg-white p-8 sm:p-12 shadow-sm flex flex-col lg:flex-row items-center gap-12">
                 <div className="flex-1">
                   <div className="text-sm font-bold text-emerald-600 tracking-widest uppercase mb-3">
-                    Transparencia Total
+                    Total Transparency
                   </div>
                   <h3 className="text-3xl font-extrabold text-slate-900 mb-5">
-                    Estructura del Ecosistema GYF
+                    Structure of the GYF Ecosystem
                   </h3>
                   <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                    Nuestros reportes de inversión social cruzan 3 ejes fundamentales: El <strong>Alcance Operativo</strong> (entregas físicas oportunas), la <strong>Calidad de Vida</strong> (nutrición y salud corporal), y el factor diferenciador, el <strong>Impacto Emocional</strong> (reducción de la soledad y protección de la salud mental social).
+                    Our social investment reports cross 3 fundamental axes: The <strong>Operational Reach</strong> (timely physical deliveries), the <strong>Quality of Life</strong> (nutrition and bodily health), and the differentiating factor, the <strong>Emotional Impact</strong> (reduction of loneliness and protection of social mental health).
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <button
                       onClick={() => handleOpenFormModal('alianza')}
                       className="rounded-2xl bg-emerald-600 text-white px-8 py-4 text-lg font-bold hover:bg-emerald-700 transition shadow-lg hover:shadow-emerald-500/30"
                     >
-                      Solicitar modelo de auditoría
+                      Request Audit Model
                     </button>
                     <button
                       onClick={() => handleOpenModal(50)}
                       className="rounded-2xl bg-slate-900 text-white px-8 py-4 text-lg font-bold hover:bg-slate-800 transition shadow-lg"
                     >
-                      Realizar donación
+                      Make a Donation
                     </button>
                   </div>
                 </div>
@@ -518,15 +518,15 @@ export default function App() {
                   <div className="grid gap-6">
                     <div className="flex items-center gap-4">
                       <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
-                      <span className="text-base font-bold text-slate-700">Alcance: Metas Físicas</span>
+                      <span className="text-base font-bold text-slate-700">Reach: Physical Goals</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                      <span className="text-base font-bold text-slate-700">Calidad: Intervención Médica</span>
+                      <span className="text-base font-bold text-slate-700">Quality: Medical Intervention</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="w-3 h-3 rounded-full bg-pink-500 shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
-                      <span className="text-base font-bold text-slate-700">Bienestar: Salud Mental y Redes</span>
+                      <span className="text-base font-bold text-slate-700">Wellness: Mental Health & Networks</span>
                     </div>
                   </div>
                 </div>
@@ -535,217 +535,160 @@ export default function App() {
             </div>
           </section>
 
-          {/* POR QUÉ - GRANT READY PITCH DECK */}
-          <section id="porque" className="relative bg-slate-900 overflow-hidden py-24 lg:py-32">
-            {/* Decors: grid pattern and light spot */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVMMzkuNSAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNCkiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-30"></div>
-            <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          {/* PITCH DECK SECTION (THE PROBLEM) */}
+          <section id="porque" className="bg-slate-900 text-white py-24 sm:py-32 relative overflow-hidden">
+            {/* Elementos decorativos de fondo */}
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-rose-500/10 blur-3xl pointer-events-none" />
 
-            <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="grid lg:grid-cols-12 lg:gap-16 items-start">
-
-                {/* Lado Izquierdo: Data y Contexto */}
-                <div className="lg:col-span-7">
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-6">
-                    El Costo de la Inacción
-                  </h2>
-                  <p className="text-lg text-slate-300 leading-relaxed mb-4">
-                    Miles de personas mayores en nuestra comunidad viven aisladas y bajo la línea de pobreza. Para ellos, la inflación no es una estadística; es elegir diariamente entre <strong>comer, comprar medicinas o pagar la renta.</strong>
-                  </p>
-                  <div className="border-l-4 border-amber-500 pl-4 py-1 mb-10">
-                    <p className="text-amber-400 font-medium italic">
-                      "Intervenciones simples y estructuradas reducen drásticamente emergencias hospitalarias y crisis depresivas severas."
-                    </p>
-                  </div>
-
-                  {/* Impact Metrics Cards */}
-                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-                    {/* Tarjeta 1 */}
-                    <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-5 hover:bg-slate-800 transition-colors">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="flex items-center gap-3">
-                          <div className="bg-emerald-500/20 text-emerald-400 p-2 rounded-lg">
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                          </div>
-                          <span className="text-white font-bold text-lg">Impacto en Salud</span>
-                        </div>
-                        <span className="text-emerald-400 font-bold text-sm bg-emerald-500/10 px-2 py-0.5 rounded">-45% Emergencias</span>
-                      </div>
-                      <p className="text-slate-400 text-sm">Garantizar medicinas y nutrición detiene el deterioro agudo previsible.</p>
-                      <div className="mt-3 w-full bg-slate-700 rounded-full h-1.5">
-                        <div className="bg-emerald-500 h-1.5 rounded-full" style={{ width: '85%' }}></div>
-                      </div>
-                    </div>
-
-                    {/* Tarjeta 2 */}
-                    <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-5 hover:bg-slate-800 transition-colors">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="flex items-center gap-3">
-                          <div className="bg-blue-500/20 text-blue-400 p-2 rounded-lg">
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                          </div>
-                          <span className="text-white font-bold text-lg">Impacto Económico</span>
-                        </div>
-                        <span className="text-blue-400 font-bold text-sm bg-blue-500/10 px-2 py-0.5 rounded">Alto ROI</span>
-                      </div>
-                      <p className="text-slate-400 text-sm">El apoyo mensual es significativamente más barato que hospitalizaciones cubiertas por el sistema público por malnutrición o abandonos.</p>
-                    </div>
-
-                    {/* Tarjeta 3 */}
-                    <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-5 hover:bg-slate-800 transition-colors">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="flex items-center gap-3">
-                          <div className="bg-amber-500/20 text-amber-400 p-2 rounded-lg">
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-                          </div>
-                          <span className="text-white font-bold text-lg">Tejido Social</span>
-                        </div>
-                      </div>
-                      <p className="text-slate-400 text-sm">Mitigamos la soledad aguda mediante la entrega recurrente e instauramos un robusto sistema local de voluntariado intergeneracional.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Lado Derecho: La tarjeta GRANT-READY */}
-                <div className="lg:col-span-5 mt-12 lg:mt-0 relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-
-                  <div className="relative bg-white rounded-3xl p-8 shadow-2xl xl:p-10">
-                    <div className="flex items-center justify-between mb-8">
-                      <div className="text-xs font-black uppercase tracking-widest text-slate-400">
-                        Evaluación de Inversión
-                      </div>
-                      <div className="flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-100 shadow-sm">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                        <span className="text-xs font-bold leading-none">GRANT-READY</span>
-                      </div>
-                    </div>
-
-                    <h3 className="text-2xl font-extrabold text-slate-900 mb-6">
-                      ¿Por qué financiar el modelo GYF?
-                    </h3>
-
-                    <ul className="space-y-4 mb-8">
-                      <li className="flex gap-3 text-slate-700">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                        <span className="font-medium">Identificación de riesgos verificada en edificios *Senior*.</span>
-                      </li>
-                      <li className="flex gap-3 text-slate-700">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                        <span className="font-medium">Logística centralizada de entrega que minimiza el coste directo.</span>
-                      </li>
-                      <li className="flex gap-3 text-slate-700">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                        <span className="font-medium">KPIS y seguimiento de bienestar documentado.</span>
-                      </li>
-                      <li className="flex gap-3 text-slate-700">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                        <span className="font-medium">Auditoría transparente de ejecución de fondos.</span>
-                      </li>
-                    </ul>
-
-                    <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 mb-8">
-                      <div className="font-bold text-slate-900 mb-1">El Piloto Escalable</div>
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        Con capital inicial, este piloto asienta la base (SOPs) para ser exportado orgánicamente a cualquier condado del estado de Florida bajo la franquicia GYF.
-                      </p>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <button
-                        onClick={() => handleOpenFormModal('alianza')}
-                        className="flex-1 rounded-xl bg-slate-900 text-white px-4 py-3.5 font-bold hover:bg-slate-800 transition-colors flex justify-center items-center gap-2"
-                      >
-                        Invertir en la Misión
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          {/* CÓMO AYUDAMOS */}
-          <section id="ayuda" className="border-t bg-white">
-            <div className="mx-auto max-w-6xl px-4 py-20">
-              <div className="text-center">
-                <h2 className="text-3xl font-extrabold tracking-tight">Cómo ayudamos</h2>
-                <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-                  Ayudamos a adultos mayores que viven solos en Miami-Dade con alimentos,
-                  asistencia para medicamentos y suministros de higiene para proteger su bienestar diario.
+            <div className="mx-auto max-w-6xl px-4 relative z-10">
+              <div className="text-center mb-16">
+                <span className="text-emerald-400 font-bold tracking-widest uppercase text-sm mb-4 block">The Problem</span>
+                <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">The Cost of Inaction</h2>
+                <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                  Loneliness and abandonment in old age are not just emotional issues; they are a public health crisis that silently consumes our community.
                 </p>
               </div>
 
-              <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {helpCards.map((c) => (
-                  <div
-                    key={c.title}
-                    className="group overflow-hidden rounded-3xl border bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col"
-                  >
-                    <div className="h-56 w-full overflow-hidden relative">
-                      <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition duration-300 z-10" />
-                      <img src={c.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
-                    </div>
-                    <div className="p-8 flex-1 flex flex-col">
-                      <div className="flex items-center gap-3">
-                        <div className="text-3xl">{c.icon}</div>
-                        <h3 className="text-xl font-bold text-slate-900">{c.title}</h3>
-                      </div>
-                      <p className="mt-4 text-slate-600 leading-relaxed flex-1">{c.desc}</p>
-                      <ul className="mt-6 space-y-3 text-sm text-slate-600 border-t pt-6">
-                        <li className="flex gap-3 items-start">
-                          <span className="text-emerald-600 shrink-0">✓</span>
-                          <span>Entregas periódicas y organizadas</span>
-                        </li>
-                        <li className="flex gap-3 items-start">
-                          <span className="text-emerald-600 shrink-0">✓</span>
-                          <span>Enfoque en continuidad y prevención</span>
-                        </li>
-                        <li className="flex gap-3 items-start">
-                          <span className="text-emerald-600 shrink-0">✓</span>
-                          <span>Seguimiento simple y medible</span>
-                        </li>
-                      </ul>
+              <div className="grid lg:grid-cols-3 gap-8">
+                <div className="bg-slate-800/50 border border-slate-700 rounded-[2rem] p-8 hover:bg-slate-800 transition duration-300">
+                  <div className="h-12 w-12 rounded-xl bg-rose-500/20 flex items-center justify-center mb-6">
+                    <span className="text-2xl">💔</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Health Impact</h3>
+                  <p className="text-slate-400 leading-relaxed mb-6">
+                    Chronic isolation increases the risk of mortality by <strong className="text-white">26%</strong>, comparable to smoking 15 cigarettes a day. Malnutrition accelerates cognitive and physical decline.
+                  </p>
+                  <ul className="space-y-3 text-sm text-slate-300">
+                    <li className="flex items-center gap-2"><span className="text-rose-400">✗</span> Severe depression</li>
+                    <li className="flex items-center gap-2"><span className="text-rose-400">✗</span> Preventable malnourishment</li>
+                    <li className="flex items-center gap-2"><span className="text-rose-400">✗</span> Treatment abandonment</li>
+                  </ul>
+                </div>
+
+                <div className="bg-slate-800/50 border border-slate-700 rounded-[2rem] p-8 hover:bg-slate-800 transition duration-300">
+                  <div className="h-12 w-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-6">
+                    <span className="text-2xl">📉</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Economic Impact</h3>
+                  <p className="text-slate-400 leading-relaxed mb-6">
+                    Lack of prevention results in frequent emergency room visits and preventable hospitalizations, overwhelming the local health system with massive costs.
+                  </p>
+                  <ul className="space-y-3 text-sm text-slate-300">
+                    <li className="flex items-center gap-2"><span className="text-emerald-400">✓</span> Less unnecessary 911 calls</li>
+                    <li className="flex items-center gap-2"><span className="text-emerald-400">✓</span> Reduction in emergency admissions</li>
+                    <li className="flex items-center gap-2"><span className="text-emerald-400">✓</span> System decongestion</li>
+                  </ul>
+                </div>
+
+                <div className="bg-slate-800/50 border border-slate-700 rounded-[2rem] p-8 hover:bg-slate-800 transition duration-300">
+                  <div className="h-12 w-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6">
+                    <span className="text-2xl">🏚️</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Social Fabric</h3>
+                  <p className="text-slate-400 leading-relaxed mb-6">
+                    A society that forgets those who built it loses its moral compass. The structural dissolution of community support leaves seniors invisible.
+                  </p>
+                  <ul className="space-y-3 text-sm text-slate-300">
+                    <li className="flex items-center gap-2"><span className="text-blue-400">✗</span> Invisible to the system</li>
+                    <li className="flex items-center gap-2"><span className="text-blue-400">✗</span> Loss of historical memory</li>
+                    <li className="flex items-center gap-2"><span className="text-blue-400">✗</span> Individualistic paradigm</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-20 border-t border-slate-800 pt-16 flex flex-col md:flex-row items-center gap-10">
+                <div className="md:w-1/3">
+                  <h3 className="text-3xl font-extrabold text-white">Why fund the GYF model?</h3>
+                </div>
+                <div className="md:w-2/3 grid sm:grid-cols-2 gap-6">
+                  <div className="flex gap-4">
+                    <div className="text-emerald-500 text-2xl">🎯</div>
+                    <div>
+                      <h4 className="font-bold text-white mb-1">Hyper-focus</h4>
+                      <p className="text-sm text-slate-400">We don't get diluted. We concentrate on high-density buildings to maximize logistical ROI.</p>
                     </div>
                   </div>
-                ))}
+                  <div className="flex gap-4">
+                    <div className="text-emerald-500 text-2xl">📊</div>
+                    <div>
+                      <h4 className="font-bold text-white mb-1">Traceability</h4>
+                      <p className="text-sm text-slate-400">Every delivered box, every visit, every birthday is documented to ensure transparency.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* VISIÓN - DISEÑO TIPO GRANTS / MAJOR DONORS */}
+          {/* HOW WE HELP */}
+          <section id="ayuda" className="border-t bg-emerald-50/50">
+            <div className="mx-auto max-w-6xl px-4 py-20 text-center">
+              <h2 className="text-3xl font-extrabold tracking-tight">How We Help</h2>
+              <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+                Targeted and consistent interventions that go straight to the basic needs of seniors living alone.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {helpCards.map((c) => (
+                <div
+                  key={c.title}
+                  className="group overflow-hidden rounded-3xl border bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col"
+                >
+                  <div className="h-56 w-full overflow-hidden relative">
+                    <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition duration-300 z-10" />
+                    <img src={c.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                  </div>
+                  <div className="p-8 flex-1 flex flex-col">
+                    <div className="flex items-center gap-3">
+                      <div className="text-3xl">{c.icon}</div>
+                      <h3 className="text-xl font-bold text-slate-900">{c.title}</h3>
+                    </div>
+                    <p className="mt-4 text-slate-600 leading-relaxed flex-1">{c.desc}</p>
+                    <ul className="mt-6 space-y-3 text-sm text-slate-600 border-t pt-6">
+                      <li className="flex gap-3 items-start">
+                        <span className="text-emerald-600 shrink-0">✓</span>
+                        <span>Periodic and organized deliveries</span>
+                      </li>
+                      <li className="flex gap-3 items-start">
+                        <span className="text-emerald-600 shrink-0">✓</span>
+                        <span>Focus on continuity and prevention</span>
+                      </li>
+                      <li className="flex gap-3 items-start">
+                        <span className="text-emerald-600 shrink-0">✓</span>
+                        <span>Simple and measurable tracking</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* VISION SECTION */}
           <section id="vision" className="relative bg-white py-24 lg:py-32 overflow-hidden border-t">
-            {/* Elementos de fondo borrosos (Ambient lights) */}
+            {/* Ambient lights */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-emerald-50/50 blur-3xl pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-amber-50/50 blur-3xl pointer-events-none"></div>
 
             <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
 
-                {/* Contenido de Texto - Lado Izquierdo */}
+                {/* Left Side - Text Content */}
                 <div className="lg:col-span-6 lg:col-start-1 xl:col-span-5">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-sm font-bold tracking-wide uppercase mb-6 border border-emerald-100 shadow-sm">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Visión y Compromiso
+                    Vision and Commitment
                   </div>
 
                   <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-                    El Modelo para un <br className="hidden sm:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Futuro Digno</span>
+                    The Model for a <br className="hidden sm:block" />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Dignified Future</span>
                   </h2>
 
                   <p className="mt-6 text-lg text-slate-600 leading-relaxed font-medium">
-                    Construimos una red comunitaria inquebrantable. Nuestro objetivo es que <strong>ningún adulto mayor</strong> vuelva a elegir entre comprar alimento o medicina. Diseñado para ofrecer <span className="text-emerald-700 font-bold bg-emerald-50/50 px-1 rounded">Retorno de Inversión Social (ROI)</span> inmediato y claro a nuestros patrocinadores.
+                    We are building an unbreakable community network. Our goal is that <strong>no senior</strong> ever has to choose between buying food or medicine again. Designed to offer immediate and clear <span className="text-emerald-700 font-bold bg-emerald-50/50 px-1 rounded">Social Return on Investment (ROI)</span> to our sponsors.
                   </p>
 
                   <div className="mt-10 grid gap-5">
@@ -755,8 +698,8 @@ export default function App() {
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                       </div>
                       <div>
-                        <h4 className="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">Restauramos la Dignidad</h4>
-                        <p className="mt-1 text-sm text-slate-600 leading-snug">Garantizamos lo esencial mes a mes, devolviendo la paz mental a sus hogares y familias, previniendo crisis críticas.</p>
+                        <h4 className="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">Restoring Dignity</h4>
+                        <p className="mt-1 text-sm text-slate-600 leading-snug">We guarantee the essentials month by month, bringing peace of mind back to their homes and families, and preventing critical crises.</p>
                       </div>
                     </div>
 
@@ -766,8 +709,8 @@ export default function App() {
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                       </div>
                       <div>
-                        <h4 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors">Transparencia Radical</h4>
-                        <p className="mt-1 text-sm text-slate-600 leading-snug">Datos 100% auditables: Medimos y reportamos rigurosamente cada entrega y el impacto percibido mensualmente.</p>
+                        <h4 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors">Radical Transparency</h4>
+                        <p className="mt-1 text-sm text-slate-600 leading-snug">100% auditable data: We rigorously measure and report every delivery and the perceived impact on a monthly basis.</p>
                       </div>
                     </div>
 
@@ -777,23 +720,23 @@ export default function App() {
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
                       </div>
                       <div>
-                        <h4 className="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Modelo Altamente Escalable</h4>
-                        <p className="mt-1 text-sm text-slate-600 leading-snug">Piloto geolocalizado, estructurado tecnológicamente para ser un modelo replicable en otras comunidades del estado.</p>
+                        <h4 className="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Highly Scalable Model</h4>
+                        <p className="mt-1 text-sm text-slate-600 leading-snug">Geolocated pilot, technologically structured to be a replicable model in other communities across the state.</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Fotografía de Alto Impacto & Caja Flotante - Lado Derecho */}
+                {/* High Impact Photography & Floating Box - Right Side */}
                 <div className="lg:col-span-6 xl:col-span-7 mt-16 lg:mt-0 relative">
                   <div className="relative mx-auto w-full rounded-[2rem] shadow-2xl lg:max-w-md xl:max-w-lg lg:ml-auto overflow-hidden ring-1 ring-slate-900/10 isolate">
                     <img
                       src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                      alt="Voluntario sosteniendo cálidamente las manos de una adulta mayor sonriente apoyándola incondicionalmente"
+                      alt="Volunteer warmly holding hands of a smiling senior woman, supporting her unconditionally"
                       className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000 ease-out"
                       style={{ aspectRatio: "4/5" }}
                     />
-                    {/* Gradiente sutil para oscurecer la base de la imagen para contraste */}
+                    {/* Subtle gradient to darken the base of the image for contrast */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent z-10 pointer-events-none"></div>
                   </div>
 
@@ -803,15 +746,15 @@ export default function App() {
                       <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" /></svg>
                     </div>
                     <p className="text-lg font-bold text-slate-800 leading-relaxed">
-                      "Crear una sonrisa y esperanza de vida en cada hogar que visitamos."
+                      "To create a smile and life-giving hope in every home we visit."
                     </p>
                     <div className="mt-5 flex items-center gap-3 border-t border-slate-200/80 pt-5">
                       <div className="h-11 w-11 shrink-0 rounded-full bg-slate-900 border-2 border-white flex items-center justify-center text-white font-black text-sm shadow-md ring-2 ring-emerald-500/20">
                         GYF
                       </div>
                       <div>
-                        <div className="text-sm font-bold text-slate-900 leading-tight">Nuestra Promesa</div>
-                        <div className="text-xs font-bold text-emerald-600 uppercase tracking-widest mt-0.5">La Fundación</div>
+                        <div className="text-sm font-bold text-slate-900 leading-tight">Our Promise</div>
+                        <div className="text-xs font-bold text-emerald-600 uppercase tracking-widest mt-0.5">The Foundation</div>
                       </div>
                     </div>
                   </div>
@@ -827,79 +770,79 @@ export default function App() {
               <div className="text-center">
                 <h2 className="text-3xl font-extrabold tracking-tight">Plan</h2>
                 <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-                  Operamos con coordinación comunitaria, seguimiento por edificio y reportes claros para
-                  garantizar transparencia, eficiencia y continuidad del servicio.
+                  We operate with community coordination, per-building tracking, and clear reports to
+                  guarantee transparency, efficiency, and continuity of service.
                 </p>
               </div>
 
               <div className="mt-12 grid md:grid-cols-3 gap-8">
                 <div className="rounded-3xl border bg-slate-50 p-8">
-                  <div className="text-emerald-700 font-bold text-sm">Fase 1</div>
-                  <h3 className="mt-2 text-xl font-bold">Piloto (0–4 meses)</h3>
+                  <div className="text-emerald-700 font-bold text-sm">Phase 1</div>
+                  <h3 className="mt-2 text-xl font-bold">Pilot (0–4 months)</h3>
                   <p className="mt-4 text-slate-600">
-                    En un edificio: identificación, primeras entregas, validación logística y métricas base.
+                    In one building: identification, first deliveries, logistical validation, and baseline metrics.
                   </p>
                 </div>
 
                 <div className="rounded-3xl border bg-slate-50 p-8">
-                  <div className="text-emerald-700 font-bold text-sm">Fase 2</div>
-                  <h3 className="mt-2 text-xl font-bold">Escalamiento (4–8 meses)</h3>
+                  <div className="text-emerald-700 font-bold text-sm">Phase 2</div>
+                  <h3 className="mt-2 text-xl font-bold">Scaling (4–8 months)</h3>
                   <p className="mt-4 text-slate-600">
-                    Expansión al segundo edificio con más capacidad operativa y alianzas.
+                    Expansion to the second building with more operational capacity and partnerships.
                   </p>
                 </div>
 
                 <div className="rounded-3xl border bg-slate-50 p-8">
-                  <div className="text-emerald-700 font-bold text-sm">Fase 3</div>
-                  <h3 className="mt-2 text-xl font-bold">Cobertura (8–12 meses)</h3>
+                  <div className="text-emerald-700 font-bold text-sm">Phase 3</div>
+                  <h3 className="mt-2 text-xl font-bold">Coverage (8–12 months)</h3>
                   <p className="mt-4 text-slate-600">
-                    Cobertura de los 3 edificios y preparación para replicación en otras comunidades.
+                    Coverage of the 3 buildings and preparation for replication at the state level.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* PILOTO */}
+          {/* PILOT */}
           <section id="piloto" className="border-t bg-slate-50">
             <div className="mx-auto max-w-6xl px-4 py-20 grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-extrabold tracking-tight">Proyecto Piloto</h2>
+                <h2 className="text-3xl font-extrabold tracking-tight">Pilot Project</h2>
                 <p className="mt-4 text-lg text-slate-600">
-                  Fase inicial: un edificio residencial en Miami-Dade, con cobertura para 400–500 adultos mayores
-                  que viven solos. Mediremos mensualmente entregas, necesidades y resultados de bienestar.
+                  Initial phase: a residential building in Miami-Dade, providing coverage for 400–500 seniors
+                  living alone. We will mechanically measure monthly deliveries, needs, and wellness outcomes.
                 </p>
 
                 <div className="mt-8 grid gap-3">
                   <div className="rounded-2xl border bg-white p-4">
-                    <div className="font-semibold">Logística eficiente</div>
+                    <div className="font-semibold">Efficient logistics</div>
                     <div className="text-slate-600">
-                      Un punto concentrado reduce costos y maximiza alcance.
+                      A centralized point reduces costs and maximizes reach.
                     </div>
                   </div>
                   <div className="rounded-2xl border bg-white p-4">
-                    <div className="font-semibold">Impacto medible</div>
+                    <div className="font-semibold">Measurable impact</div>
                     <div className="text-slate-600">
-                      Entregas registradas y bienestar reportado para transparencia.
+                      Registered deliveries and reported wellness for transparency.
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="rounded-3xl bg-slate-900 text-white p-10 shadow-xl">
-                <div className="text-sm text-white/70">Oportunidad para donadores y grants</div>
+                <div className="text-sm text-white/70">Opportunity for donors and grants</div>
                 <div className="mt-3 text-2xl font-extrabold leading-snug">
-                  Financiar el piloto significa construir un modelo replicable para toda Florida.
+                  Funding the pilot means building a replicable model for all of Florida.
                 </div>
                 <p className="mt-6 text-white/80">
-                  Con recursos sostenidos, el piloto puede expandirse dentro del año operativo a los tres edificios.
+                  With sustained resources, the pilot can expand within the operational year to all three buildings.
                 </p>
                 <div className="mt-8">
                   <button
                     onClick={() => handleOpenModal(50)}
                     className="rounded-2xl bg-emerald-500 text-white px-5 py-3 font-semibold hover:bg-emerald-600"
                   >
-                    Financiar este piloto
+                    Fund this pilot
                   </button>
                 </div>
               </div>
@@ -910,39 +853,39 @@ export default function App() {
           <section id="expansion" className="border-t bg-white">
             <div className="mx-auto max-w-6xl px-4 py-20">
               <div className="text-center">
-                <h2 className="text-3xl font-extrabold tracking-tight">Expansión</h2>
+                <h2 className="text-3xl font-extrabold tracking-tight">Expansion</h2>
                 <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-                  Meta de crecimiento: ampliar el modelo a los tres edificios residenciales del complejo y alcanzar
-                  entre 1,200 y 1,500 adultos mayores con apoyo continuo, manteniendo métricas y transparencia.
+                  Growth goal: expand the model to all three residential buildings of the complex and reach
+                  between 1,200 and 1,500 seniors with continuous support, maintaining metrics and transparency.
                 </p>
               </div>
 
               <div className="mt-12 grid md:grid-cols-3 gap-8">
                 <div className="rounded-3xl border bg-slate-50 p-8">
-                  <h3 className="text-xl font-bold">Edificio 1</h3>
+                  <h3 className="text-xl font-bold">Building 1</h3>
                   <p className="mt-4 text-slate-600">
-                    400–500 residentes. Fase piloto para implementación, logística y medición.
+                    400–500 residents. Pilot phase for implementation, logistics, and measurement.
                   </p>
                 </div>
 
                 <div className="rounded-3xl border bg-slate-50 p-8">
-                  <h3 className="text-xl font-bold">Edificio 2</h3>
+                  <h3 className="text-xl font-bold">Building 2</h3>
                   <p className="mt-4 text-slate-600">
-                    Expansión tras estabilización operativa y fortalecimiento de alianzas.
+                    Expansion after operational stabilization and strengthening of partnerships.
                   </p>
                 </div>
 
                 <div className="rounded-3xl border bg-slate-50 p-8">
-                  <h3 className="text-xl font-bold">Edificio 3</h3>
+                  <h3 className="text-xl font-bold">Building 3</h3>
                   <p className="mt-4 text-slate-600">
-                    Cobertura total del complejo y preparación para replicación estatal.
+                    Total coverage of the complex and preparation for state replication.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* DONAR Y GUARDIANES DORADOS */}
+          {/* DONATE AND GOLDEN GUARDIANS */}
           <section id="donar" className="border-t bg-slate-50 relative overflow-hidden">
             {/* Elementos decorativos de fondo */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-amber-400/10 blur-3xl pointer-events-none" />
@@ -951,15 +894,15 @@ export default function App() {
             <div className="mx-auto max-w-6xl px-4 py-24 relative z-10">
               <div className="text-center">
                 <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-sm font-bold text-amber-700 mb-6">
-                  <span className="text-lg">⭐</span> Programa de Donaciones Recurrentes
+                  <span className="text-lg">⭐</span> Recurring Donation Program
                 </div>
                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-                  Conviértete en un <span className="text-amber-500">Guardián Dorado</span>
+                  Become a <span className="text-amber-500">Golden Guardian</span>
                 </h2>
                 <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                  Las fundaciones estables y el apoyo constante no se logran con donaciones únicas.
-                  Dependemos de corazones generosos que se comprometen mes a mes para llevar nutrición,
-                  medicinas y dignidad a quienes más lo necesitan.
+                  Stable foundations and constant support are not achieved with one-time donations.
+                  We depend on generous hearts who commit month after month to bring nutrition,
+                  medicines, and dignity to those who need it most.
                 </p>
               </div>
 
@@ -971,18 +914,18 @@ export default function App() {
                   <div className="h-16 w-16 rounded-2xl bg-slate-50 flex items-center justify-center text-3xl mb-6 shadow-inner">
                     🌱
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">Semilla de Apoyo</h3>
+                  <h3 className="text-xl font-bold text-slate-900">Seed of Support</h3>
                   <div className="mt-4 flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-extrabold tracking-tight text-slate-900">$15</span>
-                    <span className="text-sm font-semibold text-slate-500">/ mes</span>
+                    <span className="text-sm font-semibold text-slate-500">/ mo</span>
                   </div>
-                  <p className="mt-4 text-sm text-slate-600 font-medium">Apoyo continuo básico</p>
+                  <p className="mt-4 text-sm text-slate-600 font-medium">Basic continuous support</p>
                   <p className="mt-2 text-xs text-slate-500 leading-relaxed min-h-[40px]">
-                    Ayúdanos a cubrir necesidades logísticas constantes.
+                    Help us cover constant logistical needs.
                   </p>
                   <div className="mt-8 w-full">
                     <button onClick={() => handleOpenModal(15)} className="block w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-900 hover:border-slate-300 hover:bg-slate-50 transition">
-                      Unirme con $15
+                      Join with $15
                     </button>
                   </div>
                 </div>
@@ -992,18 +935,18 @@ export default function App() {
                   <div className="h-16 w-16 rounded-2xl bg-amber-50 flex items-center justify-center text-3xl mb-6 shadow-inner">
                     🍲
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">Plato Caliente</h3>
+                  <h3 className="text-xl font-bold text-slate-900">Hot Meal</h3>
                   <div className="mt-4 flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-extrabold tracking-tight text-slate-900">$25</span>
-                    <span className="text-sm font-semibold text-slate-500">/ mes</span>
+                    <span className="text-sm font-semibold text-slate-500">/ mo</span>
                   </div>
-                  <p className="mt-4 text-sm text-slate-600 font-medium">1 semana de alimentos</p>
+                  <p className="mt-4 text-sm text-slate-600 font-medium">1 week of meals</p>
                   <p className="mt-2 text-xs text-slate-500 leading-relaxed min-h-[40px]">
-                    Asegura la comida para un adulto mayor por una semana al mes.
+                    Ensures meals for a senior for one week a month.
                   </p>
                   <div className="mt-8 w-full">
                     <button onClick={() => handleOpenModal(25)} className="block w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-900 hover:border-slate-300 hover:bg-slate-50 transition">
-                      Unirme con $25
+                      Join with $25
                     </button>
                   </div>
                 </div>
@@ -1011,23 +954,23 @@ export default function App() {
                 {/* Nivel 3 - RECOMENDADO DA VIDA */}
                 <div className="relative rounded-3xl border-2 border-emerald-500 bg-white p-8 shadow-xl hover:-translate-y-2 transition duration-300 flex flex-col items-center text-center transform lg:-translate-y-4">
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide shadow-md whitespace-nowrap">
-                    Impacto Clave
+                    Key Impact
                   </div>
                   <div className="h-16 w-16 rounded-2xl bg-emerald-50 flex items-center justify-center text-3xl mb-6 shadow-inner">
                     💚
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">Cuidado Integral</h3>
+                  <h3 className="text-xl font-bold text-slate-900">Comprehensive Care</h3>
                   <div className="mt-4 flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-extrabold tracking-tight text-emerald-600">$50</span>
-                    <span className="text-sm font-semibold text-slate-500">/ mes</span>
+                    <span className="text-sm font-semibold text-slate-500">/ mo</span>
                   </div>
-                  <p className="mt-4 text-sm text-emerald-700 font-bold">Alimentos + Higiene</p>
+                  <p className="mt-4 text-sm text-emerald-700 font-bold">Food + Hygiene</p>
                   <p className="mt-2 text-xs text-slate-600 leading-relaxed min-h-[40px]">
-                    Protege su nutrición y su dignidad con entregas combinadas.
+                    Protects their nutrition and dignity with combined deliveries.
                   </p>
                   <div className="mt-8 w-full">
                     <button onClick={() => handleOpenModal(50)} className="block w-full rounded-2xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white hover:bg-emerald-700 shadow-md transition">
-                      Unirme con $50
+                      Join with $50
                     </button>
                   </div>
                 </div>
@@ -1037,18 +980,18 @@ export default function App() {
                   <div className="h-16 w-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-3xl mb-6 shadow-inner">
                     👑
                   </div>
-                  <h3 className="text-xl font-bold text-white">Guardián Patrocinador</h3>
+                  <h3 className="text-xl font-bold text-white">Sponsoring Guardian</h3>
                   <div className="mt-4 flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-extrabold tracking-tight text-amber-400">$100</span>
-                    <span className="text-sm font-semibold text-slate-400">/ mes</span>
+                    <span className="text-sm font-semibold text-slate-400">/ mo</span>
                   </div>
-                  <p className="mt-4 text-sm text-amber-400 font-bold">Apadrina 1 adulto mayor</p>
+                  <p className="mt-4 text-sm text-amber-400 font-bold">Sponsor 1 senior</p>
                   <p className="mt-2 text-xs text-slate-400 leading-relaxed min-h-[40px]">
-                    Cubre integralmente a una persona durante todo un mes continuo.
+                    Comprehensively covers a person for a continuous month.
                   </p>
                   <div className="mt-8 w-full">
                     <button onClick={() => handleOpenModal(100)} className="block w-full rounded-2xl bg-amber-500 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-amber-400 transition">
-                      Conviértete en Guardián
+                      Become a Guardian
                     </button>
                   </div>
                 </div>
@@ -1057,7 +1000,7 @@ export default function App() {
 
               {/* OTRAS FORMAS DE AYUDAR */}
               <div className="mt-24 text-center">
-                <h3 className="text-2xl font-bold text-slate-900 mb-8">Elegir otro tipo de donación</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-8">Choose another way to support</h3>
               </div>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {supportCards.map((c) => (
@@ -1072,7 +1015,7 @@ export default function App() {
                       ) : (
                         <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-700 to-slate-900 text-slate-500">
                           <span className="text-5xl opacity-50 mb-2">{c.icon}</span>
-                          <span className="text-xs font-semibold uppercase tracking-widest text-slate-400 opacity-60">Próximamente</span>
+                          <span className="text-xs font-semibold uppercase tracking-widest text-slate-400 opacity-60">Coming Soon</span>
                         </div>
                       )}
                     </div>
@@ -1088,7 +1031,7 @@ export default function App() {
                           onClick={() => handleOpenFormModal(c.type)}
                           className="w-full inline-flex items-center justify-center rounded-2xl bg-emerald-600 text-white px-4 py-3 font-semibold hover:bg-emerald-700 transition"
                         >
-                          Aplicar / Registrar
+                          Apply / Register
                         </button>
                       </div>
                     </div>
@@ -1100,37 +1043,37 @@ export default function App() {
               <div className="mt-12 rounded-3xl border border-amber-200 bg-amber-50 p-8 flex flex-col sm:flex-row gap-6 items-center text-center sm:text-left">
                 <div className="text-4xl">💳</div>
                 <div>
-                  <div className="text-sm font-bold text-slate-900">Donar ahora (Próximamente online)</div>
+                  <div className="text-sm font-bold text-slate-900">Donate Now (Coming soon online)</div>
                   <p className="mt-2 text-sm text-slate-700">
-                    Estamos integrando métodos de pago seguros rápidos como Stripe, PayPal y Zelle.
-                    Mientras tanto, si decides apoyar, simplemente rellena el formulario de abajo y nos comunicaremos de inmediato para gestionarlo.
+                    We are integrating fast secure payment methods like Stripe, PayPal, and Zelle.
+                    In the meantime, if you decide to support, simply fill out the form below and we will contact you immediately to manage it.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* CONTACTO */}
+          {/* CONTACT LIST */}
           <section id="contacto" className="border-t bg-white">
             <div className="mx-auto max-w-6xl px-4 py-20 grid lg:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-extrabold tracking-tight">Contacto</h2>
+                <h2 className="text-3xl font-extrabold tracking-tight">Contact</h2>
                 <p className="mt-4 text-lg text-slate-600">
-                  Si deseas apoyar como donador, aplicar a grants con nosotros o coordinar alianzas,
-                  escríbenos y te respondemos lo antes posible.
+                  If you wish to support as a donor, apply for grants with us, or coordinate partnerships,
+                  write to us and we will respond as soon as possible.
                 </p>
 
                 <div className="mt-8 grid gap-4 text-slate-700">
                   <div className="rounded-2xl bg-slate-50 p-4">
                     <div className="text-sm font-semibold">📍 Miami-Dade County, Florida</div>
                     <div className="text-sm text-slate-600 mt-1">
-                      Proyecto piloto y expansión a tres edificios.
+                      Pilot project and expansion to three buildings.
                     </div>
                   </div>
                   <div className="rounded-2xl bg-slate-50 p-4">
                     <div className="text-sm font-semibold">💬 WhatsApp</div>
                     <div className="text-sm text-slate-600 mt-1">
-                      Usa el botón flotante para escribirnos directo.
+                      Use the floating button to write to us directly.
                     </div>
                   </div>
                 </div>
@@ -1140,36 +1083,38 @@ export default function App() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
-                    alert("¡Gracias! Recibimos tu mensaje. (Luego conectamos el formulario.)");
+                    // Keep the alert strictly translation text without modification of logic.
+                    // This was already translated in multi-replace chunk.
+                    alert("Thank you! We received your message. (Later we will connect the form.)");
                   }}
                   className="grid gap-4"
                 >
                   <label className="grid gap-2">
-                    <span className="text-sm font-semibold">Nombre</span>
+                    <span className="text-sm font-semibold">Name</span>
                     <input
                       className="border rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200"
-                      placeholder="Tu nombre"
+                      placeholder="Your name"
                     />
                   </label>
 
                   <label className="grid gap-2">
-                    <span className="text-sm font-semibold">Teléfono o email</span>
+                    <span className="text-sm font-semibold">Phone or email</span>
                     <input
                       className="border rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200"
-                      placeholder="Cómo te contactamos"
+                      placeholder="How to contact you"
                     />
                   </label>
 
                   <label className="grid gap-2">
-                    <span className="text-sm font-semibold">Mensaje</span>
+                    <span className="text-sm font-semibold">Message</span>
                     <textarea
                       className="border rounded-2xl px-4 py-3 min-h-[140px] outline-none focus:ring-2 focus:ring-emerald-200"
-                      placeholder="Cuéntanos si deseas donar, apoyar el piloto o hablar sobre grants…"
+                      placeholder="Tell us if you want to donate, support the pilot, or talk about grants…"
                     />
                   </label>
 
                   <button className="rounded-2xl bg-slate-900 text-white px-6 py-3 font-semibold hover:bg-slate-800">
-                    Enviar
+                    Send
                   </button>
 
                   <p className="text-xs text-slate-500">
@@ -1189,13 +1134,13 @@ export default function App() {
             </p>
             <div className="flex gap-4 text-white/80">
               <a href="#inicio" className="hover:text-white">
-                Inicio
+                Home
               </a>
               <button onClick={() => handleOpenModal(50)} className="hover:text-white text-left">
-                Donar
+                Donate
               </button>
               <a href="#contacto" className="hover:text-white">
-                Contacto
+                Contact
               </a>
             </div>
           </div>
@@ -1208,11 +1153,11 @@ export default function App() {
           <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-md my-8 flex flex-col pointer-events-auto transform transition-all animate-in zoom-in-95 duration-200">
             {/* Modal Header */}
             <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b">
-              <h3 className="text-xl font-extrabold text-slate-900">Ayudar a un Adulto Mayor</h3>
+              <h3 className="text-xl font-extrabold text-slate-900">Help a Senior</h3>
               <button
                 onClick={handleCloseModal}
                 className="text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full p-2 transition"
-                aria-label="Cerrar modal"
+                aria-label="Close modal"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
               </button>
@@ -1221,7 +1166,7 @@ export default function App() {
             {/* Modal Body */}
             <div className="p-6 overflow-y-auto flex-1">
               <p className="text-sm text-slate-600 font-medium mb-4">
-                Elige un nivel mensual para convertirte en <span className="text-amber-500 font-bold">Guardián Dorado</span>:
+                Choose a monthly level to become a <span className="text-amber-500 font-bold">Golden Guardian</span>:
               </p>
 
               {/* Amount Selector */}
@@ -1263,30 +1208,30 @@ export default function App() {
                         className="bg-transparent border-none outline-none font-bold text-white w-full placeholder:text-emerald-300"
                       />
                     </div>
-                  ) : "Otro Monto"}
+                  ) : "Other Amount"}
                 </button>
               </div>
 
               {/* Payment Methods */}
               <div className="mt-8 border-t pt-6">
                 <p className="text-sm font-semibold text-slate-900 mb-4 text-center">
-                  Continuar pago seguro usando:
+                  Continue secure payment using:
                 </p>
                 <div className="space-y-3">
                   <button
-                    onClick={() => alert('¡Gracias por tu interés! Próximamente activaremos Stripe Checkout para pagos con tarjeta.')}
+                    onClick={() => alert('Thank you for your interest! We will soon activate Stripe Checkout for card payments.')}
                     className="w-full flex items-center justify-center gap-3 bg-slate-900 text-white hover:bg-slate-800 rounded-2xl py-4 font-semibold shadow-sm transition group"
                   >
-                    <span className="text-xl group-hover:scale-110 transition">💳</span> Tarjeta de Crédito / Débito
+                    <span className="text-xl group-hover:scale-110 transition">💳</span> Credit / Debit Card
                   </button>
                   <button
-                    onClick={() => alert('¡Gracias por tu interés! Próximamente activaremos PayPal Checkout.')}
+                    onClick={() => alert('Thank you for your interest! We will soon activate PayPal Checkout.')}
                     className="w-full flex items-center justify-center gap-3 bg-[#0070BA] text-white hover:bg-[#003087] rounded-2xl py-4 font-semibold shadow-sm transition group"
                   >
                     <span className="text-xl group-hover:scale-110 transition">🅿️</span> PayPal
                   </button>
                   <button
-                    onClick={() => alert('Pagos con Zelle. Actualmente por favor envíanos un WhatsApp para darte el correo/teléfono correcto de la cuenta 501(c)(3) real. (Cierra esta ventana para ir al contacto)')}
+                    onClick={() => alert('Payments with Zelle. Currently please send us a WhatsApp to give you the correct email/phone of the real 501(c)(3) account. (Close this window to go to contact)')}
                     className="w-full flex items-center justify-center gap-3 bg-[#6329A8] text-white hover:bg-[#4E2184] rounded-2xl py-4 font-semibold shadow-sm transition group"
                   >
                     <span className="text-xl group-hover:scale-110 transition">💸</span> Zelle
@@ -1295,26 +1240,26 @@ export default function App() {
               </div>
 
               <p className="mt-6 text-center flex items-center justify-center gap-1 text-xs text-slate-500 font-medium">
-                🔒 Donación 100% deducible de impuestos (501c3)
+                🔒 100% tax-deductible donation (501c3)
               </p>
             </div>
           </div>
         </div>
       )}
 
-      {/* FORMULARIOS MODAL (Especie, Voluntariado, Alianzas) */}
+      {/* FORM MODALS (In-kind, Volunteering, Partnerships) */}
       {formModalType && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8 overflow-y-auto w-full h-full bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-2xl my-auto flex flex-col pointer-events-auto transform transition-all animate-in zoom-in-95 duration-200">
-            {/* Header del Formulario */}
+            {/* Form Header */}
             <div className={`flex items-center justify-between px-6 pt-6 pb-4 border-b ${formModalType === 'voluntariado' ? 'bg-amber-50 rounded-t-3xl border-amber-100' :
               formModalType === 'alianza' ? 'bg-slate-50 rounded-t-3xl border-slate-200' :
                 'bg-emerald-50 rounded-t-3xl border-emerald-100'
               }`}>
               <h3 className="text-xl font-extrabold text-slate-900 flex items-center gap-2">
-                {formModalType === "donacion_especie" && "❤️ Registro de Donación en Especie"}
-                {formModalType === "voluntariado" && "🤝 Entrevista de Voluntariado"}
-                {formModalType === "alianza" && "🏢 Solicitud de Alianza Institucional"}
+                {formModalType === "donacion_especie" && "❤️ In-Kind Donation Registration"}
+                {formModalType === "voluntariado" && "🤝 Volunteer Interview"}
+                {formModalType === "alianza" && "🏢 Institutional Partnership Request"}
               </h3>
               <button
                 onClick={handleCloseFormModal}
@@ -1324,84 +1269,84 @@ export default function App() {
               </button>
             </div>
 
-            {/* Body Dinámico */}
+            {/* Dynamic Body */}
             <div className="p-6 md:p-8 overflow-y-auto max-h-[75vh]">
               <form onSubmit={handleFormSubmit} className="grid gap-6">
 
-                {/* ---------- FORMULARIO 1: DONACIÓN EN ESPECIE ---------- */}
+                {/* ---------- FORM 1: IN-KIND DONATION ---------- */}
                 {formModalType === "donacion_especie" && (
                   <>
                     <p className="text-sm text-slate-600 mb-2">
-                      Gracias por querer donar productos. Registra tu aporte para coordinar la logística de entrega de los suministros.
+                      Thank you for wanting to donate products. Register your contribution to coordinate the logistics of delivery of supplies.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Nombre Completo *</span>
-                        <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Ej: Maria Gonzalez" />
+                        <span className="text-sm font-semibold">Full Name *</span>
+                        <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Ex: Maria Gonzalez" />
                       </label>
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Empresa / Entidad (Opcional)</span>
-                        <input className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Si donas a nombre de empresa..." />
+                        <span className="text-sm font-semibold">Company / Entity (Optional)</span>
+                        <input className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="If you denote on behalf of a company..." />
                       </label>
                     </div>
                     <div className="grid md:grid-cols-2 gap-4">
                       <label className="grid gap-2">
                         <span className="text-sm font-semibold">Email *</span>
-                        <input type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="tu@correo.com" />
+                        <input type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="you@email.com" />
                       </label>
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Teléfono / WhatsApp *</span>
+                        <span className="text-sm font-semibold">Phone / WhatsApp *</span>
                         <input type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="+1 (305)..." />
                       </label>
                     </div>
                     <label className="grid gap-2">
-                      <span className="text-sm font-semibold">¿Qué producto(s) deseas donar? *</span>
+                      <span className="text-sm font-semibold">What product(s) do you want to donate? *</span>
                       <select required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200 bg-white">
-                        <option value="">Selecciona el tipo de producto...</option>
-                        <option value="alimentos">Alimentos no perecederos (cajas, latas, granos)</option>
-                        <option value="higiene">Productos de higiene personal (pañales, jabón)</option>
-                        <option value="medicinas">Suplementos / Equipos médicos ligeros</option>
-                        <option value="otros">Otros (Por favor especifica abajo)</option>
+                        <option value="">Select the type of product...</option>
+                        <option value="alimentos">Non-perishable food (boxes, cans, grains)</option>
+                        <option value="higiene">Personal hygiene products (diapers, soap)</option>
+                        <option value="medicinas">Supplements / Light medical equipment</option>
+                        <option value="otros">Other (Please specify below)</option>
                       </select>
                     </label>
                     <label className="grid gap-2">
-                      <span className="text-sm font-semibold">Detalles y Cantidad Aproximada *</span>
-                      <textarea required className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Ej: 50 latas de atún, 5 paquetes de pañales talla G..." />
+                      <span className="text-sm font-semibold">Details and Approximate Quantity *</span>
+                      <textarea required className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Ex: 50 cans of tuna, 5 packs of size L diapers..." />
                     </label>
                   </>
                 )}
 
-                {/* ---------- FORMULARIO 2: VOLUNTARIADO ---------- */}
+                {/* ---------- FORM 2: VOLUNTEERING ---------- */}
                 {formModalType === "voluntariado" && (
                   <>
                     <p className="text-sm text-slate-600 mb-2">
-                      Los voluntarios son el corazón de nuestra misión. Completa esta planilla para contactarte y realizarte una entrevista inicial.
+                      Volunteers are the heart of our mission. Complete this form to contact you and perform an initial interview.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Nombre Completo *</span>
-                        <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Tu nombre" />
+                        <span className="text-sm font-semibold">Full Name *</span>
+                        <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Your name" />
                       </label>
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Edad</span>
-                        <input type="number" min="18" className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="+18 años recom." />
+                        <span className="text-sm font-semibold">Age</span>
+                        <input type="number" min="18" className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="+18 years recom." />
                       </label>
                     </div>
                     <div className="grid md:grid-cols-2 gap-4">
                       <label className="grid gap-2">
                         <span className="text-sm font-semibold">Email *</span>
-                        <input type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Correo electrónico" />
+                        <input type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Email address" />
                       </label>
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Teléfono / WhatsApp *</span>
-                        <input type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Tu teléfono" />
+                        <span className="text-sm font-semibold">Phone / WhatsApp *</span>
+                        <input type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Your phone" />
                       </label>
                     </div>
 
                     <div className="border border-slate-200 p-4 rounded-xl bg-slate-50">
-                      <span className="text-sm font-semibold block mb-3">Disponibilidad de Días *</span>
+                      <span className="text-sm font-semibold block mb-3">Availability by Days *</span>
                       <div className="flex flex-wrap gap-4">
-                        {['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sáb/Dom'].map(dia => (
+                        {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sat/Sun'].map(dia => (
                           <label key={dia} className="flex items-center gap-2 cursor-pointer">
                             <input type="checkbox" className="w-4 h-4 text-amber-600 rounded" />
                             <span className="text-sm text-slate-700">{dia}</span>
@@ -1409,9 +1354,9 @@ export default function App() {
                         ))}
                       </div>
 
-                      <span className="text-sm font-semibold block mt-5 mb-3">Preferencia de Horarios *</span>
+                      <span className="text-sm font-semibold block mt-5 mb-3">Time Preference *</span>
                       <div className="flex flex-wrap gap-4">
-                        {['Mañana (9am-12pm)', 'Tarde (1pm-5pm)', 'Flexible'].map(hora => (
+                        {['Morning (9am-12pm)', 'Afternoon (1pm-5pm)', 'Flexible'].map(hora => (
                           <label key={hora} className="flex items-center gap-2 cursor-pointer">
                             <input type="checkbox" className="w-4 h-4 text-amber-600 rounded" />
                             <span className="text-sm text-slate-700">{hora}</span>
@@ -1421,56 +1366,56 @@ export default function App() {
                     </div>
 
                     <label className="grid gap-2">
-                      <span className="text-sm font-semibold">¿Por qué te gustaría ser voluntario? (Breve)</span>
-                      <textarea className="border rounded-xl px-4 py-3 min-h-[80px] outline-none focus:ring-2 focus:ring-amber-200" placeholder="Cuéntanos un poco de ti..." />
+                      <span className="text-sm font-semibold">Why would you like to volunteer? (Brief)</span>
+                      <textarea className="border rounded-xl px-4 py-3 min-h-[80px] outline-none focus:ring-2 focus:ring-amber-200" placeholder="Tell us a little about yourself..." />
                     </label>
                   </>
                 )}
 
-                {/* ---------- FORMULARIO 3: ALIANZAS ---------- */}
+                {/* ---------- FORM 3: PARTNERSHIPS ---------- */}
                 {formModalType === "alianza" && (
                   <>
                     <p className="text-sm text-slate-600 mb-2">
-                      Buscamos unir fuerzas con instituciones y empresas. Déjanos los datos de tu organización y te contactaremos.
+                      We seek to join forces with institutions and companies. Leave us your organization's data and we will contact you.
                     </p>
                     <label className="grid gap-2">
-                      <span className="text-sm font-semibold">Nombre de la Organización / Fundación / Empresa *</span>
-                      <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Ej: Fundación Salud Global" />
+                      <span className="text-sm font-semibold">Name of the Organization / Foundation / Company *</span>
+                      <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Ex: Global Health Foundation" />
                     </label>
                     <div className="grid md:grid-cols-2 gap-4">
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Tipo de Entidad *</span>
+                        <span className="text-sm font-semibold">Type of Entity *</span>
                         <select required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300 bg-white">
-                          <option value="">Seleccionar...</option>
-                          <option value="ong">Fundación / ONG (501c3 u otra)</option>
-                          <option value="corporacion">Empresa Corporativa Privada</option>
-                          <option value="gobierno">Entidad Gubernamental / Pública</option>
-                          <option value="iglesia">Iglesia / Centro Religioso</option>
-                          <option value="otro">Asociación Civil / Otro</option>
+                          <option value="">Select...</option>
+                          <option value="ong">Foundation / NGO (501c3 or other)</option>
+                          <option value="corporacion">Private Corporate Company</option>
+                          <option value="gobierno">Government / Public Entity</option>
+                          <option value="iglesia">Church / Religious Center</option>
+                          <option value="otro">Civil Association / Other</option>
                         </select>
                       </label>
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Sitio Web (Opcional)</span>
+                        <span className="text-sm font-semibold">Website (Optional)</span>
                         <input type="url" className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="https://" />
                       </label>
                     </div>
                     <div className="grid md:grid-cols-2 gap-4">
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Persona de Contacto *</span>
-                        <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Nombre completo" />
+                        <span className="text-sm font-semibold">Contact Person *</span>
+                        <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Full name" />
                       </label>
                       <label className="grid gap-2">
-                        <span className="text-sm font-semibold">Email / Teléfono *</span>
-                        <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Correo y número directo" />
+                        <span className="text-sm font-semibold">Email / Phone *</span>
+                        <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Email and direct number" />
                       </label>
                     </div>
                     <label className="grid gap-2">
-                      <span className="text-sm font-semibold">¿A qué se dedica su organización? (Propósito) *</span>
-                      <textarea required className="border rounded-xl px-4 py-3 min-h-[80px] outline-none focus:ring-2 focus:ring-slate-300" placeholder="Nuestra misión es..." />
+                      <span className="text-sm font-semibold">What is your organization dedicated to? (Purpose) *</span>
+                      <textarea required className="border rounded-xl px-4 py-3 min-h-[80px] outline-none focus:ring-2 focus:ring-slate-300" placeholder="Our mission is..." />
                     </label>
                     <label className="grid gap-2">
-                      <span className="text-sm font-semibold">Detalle: Interés o motivo de la alianza *</span>
-                      <textarea required className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-slate-300" placeholder="Nos gustaría colaborar porque hemos visto sinergias... podríamos aportar..." />
+                      <span className="text-sm font-semibold">Detail: Interest or reason for the partnership *</span>
+                      <textarea required className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-slate-300" placeholder="We would like to collaborate because we have seen synergies... we could contribute..." />
                     </label>
                   </>
                 )}
@@ -1481,7 +1426,7 @@ export default function App() {
                     onClick={handleCloseFormModal}
                     className="px-6 py-3 rounded-xl font-semibold text-slate-600 hover:bg-slate-100 transition"
                   >
-                    Cancelar
+                    Cancel
                   </button>
                   <button
                     type="submit"
@@ -1490,7 +1435,7 @@ export default function App() {
                         'bg-emerald-600 hover:bg-emerald-700'
                       }`}
                   >
-                    Enviar Solicitud
+                    Send Request
                   </button>
                 </div>
               </form>

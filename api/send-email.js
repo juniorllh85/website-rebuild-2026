@@ -57,7 +57,8 @@ export default async function handler(req, res) {
   `;
 
   try {
-    const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+    // 1. Send notification to the foundation
+    await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -65,20 +66,56 @@ export default async function handler(req, res) {
         'api-key': BREVO_API_KEY,
       },
       body: JSON.stringify({
-        sender: { name: "TGYF Website", email: "thegoldenyearsfoundation@gmail.com" },
+        sender: { name: "The Golden Years Foundation", email: "thegoldenyearsfoundation@gmail.com" },
         to: [{ email: "thegoldenyearsfoundation@gmail.com" }],
         subject: subject,
         htmlContent: htmlContent,
       }),
     });
 
-    if (response.ok) {
-      return res.status(200).json({ success: true });
-    } else {
-      const errorData = await response.json();
-      console.error('Brevo API error:', errorData);
-      return res.status(response.status).json({ error: 'Failed to send email' });
+    // 2. Send cordial auto-reply to the user (if email is provided)
+    const userEmail = data.email || data.contact;
+    const userName = data.fullName || data.name || 'Friend';
+
+    if (userEmail && userEmail.includes('@')) {
+      const autoReplyHtml = `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #1e293b;">
+          <div style="background: #059669; padding: 30px; text-align: center; border-radius: 12px 12px 0 0;">
+            <h1 style="color: white; margin: 0; font-size: 24px;">¡Gracias por tu gran corazón! ❤️</h1>
+          </div>
+          <div style="padding: 30px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 12px 12px; line-height: 1.6;">
+            <p>Hola <strong>${userName}</strong>,</p>
+            <p>Recibimos con mucha alegría tu mensaje e interés en apoyar nuestra labor en <strong>The Golden Years Foundation</strong>.</p>
+            <p>Personas como tú son las que hacen posible que nuestros adultos mayores reciban el amor, la atención y la dignidad que tanto merecen. En este momento, nuestro equipo está revisando tu información y nos pondremos en contacto contigo muy pronto para dar el siguiente paso juntos.</p>
+            <p>Mientras tanto, te invitamos a seguir acompañándonos en esta misión.</p>
+            <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #f1f5f9; font-style: italic;">
+              "Dando vida y esperanza a quienes lo dieron todo."
+            </p>
+            <p style="margin-top: 20px;">
+              Con gratitud,<br>
+              <strong>El Equipo de The Golden Years Foundation</strong>
+            </p>
+          </div>
+        </div>
+      `;
+
+      await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'api-key': BREVO_API_KEY,
+        },
+        body: JSON.stringify({
+          sender: { name: "The Golden Years Foundation", email: "thegoldenyearsfoundation@gmail.com" },
+          to: [{ email: userEmail }],
+          subject: "¡Gracias por contactar a The Golden Years Foundation!",
+          htmlContent: autoReplyHtml,
+        }),
+      });
     }
+
+    return res.status(200).json({ success: true });
   } catch (error) {
     console.error('Server error:', error);
     return res.status(500).json({ error: 'Internal server error' });

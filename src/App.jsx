@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-/** ✅ Deja el número para el final */
+/** âœ… Deja el nÃºmero para el final */
 const WHATSAPP_PHONE = "13050000000";
 const WHATSAPP_MESSAGE =
   "Hello, I would like information about The Golden Years Foundation (501(c)(3)).";
@@ -18,35 +18,35 @@ function WhatsAppFloatingButton() {
       aria-label="Chat on WhatsApp"
       title="WhatsApp"
     >
-      <span className="text-lg">💬</span>
+      <span className="text-lg">ðŸ’¬</span>
       <span className="hidden sm:block">WhatsApp</span>
     </a>
   );
 }
 
 const impactStats = [
-  { value: "400–500", label: "Seniors in the pilot building" },
+  { value: "400â€“500", label: "Seniors in the pilot building" },
   { value: "3", label: "Target buildings in the complex" },
-  { value: "1,200–1,500", label: "Total potential reach (complex)" },
+  { value: "1,200â€“1,500", label: "Total potential reach (complex)" },
 ];
 
 const helpCards = [
   {
     title: "Food Security",
     desc: "Regular delivery of essential groceries to protect nutrition and stability.",
-    icon: "🥗",
+    icon: "ðŸ¥—",
     image: "/images/food.png",
   },
   {
     title: "Medicine Support",
     desc: "Support for access and continuity of medications, reducing preventable crises.",
-    icon: "💊",
+    icon: "ðŸ’Š",
     image: "/images/medicine.png",
   },
   {
     title: "Personal Hygiene",
     desc: "Hygiene kits to maintain health, dignity, and daily well-being.",
-    icon: "🧼",
+    icon: "ðŸ§¼",
     image: "/images/hygiene.png",
   },
 ];
@@ -55,21 +55,21 @@ const supportCards = [
   {
     title: "In-Kind Donations",
     desc: "Your contribution fuels food deliveries, medicine support, and hygiene kits.",
-    icon: "❤️",
+    icon: "â¤ï¸",
     type: "donacion_especie",
     image: "/images/donation.png"
   },
   {
     title: "Volunteering",
     desc: "Help with deliveries, organization, and companionship. Your time changes lives.",
-    icon: "🤝",
+    icon: "ðŸ¤",
     type: "voluntariado",
     image: "/images/volunteer.png"
   },
   {
     title: "Partnerships",
     desc: "Companies and institutions can support with resources, logistics, and matching grants.",
-    icon: "🏢",
+    icon: "ðŸ¢",
     type: "alianza",
     image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
@@ -194,7 +194,7 @@ export default function App() {
         </header>
 
         <main>
-          {/* HERO — CINEMATIC FULL-SCREEN */}
+          {/* HERO â€” CINEMATIC FULL-SCREEN */}
           <section id="inicio" className="relative min-h-screen overflow-hidden flex flex-col">
 
             {/* === BACKGROUND: Rotating image carousel === */}
@@ -210,7 +210,7 @@ export default function App() {
                 overlayTexts={[]}
                 interval={5000}
               />
-              {/* Deep cinematic overlay — dark bottom, lighter on top */}
+              {/* Deep cinematic overlay â€” dark bottom, lighter on top */}
               <div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(180deg, rgba(5,10,20,0.65) 0%, rgba(5,10,20,0.50) 40%, rgba(5,10,20,0.75) 70%, rgba(5,10,20,0.95) 100%)' }} />
               {/* Emerald left glow accent */}
               <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full pointer-events-none z-10" style={{ background: 'radial-gradient(circle, rgba(16,185,129,0.18) 0%, transparent 65%)', transform: 'translate(-30%, 30%)' }} />
@@ -225,11 +225,11 @@ export default function App() {
               <div className="flex justify-center pt-12 sm:pt-16">
                 <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-bold border" style={{ background: 'rgba(255,255,255,0.08)', borderColor: 'rgba(255,255,255,0.18)', backdropFilter: 'blur(12px)', color: 'rgba(255,255,255,0.85)' }}>
                   <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                  501(c)(3) Nonprofit · Embracing Miami-Dade, FL
+                  501(c)(3) Nonprofit Â· Embracing Miami-Dade, FL
                 </div>
               </div>
 
-              {/* Main content — centered */}
+              {/* Main content â€” centered */}
               <div className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-8 py-12">
 
                 {/* Tagline */}
@@ -249,7 +249,7 @@ export default function App() {
 
                 {/* Subheadline */}
                 <p className="mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed" style={{ color: 'rgba(203,213,225,0.85)' }}>
-                  We rescue our seniors from <strong className="text-white">loneliness, isolation, and depression</strong>. Through food, medicine, dignity, and love — we transform gray homes into spaces of celebration and true joy.
+                  We rescue our seniors from <strong className="text-white">loneliness, isolation, and depression</strong>. Through food, medicine, dignity, and love â€” we transform gray homes into spaces of celebration and true joy.
                 </p>
 
                 {/* CTA Buttons */}
@@ -260,7 +260,7 @@ export default function App() {
                     style={{ background: 'linear-gradient(135deg, #059669 0%, #0d9488 100%)', boxShadow: '0 8px 40px rgba(16,185,129,0.45), 0 0 0 1px rgba(52,211,153,0.3)' }}
                   >
                     <span className="flex items-center gap-2">
-                      <span>❤️</span>
+                      <span>â¤ï¸</span>
                       Give Them Their Smile Back
                     </span>
                   </button>
@@ -272,17 +272,17 @@ export default function App() {
                     onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.18)'; }}
                     onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.10)'; }}
                   >
-                    See Our Impact →
+                    See Our Impact â†’
                   </a>
                 </div>
 
                 {/* Floating mini impact stats */}
                 <div className="mt-14 flex flex-wrap justify-center gap-6 sm:gap-10">
                   {[
-                    { emoji: '🏠', value: '500+', label: 'Seniors Reached' },
-                    { emoji: '📦', value: '2,400+', label: 'Deliveries Made' },
-                    { emoji: '🏙️', value: '3', label: 'Buildings' },
-                    { emoji: '💚', value: '100%', label: 'Commitment' },
+                    { emoji: 'ðŸ ', value: '500+', label: 'Seniors Reached' },
+                    { emoji: 'ðŸ“¦', value: '2,400+', label: 'Deliveries Made' },
+                    { emoji: 'ðŸ™ï¸', value: '3', label: 'Buildings' },
+                    { emoji: 'ðŸ’š', value: '100%', label: 'Commitment' },
                   ].map(s => (
                     <div key={s.label} className="flex items-center gap-3 rounded-2xl px-4 py-3" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(10px)' }}>
                       <span className="text-xl">{s.emoji}</span>
@@ -296,15 +296,15 @@ export default function App() {
 
               </div>
 
-              {/* Bottom: What we provide — pill tags */}
+              {/* Bottom: What we provide â€” pill tags */}
               <div className="pb-10 sm:pb-14 flex justify-center px-4">
                 <div className="flex flex-wrap justify-center gap-3 max-w-2xl">
                   {[
-                    { icon: '🥗', label: 'Food Dignity' },
-                    { icon: '💊', label: 'Medical Care' },
-                    { icon: '🧼', label: 'Hygiene Kits' },
-                    { icon: '🎂', label: 'Birthdays & Holidays' },
-                    { icon: '📊', label: 'Full Transparency' },
+                    { icon: 'ðŸ¥—', label: 'Food Dignity' },
+                    { icon: 'ðŸ’Š', label: 'Medical Care' },
+                    { icon: 'ðŸ§¼', label: 'Hygiene Kits' },
+                    { icon: 'ðŸŽ‚', label: 'Birthdays & Holidays' },
+                    { icon: 'ðŸ“Š', label: 'Full Transparency' },
                   ].map(tag => (
                     <span key={tag.label} className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-semibold" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.14)', color: 'rgba(226,232,240,0.85)', backdropFilter: 'blur(8px)' }}>
                       <span>{tag.icon}</span> {tag.label}
@@ -313,7 +313,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Floating Quote Card — bottom right */}
+              {/* Floating Quote Card â€” bottom right */}
               <div className="absolute bottom-14 right-6 sm:right-12 max-w-xs rounded-3xl p-5 hidden lg:block" style={{ background: 'rgba(255,255,255,0.09)', border: '1px solid rgba(255,255,255,0.18)', backdropFilter: 'blur(20px)', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}>
                 <div className="text-amber-400 mb-3" style={{ fontSize: '28px', lineHeight: 1 }}>"</div>
                 <p className="text-sm font-semibold text-white leading-snug italic">
@@ -357,236 +357,413 @@ export default function App() {
             </div>
           </section>
 
-          {/* METRICS AND PROGRAMS (WITH MENTAL HEALTH) */}
-          <section id="metricas" className="border-t bg-slate-50 py-24 sm:py-32">
-            <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-              <div className="text-center max-w-4xl mx-auto mb-20">
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-8 leading-tight">
-                  More than Metrics:<br />
-                  <span className="text-emerald-600">Companionship and Absolute Dignity</span>
+          {/* METRICS AND PROGRAMS â€” PREMIUM DARK REDESIGN */}
+          <section id="metricas" className="relative overflow-hidden border-t" style={{ background: 'linear-gradient(160deg, #0a0f1e 0%, #0d1b2a 50%, #0f172a 100%)' }}>
+            {/* Ambient glows */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(16,185,129,0.12) 0%, transparent 65%)', transform: 'translate(25%,-25%)' }} />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 65%)', transform: 'translate(-25%, 25%)' }} />
+
+            <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 py-24 sm:py-32 relative z-10">
+
+              {/* Section header */}
+              <div className="text-center max-w-4xl mx-auto mb-16">
+                <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-black uppercase tracking-widest mb-6 border" style={{ background: 'rgba(52,211,153,0.1)', borderColor: 'rgba(52,211,153,0.25)', color: '#34d399' }}>
+                  ðŸ“Š Impact Programs
+                </div>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-6">
+                  More than Metrics:{' '}
+                  <span style={{ background: 'linear-gradient(90deg, #34d399, #2dd4bf)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                    Companionship &amp; Dignity
+                  </span>
                 </h2>
-                <p className="text-xl text-slate-600 leading-relaxed font-medium">
-                  For our social investors, we report hard data with absolute precision. For our seniors, we transform those numbers into real companionship, dignity, constant medical care, and the absolute certainty that <strong>they are not a burden, they have us.</strong>
+                <p className="text-lg leading-relaxed" style={{ color: 'rgba(203,213,225,0.8)' }}>
+                  For our social investors, hard data with absolute precision. For our seniors, real companionship, dignity, continuous medical care â€” and the certainty that <strong className="text-white">they are not a burden, they have us.</strong>
                 </p>
               </div>
 
-              {/* GRID INTERACTIVO DE PROGRAMAS (8 TARJETAS) GRANDES */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {/* BENTO GRID */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-                {/* 1. Adultos atendidos */}
-                <div className="group relative min-h-[26rem] md:min-h-[30rem] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500">
-                  <img src="/images/hero.png" alt="Alcance de vidas" className="absolute inset-0 w-full h-full object-cover transform opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="bg-emerald-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
-                      👥
-                    </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Lives Reached</h3>
-                    <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Rigorous census of active beneficiaries in the pilot, ensuring sustained support month by month without exclusions.
-                    </p>
+                {/* 1 - Lives Reached */}
+                <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }}>
+                  <img src="/images/hero.png" alt="Lives Reached" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(16,185,129,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
+                  <div className="absolute inset-0 p-7 flex flex-col justify-end">
+                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 transform group-hover:-translate-y-1 transition-transform duration-300" style={{ background: 'rgba(16,185,129,0.2)', border: '1px solid rgba(52,211,153,0.3)', boxShadow: '0 0 20px rgba(16,185,129,0.3)' }}>ðŸ‘¥</div>
+                    <div className="text-3xl font-black text-white mb-1">500+</div>
+                    <h3 className="text-lg font-extrabold text-white mb-2">Lives Reached</h3>
+                    <p className="text-sm leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500" style={{ color: 'rgba(148,163,184,0.9)' }}>Rigorous census of active beneficiaries in the pilot, ensuring sustained support month by month without exclusions.</p>
                   </div>
                 </div>
 
-                {/* 2. Alimentación y Entregas */}
-                <div className="group relative min-h-[26rem] md:min-h-[30rem] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500">
-                  <img src="/images/food.png" alt="Entrega de alimentos" className="absolute inset-0 w-full h-full object-cover transform opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="bg-amber-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
-                      📦
-                    </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Safe Nutrition</h3>
-                    <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Auditable record of high-quality food deliveries, preventing malnutrition and severe weakening.
-                    </p>
+                {/* 2 - Safe Nutrition */}
+                <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }}>
+                  <img src="/images/food.png" alt="Safe Nutrition" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(245,158,11,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
+                  <div className="absolute inset-0 p-7 flex flex-col justify-end">
+                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 transform group-hover:-translate-y-1 transition-transform duration-300" style={{ background: 'rgba(245,158,11,0.2)', border: '1px solid rgba(251,191,36,0.3)', boxShadow: '0 0 20px rgba(245,158,11,0.3)' }}>ðŸ“¦</div>
+                    <div className="text-3xl font-black text-white mb-1">2,400+</div>
+                    <h3 className="text-lg font-extrabold text-white mb-2">Safe Nutrition</h3>
+                    <p className="text-sm leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500" style={{ color: 'rgba(148,163,184,0.9)' }}>Auditable record of high-quality food deliveries, preventing malnutrition and severe weakening in our seniors.</p>
                   </div>
                 </div>
 
-                {/* 3. Kits de higiene */}
-                <div className="group relative min-h-[26rem] md:min-h-[30rem] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500">
-                  <img src="/images/hygiene.png" alt="Productos de higiene personal" className="absolute inset-0 w-full h-full object-cover transform opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
-                      🧼
-                    </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Dignity Kits</h3>
-                    <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Methodical distribution of personal hygiene items. Continuous grooming prevents infections and protects their dignity.
-                    </p>
+                {/* 3 - Dignity Kits */}
+                <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }}>
+                  <img src="/images/hygiene.png" alt="Dignity Kits" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(59,130,246,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
+                  <div className="absolute inset-0 p-7 flex flex-col justify-end">
+                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 transform group-hover:-translate-y-1 transition-transform duration-300" style={{ background: 'rgba(59,130,246,0.2)', border: '1px solid rgba(96,165,250,0.3)', boxShadow: '0 0 20px rgba(59,130,246,0.3)' }}>ðŸ§¼</div>
+                    <h3 className="text-lg font-extrabold text-white mb-2">Dignity Kits</h3>
+                    <p className="text-sm leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500" style={{ color: 'rgba(148,163,184,0.9)' }}>Personal hygiene kits to maintain health, well-being, and outward dignity with every distribution cycle.</p>
                   </div>
                 </div>
 
-                {/* 4. Apoyo a medicinas */}
-                <div className="group relative min-h-[26rem] md:min-h-[30rem] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500">
-                  <img src="/images/medicine.png" alt="Apoyo médico" className="absolute inset-0 w-full h-full object-cover transform opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="bg-rose-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
-                      💊
-                    </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Medical Continuity</h3>
-                    <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      We prevent the interruption of critical treatments by financially supporting the co-pay for their vital medicines.
-                    </p>
+                {/* 4 - Medical Continuity */}
+                <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }}>
+                  <img src="/images/medicine.png" alt="Medical Continuity" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(239,68,68,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
+                  <div className="absolute inset-0 p-7 flex flex-col justify-end">
+                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 transform group-hover:-translate-y-1 transition-transform duration-300" style={{ background: 'rgba(239,68,68,0.2)', border: '1px solid rgba(252,165,165,0.3)', boxShadow: '0 0 20px rgba(239,68,68,0.3)' }}>ðŸ’Š</div>
+                    <h3 className="text-lg font-extrabold text-white mb-2">Medical Continuity</h3>
+                    <p className="text-sm leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500" style={{ color: 'rgba(148,163,184,0.9)' }}>We prevent critical treatment interruptions by supporting co-pays for their vital medicines every month.</p>
                   </div>
                 </div>
 
-                {/* N U E V O ! 5. Cumpleaños Colectivos (Salud Mental) MEGA TARJETA */}
-                <div className="group relative min-h-[28rem] md:min-h-[34rem] rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 lg:col-span-2">
+                {/* 5 - Celebration of Life â€” WIDE card */}
+                <div className="group relative rounded-3xl overflow-hidden cursor-pointer lg:col-span-2" style={{ minHeight: '28rem' }}>
                   <ImageCarousel
                     images={[
-                      "https://images.unsplash.com/photo-1530103862676-de8892bc952f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                      "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                      "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      "https://images.unsplash.com/photo-1530103862676-de8892bc952f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                      "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                      "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                     ]}
-                    overlayTexts={[
-                      "Celebrating 80 Years!",
-                      "Surprise for Maria, 91 Years Old!",
-                      "You matter to us"
-                    ]}
+                    overlayTexts={["Celebrating 80 Years!", "Surprise â€” Maria, 91!", "You Matter To Us"]}
                     interval={4500}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.97) 0%, rgba(5,10,20,0.5) 50%, rgba(5,10,20,0.15) 100%)' }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(236,72,153,0.25) 0%, transparent 60%)' }} />
                   <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-end">
-                    <div className="flex items-center gap-4 mb-4 transform group-hover:-translate-y-1 transition-transform duration-300">
-                      <div className="bg-pink-500 text-white w-14 h-14 flex items-center justify-center rounded-2xl shadow-xl text-2xl">
-                        🎂
-                      </div>
-                      <span className="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full font-bold tracking-widest uppercase text-xs border border-pink-500/30">Active Mental Health</span>
+                    <div className="flex items-center gap-3 mb-4 transform group-hover:-translate-y-1 transition-transform duration-300">
+                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl" style={{ background: 'rgba(236,72,153,0.2)', border: '1px solid rgba(249,168,212,0.3)', boxShadow: '0 0 25px rgba(236,72,153,0.3)' }}>ðŸŽ‚</div>
+                      <span className="text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full" style={{ background: 'rgba(236,72,153,0.15)', color: '#f9a8d4', border: '1px solid rgba(236,72,153,0.25)' }}>Active Mental Health</span>
                     </div>
-                    <h3 className="text-white text-3xl sm:text-4xl font-extrabold mb-4">Celebration of Life</h3>
-                    <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
-                      <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-medium">
-                        We cut the chain of depression short by organizing monthly <strong>Collective Birthdays</strong>. We want them to know they will never blow out candles alone again, because they are not a burden: they are the greatest treasure of our community and deserve to smile every day.
-                      </p>
-                    </div>
+                    <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Celebration of Life</h3>
+                    <p className="text-sm sm:text-base leading-relaxed max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500" style={{ color: 'rgba(203,213,225,0.85)' }}>
+                      We cut the chain of depression short by organizing monthly <strong className="text-white">Collective Birthdays</strong>. We want them to know they will never blow out candles alone again â€” because they are not a burden, they are the greatest treasure of our community.
+                    </p>
                   </div>
                 </div>
 
-                {/* N U E V O ! 6. Días Festivos (Socialización) MEGA TARJETA */}
-                <div className="group relative min-h-[28rem] md:min-h-[34rem] rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 lg:col-span-2">
+                {/* 6 - Events & Holidays â€” WIDE card */}
+                <div className="group relative rounded-3xl overflow-hidden cursor-pointer lg:col-span-2" style={{ minHeight: '28rem' }}>
                   <ImageCarousel
                     images={[
                       "/images/festivo_1.png",
                       "/images/festivo_2.png",
                       "/images/festivo_3.png",
-                      "/images/festivo_4.png",
-                      "/images/festivo_5.png",
                       "/images/mothers_day_1.png",
                       "/images/mothers_day_2.png",
                       "/images/mothers_day_3.png"
                     ]}
-                    overlayTexts={[
-                      "Great Thanksgiving Dinner",
-                      "Creating Community Ties",
-                      "Beautiful Gatherings",
-                      "Unforgettable Dinners",
-                      "Celebrating Life",
-                      "Happy Mother's Day!",
-                      "A Mother, Our Treasure",
-                      "Roses, Love, and Joy"
-                    ]}
+                    overlayTexts={["Great Thanksgiving Dinner", "Creating Community Ties", "Unforgettable Gatherings", "Happy Mother's Day!", "A Mother, Our Treasure", "Roses, Love & Joy"]}
                     interval={4000}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.97) 0%, rgba(5,10,20,0.5) 50%, rgba(5,10,20,0.15) 100%)' }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(139,92,246,0.25) 0%, transparent 60%)' }} />
                   <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-end">
-                    <div className="flex items-center gap-4 mb-4 transform group-hover:-translate-y-1 transition-transform duration-300">
-                      <div className="bg-violet-500 text-white w-14 h-14 flex items-center justify-center rounded-2xl shadow-xl text-2xl">
-                        🎉
-                      </div>
+                    <div className="flex items-center gap-3 mb-4 transform group-hover:-translate-y-1 transition-transform duration-300">
+                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl" style={{ background: 'rgba(139,92,246,0.2)', border: '1px solid rgba(196,181,253,0.3)', boxShadow: '0 0 25px rgba(139,92,246,0.3)' }}>ðŸŽ‰</div>
                     </div>
-                    <h3 className="text-white text-3xl sm:text-4xl font-extrabold mb-4">Events and Holidays</h3>
-                    <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
-                      <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-medium">
-                        From Mother's and Father's Day to emotional Thanksgiving dinners. We foster beautiful physical spaces to laugh, create new friendships among neighbors, and aggressively combat cognitive decline caused by isolation.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 7. Bienestar Mapeado */}
-                <div className="group relative min-h-[26rem] md:min-h-[30rem] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500">
-                  <img src="/images/volunteer.png" alt="Bienestar Evaluado" className="absolute inset-0 w-full h-full object-cover transform opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="bg-teal-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
-                      📈
-                    </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Reported Wellness</h3>
-                    <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Short periodic self-reports to scientifically measure perceived human improvement and proactively adjust the program.
+                    <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Events &amp; Holidays</h3>
+                    <p className="text-sm sm:text-base leading-relaxed max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500" style={{ color: 'rgba(203,213,225,0.85)' }}>
+                      From Mother's and Father's Day to emotional Thanksgiving dinners â€” we foster deep community bonds that combat cognitive decline caused by isolation, one celebration at a time.
                     </p>
                   </div>
                 </div>
 
-                {/* 8. Voluntarios (Tejido humano) */}
-                <div className="group relative min-h-[26rem] md:min-h-[30rem] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500">
-                  <img src="/images/hero.png" alt="Comunidad unida" className="absolute inset-0 w-full h-full object-cover transform opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="bg-indigo-500 text-white w-12 h-12 flex items-center justify-center rounded-2xl mb-4 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300 text-xl">
-                      🤝
-                    </div>
-                    <h3 className="text-white text-2xl font-bold mb-3">Volunteer Network</h3>
-                    <p className="text-slate-300 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      Building a network of empathetic volunteers, measuring the enormous warm and human value they inject into each visit.
-                    </p>
+                {/* 7 - Reported Wellness */}
+                <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }}>
+                  <img src="/images/volunteer.png" alt="Reported Wellness" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(20,184,166,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
+                  <div className="absolute inset-0 p-7 flex flex-col justify-end">
+                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 transform group-hover:-translate-y-1 transition-transform duration-300" style={{ background: 'rgba(20,184,166,0.2)', border: '1px solid rgba(94,234,212,0.3)', boxShadow: '0 0 20px rgba(20,184,166,0.3)' }}>ðŸ“ˆ</div>
+                    <h3 className="text-lg font-extrabold text-white mb-2">Reported Wellness</h3>
+                    <p className="text-sm leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500" style={{ color: 'rgba(148,163,184,0.9)' }}>Periodic self-reports to scientifically measure perceived improvement and proactively adjust each program.</p>
+                  </div>
+                </div>
+
+                {/* 8 - Volunteer Network */}
+                <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }}>
+                  <img src="/images/donation.png" alt="Volunteer Network" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(99,102,241,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
+                  <div className="absolute inset-0 p-7 flex flex-col justify-end">
+                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 transform group-hover:-translate-y-1 transition-transform duration-300" style={{ background: 'rgba(99,102,241,0.2)', border: '1px solid rgba(165,180,252,0.3)', boxShadow: '0 0 20px rgba(99,102,241,0.3)' }}>ðŸ¤</div>
+                    <h3 className="text-lg font-extrabold text-white mb-2">Volunteer Network</h3>
+                    <p className="text-sm leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500" style={{ color: 'rgba(148,163,184,0.9)' }}>Building a network of empathetic volunteers, measuring the enormous human value they inject into each visit.</p>
                   </div>
                 </div>
 
               </div>
 
-              {/* CARD RESUMEN Y BOTÓN */}
-              <div className="mt-20 rounded-[2.5rem] border border-slate-200 bg-white p-8 sm:p-12 shadow-sm flex flex-col lg:flex-row items-center gap-12">
+              {/* Bottom CTA card */}
+              <div className="mt-14 rounded-3xl p-8 sm:p-12 flex flex-col lg:flex-row items-center gap-10" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.10)' }}>
                 <div className="flex-1">
-                  <div className="text-sm font-bold text-emerald-600 tracking-widest uppercase mb-3">
-                    Total Transparency
-                  </div>
-                  <h3 className="text-3xl font-extrabold text-slate-900 mb-5">
-                    Structure of the GYF Ecosystem
-                  </h3>
-                  <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                    Our social investment reports cross 3 fundamental axes: The <strong>Operational Reach</strong> (timely physical deliveries), the <strong>Quality of Life</strong> (nutrition and bodily health), and the differentiating factor, the <strong>Emotional Impact</strong> (reduction of loneliness and protection of social mental health).
+                  <div className="text-xs font-black uppercase tracking-widest mb-3" style={{ color: '#34d399' }}>Total Transparency</div>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">Structure of the GYF Ecosystem</h3>
+                  <p className="leading-relaxed mb-8" style={{ color: 'rgba(148,163,184,0.85)' }}>
+                    Our social investment reports cross 3 fundamental axes: <strong className="text-white">Operational Reach</strong>, <strong className="text-white">Quality of Life</strong>, and the differentiating factor, <strong className="text-white">Emotional Impact</strong> â€” reduction of loneliness and protection of mental health.
                   </p>
                   <div className="flex flex-wrap gap-4">
-                    <button
-                      onClick={() => handleOpenFormModal('alianza')}
-                      className="rounded-2xl bg-emerald-600 text-white px-8 py-4 text-lg font-bold hover:bg-emerald-700 transition shadow-lg hover:shadow-emerald-500/30"
-                    >
+                    <button onClick={() => handleOpenFormModal('alianza')} className="rounded-2xl px-7 py-3.5 text-base font-bold text-white transition-all duration-300 hover:brightness-110" style={{ background: 'linear-gradient(135deg, #059669, #0d9488)', boxShadow: '0 6px 25px rgba(16,185,129,0.35)' }}>
                       Request Audit Model
                     </button>
-                    <button
-                      onClick={() => handleOpenModal(50)}
-                      className="rounded-2xl bg-slate-900 text-white px-8 py-4 text-lg font-bold hover:bg-slate-800 transition shadow-lg"
-                    >
+                    <button onClick={() => handleOpenModal(50)} className="rounded-2xl px-7 py-3.5 text-base font-bold text-white transition-all duration-300" style={{ background: 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.2)' }}>
                       Make a Donation
                     </button>
                   </div>
                 </div>
-
-                {/* Decoración visual derecha */}
-                <div className="w-full lg:w-1/3 bg-slate-50 rounded-[2rem] p-8 border border-slate-100 shadow-inner">
-                  <div className="grid gap-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
-                      <span className="text-base font-bold text-slate-700">Reach: Physical Goals</span>
+                <div className="w-full lg:w-72 rounded-2xl p-7 grid gap-4" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  {[
+                    { color: '#34d399', glow: 'rgba(52,211,153,0.5)', label: 'Reach: Physical Goals' },
+                    { color: '#60a5fa', glow: 'rgba(96,165,250,0.5)', label: 'Quality: Medical Intervention' },
+                    { color: '#f472b6', glow: 'rgba(244,114,182,0.5)', label: 'Wellness: Mental Health' },
+                  ].map(item => (
+                    <div key={item.label} className="flex items-center gap-4">
+                      <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ background: item.color, boxShadow: `0 0 12px ${item.glow}` }} />
+                      <span className="text-sm font-bold text-white">{item.label}</span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                      <span className="text-base font-bold text-slate-700">Quality: Medical Intervention</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="w-3 h-3 rounded-full bg-pink-500 shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
-                      <span className="text-base font-bold text-slate-700">Wellness: Mental Health & Networks</span>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
             </div>
           </section>
+
+          {/* TESTIMONIALS â€” CHARITY EVENTS & SENIOR LIFE STORIES */}
+          <section id="testimonios" className="relative overflow-hidden border-t" style={{ background: 'linear-gradient(180deg, #080d1a 0%, #0a1220 50%, #070c18 100%)' }}>
+            <div className="absolute top-1/2 left-1/2 w-[900px] h-[500px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(251,191,36,0.07) 0%, transparent 70%)', transform: 'translate(-50%,-50%)' }} />
+
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 relative z-10">
+
+              {/* Section Header */}
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-black uppercase tracking-widest mb-6 border" style={{ background: 'rgba(251,191,36,0.10)', borderColor: 'rgba(251,191,36,0.25)', color: '#fbbf24' }}>
+                  â¤ï¸ Stories of Hope
+                </div>
+                <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-5">
+                  Lives changed.{' '}
+                  <span style={{ background: 'linear-gradient(90deg, #fbbf24, #f59e0b, #fcd34d)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                    Hope restored.
+                  </span>
+                </h2>
+                <p className="text-lg leading-relaxed" style={{ color: 'rgba(203,213,225,0.75)' }}>
+                  These are real voices from the seniors we serve â€” their words, their transformation, their renewed reason to live.
+                </p>
+              </div>
+
+              {/* Testimonial Grid â€” 8 cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+                {/* Card 1 */}
+                <div className="group rounded-3xl p-6 flex flex-col transition-all duration-500 hover:-translate-y-2 md:col-span-2" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(10px)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(251,191,36,0.3)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)'; }}
+                >
+                  <div className="h-52 rounded-2xl overflow-hidden mb-5 relative">
+                    <img src="/images/mothers_day_1.png" alt="Event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.6) 0%, transparent 60%)' }} />
+                    <div className="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(251,191,36,0.85)', color: '#0a0f1e' }}>ðŸŒ¹ Mother's Day Event</div>
+                  </div>
+                  <div className="text-amber-400 text-3xl mb-3 leading-none">"</div>
+                  <p className="text-sm sm:text-base leading-relaxed flex-1 italic" style={{ color: 'rgba(226,232,240,0.9)' }}>
+                    When they knocked on my door with flowers on Mother's Day, I hadn't left my apartment in three weeks. I thought no one remembered I existed. That hug from the volunteer changed everything. I started looking forward to mornings again, waiting to see who would visit me next. For the first time in years, I felt like someone's mother again â€” not just an old woman forgotten by the world.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center text-sm font-black text-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, #fbbf24, #f59e0b)' }}>MR</div>
+                    <div>
+                      <div className="text-sm font-bold text-white">MarÃ­a R., 81 years</div>
+                      <div className="text-xs" style={{ color: '#34d399' }}>Pilot Building Â· Miami-Dade</div>
+                    </div>
+                    <div className="ml-auto flex gap-0.5">{'â­â­â­â­â­'.split('').map((s, i) => <span key={i} className="text-amber-400 text-sm">{s}</span>)}</div>
+                  </div>
+                </div>
+
+                {/* Card 2 */}
+                <div className="group rounded-3xl p-6 flex flex-col transition-all duration-500 hover:-translate-y-2" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(10px)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(52,211,153,0.3)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
+                >
+                  <div className="h-40 rounded-2xl overflow-hidden mb-5 relative">
+                    <img src="/images/food.png" alt="Food program" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(16,185,129,0.85)', color: 'white' }}>ðŸ¥— Nutrition Program</div>
+                  </div>
+                  <div className="text-emerald-400 text-3xl mb-3 leading-none">"</div>
+                  <p className="text-sm leading-relaxed flex-1 italic" style={{ color: 'rgba(226,232,240,0.9)' }}>
+                    I used to skip meals to make my medication copay last. Since the foundation started bringing groceries, I no longer have to choose between eating and my heart medicine. I've gained back 8 pounds and my doctor says my labs are the best in five years. I feel like I have a future again.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center text-sm font-black text-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, #34d399, #059669)' }}>AG</div>
+                    <div>
+                      <div className="text-sm font-bold text-white">Alberto G., 76 years</div>
+                      <div className="text-xs" style={{ color: '#34d399' }}>Pilot Building Â· Miami-Dade</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="group rounded-3xl p-6 flex flex-col transition-all duration-500 hover:-translate-y-2" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(10px)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(139,92,246,0.35)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
+                >
+                  <div className="h-40 rounded-2xl overflow-hidden mb-5 relative">
+                    <img src="/images/festivo_3.png" alt="Holiday gathering" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(139,92,246,0.85)', color: 'white' }}>ðŸŽ‰ Thanksgiving</div>
+                  </div>
+                  <div className="text-violet-400 text-3xl mb-3 leading-none">"</div>
+                  <p className="text-sm leading-relaxed flex-1 italic" style={{ color: 'rgba(226,232,240,0.9)' }}>
+                    I had spent four Thanksgivings alone watching TV with a frozen dinner. At the foundation's dinner I laughed so much my cheeks hurt. I met DoÃ±a Carmen, now my best friend â€” we knock on each other's doors every morning. Loneliness was killing me silently. Not anymore.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center text-sm font-black text-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, #818cf8, #6366f1)' }}>JM</div>
+                    <div>
+                      <div className="text-sm font-bold text-white">JosÃ© M., 84 years</div>
+                      <div className="text-xs" style={{ color: '#34d399' }}>Pilot Building Â· Miami-Dade</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 4 */}
+                <div className="group rounded-3xl p-6 flex flex-col transition-all duration-500 hover:-translate-y-2" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(10px)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(251,191,36,0.3)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
+                >
+                  <div className="h-40 rounded-2xl overflow-hidden mb-5 relative">
+                    <img src="/images/hygiene.png" alt="Hygiene kits" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(251,191,36,0.85)', color: '#0a0f1e' }}>ðŸ§¼ Dignity Kits</div>
+                  </div>
+                  <div className="text-amber-400 text-3xl mb-3 leading-none">"</div>
+                  <p className="text-sm leading-relaxed flex-1 italic" style={{ color: 'rgba(226,232,240,0.9)' }}>
+                    At 88, arthritis makes it hard to shop. When they brought the hygiene kit to my door, I cried. Not from sadness â€” from gratitude. I feel clean, cared for, and dignified. My daughter lives far away and those small packages give me the same feeling as when she used to take care of me. Thank you from the bottom of my heart.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center text-sm font-black text-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, #fbbf24, #d97706)' }}>ER</div>
+                    <div>
+                      <div className="text-sm font-bold text-white">Elena R., 88 years</div>
+                      <div className="text-xs" style={{ color: '#34d399' }}>Pilot Building Â· Miami-Dade</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 5 */}
+                <div className="group rounded-3xl p-6 flex flex-col transition-all duration-500 hover:-translate-y-2" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(10px)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(52,211,153,0.3)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
+                >
+                  <div className="h-40 rounded-2xl overflow-hidden mb-5 relative">
+                    <img src="/images/medicine.png" alt="Medicine support" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(239,68,68,0.85)', color: 'white' }}>ðŸ’Š Medicine Support</div>
+                  </div>
+                  <div className="text-rose-400 text-3xl mb-3 leading-none">"</div>
+                  <p className="text-sm leading-relaxed flex-1 italic" style={{ color: 'rgba(226,232,240,0.9)' }}>
+                    My insulin was costing me $240 a month. I was rationing my doses â€” which my doctor told me was extremely dangerous. The foundation stepped in and covered the gap. Three months later my A1C dropped from 9.8 to 7.1. My doctor said it's like I have a personal advocate watching over me. I do â€” and I thank God for them every day.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center text-sm font-black text-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, #f87171, #dc2626)' }}>RP</div>
+                    <div>
+                      <div className="text-sm font-bold text-white">Rosa P., 73 years</div>
+                      <div className="text-xs" style={{ color: '#34d399' }}>Pilot Building Â· Miami-Dade</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 6 â€” wide */}
+                <div className="group rounded-3xl p-6 flex flex-col transition-all duration-500 hover:-translate-y-2 md:col-span-2" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(10px)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(244,114,182,0.3)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
+                >
+                  <div className="h-52 rounded-2xl overflow-hidden mb-5 relative">
+                    <img src="/images/festivo_1.png" alt="Birthday celebration" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.5) 0%, transparent 60%)' }} />
+                    <div className="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(236,72,153,0.85)', color: 'white' }}>ðŸŽ‚ Birthday Celebration</div>
+                  </div>
+                  <div className="text-pink-400 text-3xl mb-3 leading-none">"</div>
+                  <p className="text-sm sm:text-base leading-relaxed flex-1 italic" style={{ color: 'rgba(226,232,240,0.9)' }}>
+                    I turned 90 believing no one would notice. Then they knocked on my door with balloons, a cake, and ten neighbors I'd never properly spoken to. We sang, we told stories, we laughed until we cried. My doctor had told my son I was showing signs of early depression from isolation. After that birthday, something in me reignited. I started leaving my apartment daily. My son says I look 10 years younger. I tell him â€” I feel like I have a reason to be here again.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center text-sm font-black text-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, #f472b6, #db2777)' }}>CM</div>
+                    <div>
+                      <div className="text-sm font-bold text-white">Carmen M., 90 years</div>
+                      <div className="text-xs" style={{ color: '#34d399' }}>Pilot Building Â· Miami-Dade</div>
+                    </div>
+                    <div className="ml-auto flex gap-0.5">{'â­â­â­â­â­'.split('').map((s, i) => <span key={i} className="text-amber-400 text-sm">{s}</span>)}</div>
+                  </div>
+                </div>
+
+                {/* Card 7 */}
+                <div className="group rounded-3xl p-6 flex flex-col transition-all duration-500 hover:-translate-y-2" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(10px)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(20,184,166,0.35)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
+                >
+                  <div className="h-40 rounded-2xl overflow-hidden mb-5 relative">
+                    <img src="/images/volunteer.png" alt="Volunteers" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(20,184,166,0.85)', color: 'white' }}>ðŸ¤ Volunteer Visit</div>
+                  </div>
+                  <div className="text-teal-400 text-3xl mb-3 leading-none">"</div>
+                  <p className="text-sm leading-relaxed flex-1 italic" style={{ color: 'rgba(226,232,240,0.9)' }}>
+                    After my wife passed away, I stopped talking. Weeks went by without a single conversation. A volunteer named Carlos started visiting every Thursday. We play chess. We talk about baseball. Now I count the days to Thursday. He doesn't know it, but he saved my life. A man at 79 needs to feel he still matters.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center text-sm font-black text-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #0d9488)' }}>FG</div>
+                    <div>
+                      <div className="text-sm font-bold text-white">Fernando G., 79 years</div>
+                      <div className="text-xs" style={{ color: '#34d399' }}>Pilot Building Â· Miami-Dade</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 8 */}
+                <div className="group rounded-3xl p-6 flex flex-col transition-all duration-500 hover:-translate-y-2" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(10px)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(251,191,36,0.35)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
+                >
+                  <div className="h-40 rounded-2xl overflow-hidden mb-5 relative">
+                    <img src="/images/mothers_day_3.png" alt="Event joy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(251,191,36,0.85)', color: '#0a0f1e' }}>ðŸŒŸ Community Event</div>
+                  </div>
+                  <div className="text-amber-400 text-3xl mb-3 leading-none">"</div>
+                  <p className="text-sm leading-relaxed flex-1 italic" style={{ color: 'rgba(226,232,240,0.9)' }}>
+                    I immigrated to the US 40 years ago and worked my whole life. In my old age I ended up alone, not speaking much English, afraid to leave my floor. The Golden Years Foundation brought people to me. Now I have a community again â€” in my own building. I feel like a person again, not a forgotten relic. My will to live came back with every knock on my door.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center text-sm font-black text-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, #fbbf24, #b45309)' }}>LV</div>
+                    <div>
+                      <div className="text-sm font-bold text-white">Luz V., 82 years</div>
+                      <div className="text-xs" style={{ color: '#34d399' }}>Pilot Building Â· Miami-Dade</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Donate CTA under testimonials */}
+              <div className="mt-14 text-center">
+                <p className="text-lg mb-6" style={{ color: 'rgba(203,213,225,0.75)' }}>Your donation writes the next story of hope.</p>
+                <button onClick={() => handleOpenModal(50)} className="rounded-full px-10 py-4 text-lg font-black text-white transition-all duration-300 hover:-translate-y-1 hover:brightness-110" style={{ background: 'linear-gradient(135deg, #fbbf24, #f59e0b)', color: '#0a0f1e', boxShadow: '0 8px 40px rgba(251,191,36,0.4)' }}>
+                  â¤ï¸ Be Part of Their Story
+                </button>
+              </div>
+
+            </div>
+          </section>
+
 
           {/* PITCH DECK SECTION (THE PROBLEM) */}
           <section id="porque" className="bg-slate-900 text-white py-24 sm:py-32 relative overflow-hidden">
@@ -606,46 +783,46 @@ export default function App() {
               <div className="grid lg:grid-cols-3 gap-8">
                 <div className="bg-slate-800/50 border border-slate-700 rounded-[2rem] p-8 hover:bg-slate-800 transition duration-300">
                   <div className="h-12 w-12 rounded-xl bg-rose-500/20 flex items-center justify-center mb-6">
-                    <span className="text-2xl">💔</span>
+                    <span className="text-2xl">ðŸ’”</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Health Impact</h3>
                   <p className="text-slate-400 leading-relaxed mb-6">
                     Chronic isolation increases the risk of mortality by <strong className="text-white">26%</strong>, comparable to smoking 15 cigarettes a day. Malnutrition accelerates cognitive and physical decline.
                   </p>
                   <ul className="space-y-3 text-sm text-slate-300">
-                    <li className="flex items-center gap-2"><span className="text-rose-400">✗</span> Severe depression</li>
-                    <li className="flex items-center gap-2"><span className="text-rose-400">✗</span> Preventable malnourishment</li>
-                    <li className="flex items-center gap-2"><span className="text-rose-400">✗</span> Treatment abandonment</li>
+                    <li className="flex items-center gap-2"><span className="text-rose-400">âœ—</span> Severe depression</li>
+                    <li className="flex items-center gap-2"><span className="text-rose-400">âœ—</span> Preventable malnourishment</li>
+                    <li className="flex items-center gap-2"><span className="text-rose-400">âœ—</span> Treatment abandonment</li>
                   </ul>
                 </div>
 
                 <div className="bg-slate-800/50 border border-slate-700 rounded-[2rem] p-8 hover:bg-slate-800 transition duration-300">
                   <div className="h-12 w-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-6">
-                    <span className="text-2xl">📉</span>
+                    <span className="text-2xl">ðŸ“‰</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Economic Impact</h3>
                   <p className="text-slate-400 leading-relaxed mb-6">
                     Lack of prevention results in frequent emergency room visits and preventable hospitalizations, overwhelming the local health system with massive costs.
                   </p>
                   <ul className="space-y-3 text-sm text-slate-300">
-                    <li className="flex items-center gap-2"><span className="text-emerald-400">✓</span> Less unnecessary 911 calls</li>
-                    <li className="flex items-center gap-2"><span className="text-emerald-400">✓</span> Reduction in emergency admissions</li>
-                    <li className="flex items-center gap-2"><span className="text-emerald-400">✓</span> System decongestion</li>
+                    <li className="flex items-center gap-2"><span className="text-emerald-400">âœ“</span> Less unnecessary 911 calls</li>
+                    <li className="flex items-center gap-2"><span className="text-emerald-400">âœ“</span> Reduction in emergency admissions</li>
+                    <li className="flex items-center gap-2"><span className="text-emerald-400">âœ“</span> System decongestion</li>
                   </ul>
                 </div>
 
                 <div className="bg-slate-800/50 border border-slate-700 rounded-[2rem] p-8 hover:bg-slate-800 transition duration-300">
                   <div className="h-12 w-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6">
-                    <span className="text-2xl">🏚️</span>
+                    <span className="text-2xl">ðŸšï¸</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Social Fabric</h3>
                   <p className="text-slate-400 leading-relaxed mb-6">
                     A society that forgets those who built it loses its moral compass. The structural dissolution of community support leaves seniors invisible.
                   </p>
                   <ul className="space-y-3 text-sm text-slate-300">
-                    <li className="flex items-center gap-2"><span className="text-blue-400">✗</span> Invisible to the system</li>
-                    <li className="flex items-center gap-2"><span className="text-blue-400">✗</span> Loss of historical memory</li>
-                    <li className="flex items-center gap-2"><span className="text-blue-400">✗</span> Individualistic paradigm</li>
+                    <li className="flex items-center gap-2"><span className="text-blue-400">âœ—</span> Invisible to the system</li>
+                    <li className="flex items-center gap-2"><span className="text-blue-400">âœ—</span> Loss of historical memory</li>
+                    <li className="flex items-center gap-2"><span className="text-blue-400">âœ—</span> Individualistic paradigm</li>
                   </ul>
                 </div>
               </div>
@@ -656,14 +833,14 @@ export default function App() {
                 </div>
                 <div className="md:w-2/3 grid sm:grid-cols-2 gap-6">
                   <div className="flex gap-4">
-                    <div className="text-emerald-500 text-2xl">🎯</div>
+                    <div className="text-emerald-500 text-2xl">ðŸŽ¯</div>
                     <div>
                       <h4 className="font-bold text-white mb-1">Hyper-focus</h4>
                       <p className="text-sm text-slate-400">We don't get diluted. We concentrate on high-density buildings to maximize logistical ROI.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="text-emerald-500 text-2xl">📊</div>
+                    <div className="text-emerald-500 text-2xl">ðŸ“Š</div>
                     <div>
                       <h4 className="font-bold text-white mb-1">Traceability</h4>
                       <p className="text-sm text-slate-400">Every delivered box, every visit, every birthday is documented to ensure transparency.</p>
@@ -701,15 +878,15 @@ export default function App() {
                     <p className="mt-4 text-slate-600 leading-relaxed flex-1">{c.desc}</p>
                     <ul className="mt-6 space-y-3 text-sm text-slate-600 border-t pt-6">
                       <li className="flex gap-3 items-start">
-                        <span className="text-emerald-600 shrink-0">✓</span>
+                        <span className="text-emerald-600 shrink-0">âœ“</span>
                         <span>Periodic and organized deliveries</span>
                       </li>
                       <li className="flex gap-3 items-start">
-                        <span className="text-emerald-600 shrink-0">✓</span>
+                        <span className="text-emerald-600 shrink-0">âœ“</span>
                         <span>Focus on continuity and prevention</span>
                       </li>
                       <li className="flex gap-3 items-start">
-                        <span className="text-emerald-600 shrink-0">✓</span>
+                        <span className="text-emerald-600 shrink-0">âœ“</span>
                         <span>Simple and measurable tracking</span>
                       </li>
                     </ul>
@@ -862,7 +1039,7 @@ export default function App() {
               <div className="mt-12 grid md:grid-cols-3 gap-8">
                 <div className="rounded-3xl border bg-slate-50 p-8">
                   <div className="text-emerald-700 font-bold text-sm">Phase 1</div>
-                  <h3 className="mt-2 text-xl font-bold">Pilot (0–4 months)</h3>
+                  <h3 className="mt-2 text-xl font-bold">Pilot (0â€“4 months)</h3>
                   <p className="mt-4 text-slate-600">
                     In one building: identification, first deliveries, logistical validation, and baseline metrics.
                   </p>
@@ -870,7 +1047,7 @@ export default function App() {
 
                 <div className="rounded-3xl border bg-slate-50 p-8">
                   <div className="text-emerald-700 font-bold text-sm">Phase 2</div>
-                  <h3 className="mt-2 text-xl font-bold">Scaling (4–8 months)</h3>
+                  <h3 className="mt-2 text-xl font-bold">Scaling (4â€“8 months)</h3>
                   <p className="mt-4 text-slate-600">
                     Expansion to the second building with more operational capacity and partnerships.
                   </p>
@@ -878,7 +1055,7 @@ export default function App() {
 
                 <div className="rounded-3xl border bg-slate-50 p-8">
                   <div className="text-emerald-700 font-bold text-sm">Phase 3</div>
-                  <h3 className="mt-2 text-xl font-bold">Coverage (8–12 months)</h3>
+                  <h3 className="mt-2 text-xl font-bold">Coverage (8â€“12 months)</h3>
                   <p className="mt-4 text-slate-600">
                     Coverage of the 3 buildings and preparation for replication at the state level.
                   </p>
@@ -893,7 +1070,7 @@ export default function App() {
               <div>
                 <h2 className="text-3xl font-extrabold tracking-tight">Pilot Project</h2>
                 <p className="mt-4 text-lg text-slate-600">
-                  Initial phase: a residential building in Miami-Dade, providing coverage for 400–500 seniors
+                  Initial phase: a residential building in Miami-Dade, providing coverage for 400â€“500 seniors
                   living alone. We will mechanically measure monthly deliveries, needs, and wellness outcomes.
                 </p>
 
@@ -948,7 +1125,7 @@ export default function App() {
                 <div className="rounded-3xl border bg-slate-50 p-8">
                   <h3 className="text-xl font-bold">Building 1</h3>
                   <p className="mt-4 text-slate-600">
-                    400–500 residents. Pilot phase for implementation, logistics, and measurement.
+                    400â€“500 residents. Pilot phase for implementation, logistics, and measurement.
                   </p>
                 </div>
 
@@ -981,7 +1158,7 @@ export default function App() {
               {/* Emotional Hero Header */}
               <div className="text-center mb-20">
                 <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-bold mb-8 border" style={{ background: 'rgba(251,191,36,0.12)', borderColor: 'rgba(251,191,36,0.3)', color: '#fcd34d' }}>
-                  <span className="animate-pulse">⭐</span> Recurring Donation Program
+                  <span className="animate-pulse">â­</span> Recurring Donation Program
                 </div>
                 <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
                   Become a{' '}
@@ -995,9 +1172,9 @@ export default function App() {
                 {/* Emotional stats row */}
                 <div className="mt-10 flex flex-wrap justify-center gap-8">
                   {[
-                    { emoji: '🏠', value: '500+', label: 'Seniors reached' },
-                    { emoji: '📦', value: '2,400+', label: 'Deliveries made' },
-                    { emoji: '❤️', value: '100%', label: 'Commitment' },
+                    { emoji: 'ðŸ ', value: '500+', label: 'Seniors reached' },
+                    { emoji: 'ðŸ“¦', value: '2,400+', label: 'Deliveries made' },
+                    { emoji: 'â¤ï¸', value: '100%', label: 'Commitment' },
                   ].map(s => (
                     <div key={s.label} className="flex items-center gap-3">
                       <span className="text-2xl">{s.emoji}</span>
@@ -1019,7 +1196,7 @@ export default function App() {
                   onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.09)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.4)'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
-                  <div className="h-16 w-16 rounded-2xl flex items-center justify-center text-3xl mb-5" style={{ background: 'rgba(255,255,255,0.08)', boxShadow: '0 0 30px rgba(134,239,172,0.2)' }}>🌱</div>
+                  <div className="h-16 w-16 rounded-2xl flex items-center justify-center text-3xl mb-5" style={{ background: 'rgba(255,255,255,0.08)', boxShadow: '0 0 30px rgba(134,239,172,0.2)' }}>ðŸŒ±</div>
                   <h3 className="text-lg font-extrabold text-white">Seed of Support</h3>
                   <div className="mt-4 flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-black text-white">$15</span>
@@ -1037,7 +1214,7 @@ export default function App() {
                   onMouseEnter={e => { e.currentTarget.style.background = 'rgba(251,191,36,0.10)'; e.currentTarget.style.borderColor = 'rgba(251,191,36,0.3)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(251,191,36,0.15)'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
-                  <div className="h-16 w-16 rounded-2xl flex items-center justify-center text-3xl mb-5" style={{ background: 'rgba(251,191,36,0.12)', boxShadow: '0 0 30px rgba(251,191,36,0.25)' }}>🍲</div>
+                  <div className="h-16 w-16 rounded-2xl flex items-center justify-center text-3xl mb-5" style={{ background: 'rgba(251,191,36,0.12)', boxShadow: '0 0 30px rgba(251,191,36,0.25)' }}>ðŸ²</div>
                   <h3 className="text-lg font-extrabold text-white">Hot Meal</h3>
                   <div className="mt-4 flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-black" style={{ color: '#fbbf24' }}>$25</span>
@@ -1052,21 +1229,21 @@ export default function App() {
                   </button>
                 </div>
 
-                {/* Tier 3 - Comprehensive — FEATURED */}
+                {/* Tier 3 - Comprehensive â€” FEATURED */}
                 <div className="group relative rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-3 cursor-pointer lg:-translate-y-4"
                   style={{ background: 'linear-gradient(145deg, rgba(5,150,105,0.25), rgba(6,95,70,0.35))', border: '2px solid rgba(52,211,153,0.5)', backdropFilter: 'blur(10px)', boxShadow: '0 0 60px rgba(16,185,129,0.2), inset 0 1px 0 rgba(255,255,255,0.1)' }}
                 >
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-xs font-black uppercase tracking-widest" style={{ background: 'linear-gradient(90deg, #059669, #0d9488)', color: 'white', boxShadow: '0 4px 20px rgba(16,185,129,0.4)' }}>
-                    ✨ Key Impact
+                    âœ¨ Key Impact
                   </div>
-                  <div className="h-16 w-16 rounded-2xl flex items-center justify-center text-3xl mb-5" style={{ background: 'rgba(52,211,153,0.15)', boxShadow: '0 0 40px rgba(52,211,153,0.35)' }}>💚</div>
+                  <div className="h-16 w-16 rounded-2xl flex items-center justify-center text-3xl mb-5" style={{ background: 'rgba(52,211,153,0.15)', boxShadow: '0 0 40px rgba(52,211,153,0.35)' }}>ðŸ’š</div>
                   <h3 className="text-lg font-extrabold text-white">Comprehensive Care</h3>
                   <div className="mt-4 flex items-baseline justify-center gap-1">
                     <span className="text-5xl font-black" style={{ color: '#34d399', textShadow: '0 0 30px rgba(52,211,153,0.5)' }}>$50</span>
                     <span className="text-sm font-semibold" style={{ color: 'rgba(148,163,184,0.7)' }}>/mo</span>
                   </div>
                   <div className="mt-2 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(52,211,153,0.2)', color: '#6ee7b7' }}>Food + Hygiene</div>
-                  <p className="mt-3 text-xs leading-relaxed" style={{ color: 'rgba(203,213,225,0.8)' }}>Complete protection — nutrition and personal dignity, delivered together monthly.</p>
+                  <p className="mt-3 text-xs leading-relaxed" style={{ color: 'rgba(203,213,225,0.8)' }}>Complete protection â€” nutrition and personal dignity, delivered together monthly.</p>
                   <button onClick={() => handleOpenModal(50)} className="mt-7 w-full rounded-2xl py-3.5 text-sm font-black text-white transition-all duration-300 hover:brightness-110 hover:scale-105" style={{ background: 'linear-gradient(135deg, #059669, #0d9488)', boxShadow: '0 8px 30px rgba(16,185,129,0.4)' }}>
                     Join with $50
                   </button>
@@ -1078,14 +1255,14 @@ export default function App() {
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(251,191,36,0.5)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(251,191,36,0.2)'; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(251,191,36,0.25)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
-                  <div className="h-16 w-16 rounded-2xl flex items-center justify-center text-3xl mb-5" style={{ background: 'rgba(251,191,36,0.12)', boxShadow: '0 0 40px rgba(251,191,36,0.35)' }}>👑</div>
+                  <div className="h-16 w-16 rounded-2xl flex items-center justify-center text-3xl mb-5" style={{ background: 'rgba(251,191,36,0.12)', boxShadow: '0 0 40px rgba(251,191,36,0.35)' }}>ðŸ‘‘</div>
                   <h3 className="text-lg font-extrabold text-white">Sponsoring Guardian</h3>
                   <div className="mt-4 flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-black" style={{ color: '#fbbf24', textShadow: '0 0 25px rgba(251,191,36,0.5)' }}>$100</span>
                     <span className="text-sm font-semibold" style={{ color: 'rgba(148,163,184,0.7)' }}>/mo</span>
                   </div>
                   <div className="mt-2 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(251,191,36,0.15)', color: '#fcd34d' }}>Sponsor 1 Senior</div>
-                  <p className="mt-3 text-xs leading-relaxed" style={{ color: 'rgba(148,163,184,0.8)' }}>Your name becomes their shield — full monthly coverage for one real person.</p>
+                  <p className="mt-3 text-xs leading-relaxed" style={{ color: 'rgba(148,163,184,0.8)' }}>Your name becomes their shield â€” full monthly coverage for one real person.</p>
                   <button onClick={() => handleOpenModal(100)} className="mt-7 w-full rounded-2xl py-3 text-sm font-black text-slate-900 transition-all duration-300 hover:brightness-110" style={{ background: 'linear-gradient(135deg, #fbbf24, #f59e0b)', boxShadow: '0 8px 30px rgba(251,191,36,0.35)' }}>
                     Become a Guardian
                   </button>
@@ -1097,7 +1274,7 @@ export default function App() {
               <div className="mt-24">
                 <div className="text-center mb-12">
                   <h3 className="text-3xl font-extrabold text-white">Choose another way to support</h3>
-                  <p className="mt-3 text-sm" style={{ color: 'rgba(148,163,184,0.7)' }}>Every contribution — big or small — creates real impact.</p>
+                  <p className="mt-3 text-sm" style={{ color: 'rgba(148,163,184,0.7)' }}>Every contribution â€” big or small â€” creates real impact.</p>
                 </div>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {supportCards.map((c) => (
@@ -1130,7 +1307,7 @@ export default function App() {
                             className="w-full inline-flex items-center justify-center rounded-2xl py-3 text-sm font-bold text-white transition-all duration-300 hover:brightness-110"
                             style={{ background: 'linear-gradient(135deg, #059669, #0d9488)', boxShadow: '0 4px 20px rgba(16,185,129,0.3)' }}
                           >
-                            Apply / Register →
+                            Apply / Register â†’
                           </button>
                         </div>
                       </div>
@@ -1141,9 +1318,9 @@ export default function App() {
 
               {/* PAYMENT NOTICE */}
               <div className="mt-14 rounded-3xl p-8 flex flex-col sm:flex-row gap-6 items-center text-center sm:text-left" style={{ background: 'rgba(251,191,36,0.08)', border: '1px solid rgba(251,191,36,0.2)' }}>
-                <div className="text-4xl flex-shrink-0">💳</div>
+                <div className="text-4xl flex-shrink-0">ðŸ’³</div>
                 <div>
-                  <div className="text-sm font-bold text-white">Donate Now — Online payments coming soon</div>
+                  <div className="text-sm font-bold text-white">Donate Now â€” Online payments coming soon</div>
                   <p className="mt-2 text-sm" style={{ color: 'rgba(148,163,184,0.8)' }}>
                     We are integrating Stripe, PayPal, and Zelle. In the meantime, fill out the form and we will contact you immediately to process your donation.
                   </p>
@@ -1165,13 +1342,13 @@ export default function App() {
 
                 <div className="mt-8 grid gap-4 text-slate-700">
                   <div className="rounded-2xl bg-slate-50 p-4">
-                    <div className="text-sm font-semibold">📍 Miami-Dade County, Florida</div>
+                    <div className="text-sm font-semibold">ðŸ“ Miami-Dade County, Florida</div>
                     <div className="text-sm text-slate-600 mt-1">
                       Pilot project and expansion to three buildings.
                     </div>
                   </div>
                   <div className="rounded-2xl bg-slate-50 p-4">
-                    <div className="text-sm font-semibold">💬 WhatsApp</div>
+                    <div className="text-sm font-semibold">ðŸ’¬ WhatsApp</div>
                     <div className="text-sm text-slate-600 mt-1">
                       Use the floating button to write to us directly.
                     </div>
@@ -1209,7 +1386,7 @@ export default function App() {
                     <span className="text-sm font-semibold">Message</span>
                     <textarea
                       className="border rounded-2xl px-4 py-3 min-h-[140px] outline-none focus:ring-2 focus:ring-emerald-200"
-                      placeholder="Tell us if you want to donate, support the pilot, or talk about grants…"
+                      placeholder="Tell us if you want to donate, support the pilot, or talk about grantsâ€¦"
                     />
                   </label>
 
@@ -1218,7 +1395,7 @@ export default function App() {
                   </button>
 
                   <p className="text-xs text-slate-500">
-                    © {new Date().getFullYear()} The Golden Years Foundation • 501(c)(3).
+                    Â© {new Date().getFullYear()} The Golden Years Foundation â€¢ 501(c)(3).
                   </p>
                 </form>
               </div>
@@ -1230,7 +1407,7 @@ export default function App() {
         <footer className="border-t bg-slate-900 text-white">
           <div className="mx-auto max-w-6xl px-4 py-10 text-sm flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
             <p className="m-0">
-              © {new Date().getFullYear()} The Golden Years Foundation · 501(c)(3)
+              Â© {new Date().getFullYear()} The Golden Years Foundation Â· 501(c)(3)
             </p>
             <div className="flex gap-4 text-white/80">
               <a href="#inicio" className="hover:text-white">
@@ -1322,25 +1499,25 @@ export default function App() {
                     onClick={() => alert('Thank you for your interest! We will soon activate Stripe Checkout for card payments.')}
                     className="w-full flex items-center justify-center gap-3 bg-slate-900 text-white hover:bg-slate-800 rounded-2xl py-4 font-semibold shadow-sm transition group"
                   >
-                    <span className="text-xl group-hover:scale-110 transition">💳</span> Credit / Debit Card
+                    <span className="text-xl group-hover:scale-110 transition">ðŸ’³</span> Credit / Debit Card
                   </button>
                   <button
                     onClick={() => alert('Thank you for your interest! We will soon activate PayPal Checkout.')}
                     className="w-full flex items-center justify-center gap-3 bg-[#0070BA] text-white hover:bg-[#003087] rounded-2xl py-4 font-semibold shadow-sm transition group"
                   >
-                    <span className="text-xl group-hover:scale-110 transition">🅿️</span> PayPal
+                    <span className="text-xl group-hover:scale-110 transition">ðŸ…¿ï¸</span> PayPal
                   </button>
                   <button
                     onClick={() => alert('Payments with Zelle. Currently please send us a WhatsApp to give you the correct email/phone of the real 501(c)(3) account. (Close this window to go to contact)')}
                     className="w-full flex items-center justify-center gap-3 bg-[#6329A8] text-white hover:bg-[#4E2184] rounded-2xl py-4 font-semibold shadow-sm transition group"
                   >
-                    <span className="text-xl group-hover:scale-110 transition">💸</span> Zelle
+                    <span className="text-xl group-hover:scale-110 transition">ðŸ’¸</span> Zelle
                   </button>
                 </div>
               </div>
 
               <p className="mt-6 text-center flex items-center justify-center gap-1 text-xs text-slate-500 font-medium">
-                🔒 100% tax-deductible donation (501c3)
+                ðŸ”’ 100% tax-deductible donation (501c3)
               </p>
             </div>
           </div>
@@ -1357,9 +1534,9 @@ export default function App() {
                 'bg-emerald-50 rounded-t-3xl border-emerald-100'
               }`}>
               <h3 className="text-xl font-extrabold text-slate-900 flex items-center gap-2">
-                {formModalType === "donacion_especie" && "❤️ In-Kind Donation Registration"}
-                {formModalType === "voluntariado" && "🤝 Volunteer Interview"}
-                {formModalType === "alianza" && "🏢 Institutional Partnership Request"}
+                {formModalType === "donacion_especie" && "â¤ï¸ In-Kind Donation Registration"}
+                {formModalType === "voluntariado" && "ðŸ¤ Volunteer Interview"}
+                {formModalType === "alianza" && "ðŸ¢ Institutional Partnership Request"}
               </h3>
               <button
                 onClick={handleCloseFormModal}

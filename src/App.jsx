@@ -194,92 +194,145 @@ export default function App() {
         </header>
 
         <main>
-          {/* INICIO */}
-          <section id="inicio" className="bg-gradient-to-b from-slate-50 to-white overflow-hidden pb-12 pt-8">
-            <div className="mx-auto max-w-[90rem] px-4 py-8 sm:py-16 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          {/* HERO — CINEMATIC FULL-SCREEN */}
+          <section id="inicio" className="relative min-h-screen overflow-hidden flex flex-col">
 
-              {/* TEXTO Y LLAMADOS A LA ACCIÓN */}
-              <div className="lg:col-span-5 order-2 lg:order-1">
-                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-800 shadow-sm">
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse shadow" />
-                  501(c)(3) • Embracing Miami-Dade
+            {/* === BACKGROUND: Rotating image carousel === */}
+            <div className="absolute inset-0 z-0">
+              <ImageCarousel
+                images={[
+                  "/images/hero.png",
+                  "/images/mothers_day_1.png",
+                  "/images/festivo_1.png",
+                  "/images/mothers_day_3.png",
+                  "/images/festivo_3.png"
+                ]}
+                overlayTexts={[]}
+                interval={5000}
+              />
+              {/* Deep cinematic overlay — dark bottom, lighter on top */}
+              <div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(180deg, rgba(5,10,20,0.65) 0%, rgba(5,10,20,0.50) 40%, rgba(5,10,20,0.75) 70%, rgba(5,10,20,0.95) 100%)' }} />
+              {/* Emerald left glow accent */}
+              <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full pointer-events-none z-10" style={{ background: 'radial-gradient(circle, rgba(16,185,129,0.18) 0%, transparent 65%)', transform: 'translate(-30%, 30%)' }} />
+              {/* Gold right glow accent */}
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none z-10" style={{ background: 'radial-gradient(circle, rgba(251,191,36,0.10) 0%, transparent 65%)', transform: 'translate(30%, -30%)' }} />
+            </div>
+
+            {/* === CONTENT === */}
+            <div className="relative z-20 flex flex-col min-h-screen">
+
+              {/* Narrow top badge */}
+              <div className="flex justify-center pt-12 sm:pt-16">
+                <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-bold border" style={{ background: 'rgba(255,255,255,0.08)', borderColor: 'rgba(255,255,255,0.18)', backdropFilter: 'blur(12px)', color: 'rgba(255,255,255,0.85)' }}>
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  501(c)(3) Nonprofit · Embracing Miami-Dade, FL
                 </div>
+              </div>
 
-                <h1 className="mt-8 text-5xl sm:text-6xl md:text-[4rem] font-extrabold leading-[1.1] tracking-tight text-slate-900">
-                  Rescuing from oblivion the generation that gave it <span className="text-emerald-600 underline decoration-emerald-300 decoration-8 underline-offset-4">all.</span>
-                </h1>
+              {/* Main content — centered */}
+              <div className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-8 py-12">
 
-                <p className="mt-8 text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
-                  The Golden Years Foundation goes far beyond delivering a box of food. <strong className="text-slate-900">We rescue our seniors from loneliness, isolation, and depression.</strong> Through continuous physical support and emotional care, we transform gray homes into spaces of celebration, dignity, and true joy.
+                {/* Tagline */}
+                <p className="text-xs sm:text-sm font-black uppercase tracking-[0.35em] mb-6" style={{ color: '#34d399', letterSpacing: '0.3em' }}>
+                  The Golden Years Foundation
                 </p>
 
-                <div className="mt-10 flex flex-wrap gap-4">
+                {/* MAIN HEADLINE */}
+                <h1 className="max-w-5xl text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-white">
+                  Rescuing from oblivion{' '}
+                  <br className="hidden sm:block" />
+                  the generation that{' '}
+                  <span style={{ background: 'linear-gradient(90deg, #34d399 0%, #2dd4bf 50%, #fbbf24 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                    gave it all.
+                  </span>
+                </h1>
+
+                {/* Subheadline */}
+                <p className="mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed" style={{ color: 'rgba(203,213,225,0.85)' }}>
+                  We rescue our seniors from <strong className="text-white">loneliness, isolation, and depression</strong>. Through food, medicine, dignity, and love — we transform gray homes into spaces of celebration and true joy.
+                </p>
+
+                {/* CTA Buttons */}
+                <div className="mt-10 flex flex-wrap gap-4 justify-center">
                   <button
                     onClick={() => handleOpenModal(50)}
-                    className="rounded-full bg-emerald-600 text-white px-8 py-4 text-lg font-bold shadow-xl shadow-emerald-600/30 hover:shadow-2xl hover:bg-emerald-700 hover:-translate-y-1 transition-all duration-300"
+                    className="group relative rounded-full px-9 py-4 text-base sm:text-lg font-black text-white transition-all duration-300 hover:-translate-y-1 hover:brightness-110"
+                    style={{ background: 'linear-gradient(135deg, #059669 0%, #0d9488 100%)', boxShadow: '0 8px 40px rgba(16,185,129,0.45), 0 0 0 1px rgba(52,211,153,0.3)' }}
                   >
-                    ❤️ I Want to Give Them Their Smile Back
+                    <span className="flex items-center gap-2">
+                      <span>❤️</span>
+                      Give Them Their Smile Back
+                    </span>
                   </button>
+
                   <a
                     href="#impacto"
-                    className="rounded-full border-2 border-slate-200 bg-white px-8 py-4 text-lg font-bold text-slate-700 hover:border-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 transition-all duration-300"
+                    className="rounded-full px-9 py-4 text-base sm:text-lg font-bold transition-all duration-300 hover:-translate-y-1"
+                    style={{ background: 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.25)', color: 'white', backdropFilter: 'blur(8px)' }}
+                    onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.18)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.10)'; }}
                   >
-                    View Our Plan
+                    See Our Impact →
                   </a>
                 </div>
 
-                <div className="mt-12 grid gap-4 text-base sm:text-lg text-slate-700 font-semibold bg-slate-50 p-6 sm:p-8 rounded-[2rem] border border-slate-200 shadow-inner">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white p-2 text-emerald-600 rounded-xl shadow-sm"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg></div>
-                    <span>Food Dignity and Medical Care</span>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white p-2 text-emerald-600 rounded-xl shadow-sm"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg></div>
-                    <span>Mental Health, Birthdays, and Holidays</span>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white p-2 text-emerald-600 rounded-xl shadow-sm"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg></div>
-                    <span>Transparency and Wellness Evaluations</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* IMAGEN GIGANTE ROTATIVA (CARRUSEL) */}
-              <div className="lg:col-span-7 relative order-1 lg:order-2 perspective-1000">
-                <div className="absolute -inset-10 bg-emerald-600/15 blur-[80px] rounded-[5rem]" />
-                <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[1.4/1] rounded-[3rem] overflow-hidden shadow-2xl border-[10px] border-white group transform transition-transform duration-700 hover:rotate-1">
-
-                  <ImageCarousel
-                    images={[
-                      "/images/hero.png",
-                      "/images/mothers_day_1.png",
-                      "/images/festivo_1.png",
-                      "/images/volunteer.png",
-                      "/images/festivo_3.png"
-                    ]}
-                    overlayTexts={[
-                      "Fostering Unbreakable Bonds",
-                      "Our Mothers, Our Treasure",
-                      "The Family We Choose",
-                      "Generations United",
-                      "Contagious Joy"
-                    ]}
-                    interval={4500}
-                  />
-
-                  {/* Gradiente Oscuro de Fondo para el Texto Quote */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent flex flex-col justify-end p-8 sm:p-12 z-10 pointer-events-none">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="h-3 w-3 rounded-full bg-rose-500 animate-pulse shadow-lg shadow-rose-500/50" />
-                      <span className="text-rose-300 text-sm sm:text-base font-black tracking-[0.2em] uppercase">Emotional Mission</span>
+                {/* Floating mini impact stats */}
+                <div className="mt-14 flex flex-wrap justify-center gap-6 sm:gap-10">
+                  {[
+                    { emoji: '🏠', value: '500+', label: 'Seniors Reached' },
+                    { emoji: '📦', value: '2,400+', label: 'Deliveries Made' },
+                    { emoji: '🏙️', value: '3', label: 'Buildings' },
+                    { emoji: '💚', value: '100%', label: 'Commitment' },
+                  ].map(s => (
+                    <div key={s.label} className="flex items-center gap-3 rounded-2xl px-4 py-3" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(10px)' }}>
+                      <span className="text-xl">{s.emoji}</span>
+                      <div className="text-left">
+                        <div className="text-lg font-black text-white leading-none">{s.value}</div>
+                        <div className="text-xs mt-0.5" style={{ color: 'rgba(148,163,184,0.8)' }}>{s.label}</div>
+                      </div>
                     </div>
-                    <p className="text-white text-2xl sm:text-4xl font-extrabold leading-tight shadow-sm max-w-2xl italic">
-                      «Our masterpiece is not built with handouts, it is built with pure love, empathy, and human hope.»
-                    </p>
-                  </div>
+                  ))}
+                </div>
 
+              </div>
+
+              {/* Bottom: What we provide — pill tags */}
+              <div className="pb-10 sm:pb-14 flex justify-center px-4">
+                <div className="flex flex-wrap justify-center gap-3 max-w-2xl">
+                  {[
+                    { icon: '🥗', label: 'Food Dignity' },
+                    { icon: '💊', label: 'Medical Care' },
+                    { icon: '🧼', label: 'Hygiene Kits' },
+                    { icon: '🎂', label: 'Birthdays & Holidays' },
+                    { icon: '📊', label: 'Full Transparency' },
+                  ].map(tag => (
+                    <span key={tag.label} className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-semibold" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.14)', color: 'rgba(226,232,240,0.85)', backdropFilter: 'blur(8px)' }}>
+                      <span>{tag.icon}</span> {tag.label}
+                    </span>
+                  ))}
                 </div>
               </div>
+
+              {/* Floating Quote Card — bottom right */}
+              <div className="absolute bottom-14 right-6 sm:right-12 max-w-xs rounded-3xl p-5 hidden lg:block" style={{ background: 'rgba(255,255,255,0.09)', border: '1px solid rgba(255,255,255,0.18)', backdropFilter: 'blur(20px)', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}>
+                <div className="text-amber-400 mb-3" style={{ fontSize: '28px', lineHeight: 1 }}>"</div>
+                <p className="text-sm font-semibold text-white leading-snug italic">
+                  Our masterpiece is not built with handouts, it is built with pure love, empathy, and human hope.
+                </p>
+                <div className="mt-4 flex items-center gap-2 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}>
+                  <div className="h-8 w-8 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: 'linear-gradient(135deg, #059669, #0d9488)' }}>GYF</div>
+                  <div>
+                    <div className="text-xs font-bold text-white">Emotional Mission</div>
+                    <div className="text-xs" style={{ color: '#34d399' }}>The Foundation</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Scroll indicator */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce" style={{ color: 'rgba(148,163,184,0.6)' }}>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </div>
+
             </div>
           </section>
 

@@ -39,8 +39,9 @@ export default function App() {
   const handleOpenFormModal = (type) => setFormModalType(type);
   const handleCloseFormModal = () => setFormModalType(null);
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (e, overrideType = null) => {
     e.preventDefault();
+    const type = overrideType || formModalType;
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
@@ -48,12 +49,13 @@ export default function App() {
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: formModalType, data }),
+        body: JSON.stringify({ type: type, data }),
       });
 
       if (response.ok) {
         alert("¡Gracias! Hemos recibido tu información exitosamente. Nos pondremos en contacto contigo muy pronto.");
-        handleCloseFormModal();
+        if (!overrideType) handleCloseFormModal();
+        e.target.reset(); // Clear common form
       } else {
         alert("Hubo un error al enviar la información. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.");
       }
@@ -82,7 +84,7 @@ export default function App() {
           <Pilot onDonateClick={handleOpenModal} />
           <Expansion />
           <DonationSection onDonateClick={handleOpenModal} onFormModalOpen={handleOpenFormModal} />
-          <Contact />
+          <Contact onSubmit={handleFormSubmit} />
         </main>
 
         <Footer onDonateClick={handleOpenModal} />

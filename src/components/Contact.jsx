@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Contact() {
+export default function Contact({ onSubmit }) {
   return (
     <section id="contacto" className="border-t bg-white">
       <div className="mx-auto max-w-6xl px-4 py-20 grid lg:grid-cols-2 gap-12">
@@ -35,15 +35,14 @@ export default function Contact() {
 
         <div className="rounded-3xl border bg-white p-8 shadow-sm">
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thank you! We received your message. (Later we will connect the form.)");
-            }}
+            onSubmit={(e) => onSubmit(e, 'contacto')}
             className="grid gap-4"
           >
             <label className="grid gap-2">
               <span className="text-sm font-semibold">Name</span>
               <input
+                name="name"
+                required
                 className="border rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200"
                 placeholder="Your name"
               />
@@ -52,6 +51,8 @@ export default function Contact() {
             <label className="grid gap-2">
               <span className="text-sm font-semibold">Phone or email</span>
               <input
+                name="contact"
+                required
                 className="border rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200"
                 placeholder="How to contact you"
               />
@@ -60,6 +61,8 @@ export default function Contact() {
             <label className="grid gap-2">
               <span className="text-sm font-semibold">Message</span>
               <textarea
+                name="message"
+                required
                 className="border rounded-2xl px-4 py-3 min-h-[140px] outline-none focus:ring-2 focus:ring-emerald-200"
                 placeholder="Tell us if you want to donate, support the pilot, or talk about grants…"
               />

@@ -13,6 +13,9 @@ export default function PaymentModal({
 }) {
   const [paymentMethod, setPaymentMethod] = useState(null); // 'card', 'paypal', 'zelle'
   const [isRecurring, setIsRecurring] = useState(true);
+  const [donorName, setDonorName] = useState('');
+  const [donorEmail, setDonorEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!isOpen) return null;
 
@@ -20,6 +23,39 @@ export default function PaymentModal({
   const foundationEmail = whatsappInfo.email;
 
   const handleBack = () => setPaymentMethod(null);
+
+  const handleNotifyDonation = async (method) => {
+    if (!donorName || !donorEmail) {
+      alert("Por favor, ingresa tu nombre y correo para identificarte con la causa.");
+      return false;
+    }
+    
+    setIsSubmitting(true);
+    const amount = isCustomAmount ? customAmountValue : selectedAmount;
+    
+    try {
+      await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'donacion_dinero',
+          data: {
+            name: donorName,
+            email: donorEmail,
+            amount: `${amount} USD`,
+            recurring: isRecurring ? 'Monthly' : 'One-time',
+            method: method.charAt(0).toUpperCase() + method.slice(1)
+          }
+        }),
+      });
+      return true;
+    } catch (error) {
+      console.error('Error sending donation notification:', error);
+      return true; // Still allow them to see the payment info even if email fails
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4 overflow-y-auto w-full h-full bg-slate-900/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
@@ -53,13 +89,13 @@ export default function PaymentModal({
         {/* Modal Body */}
         <div className="p-6 overflow-y-auto flex-1">
           {!paymentMethod ? (
-            <>
-              <p className="text-sm text-slate-600 font-medium mb-4">
+            <div className="grid gap-4">
+              <p className="text-sm text-slate-600 font-medium mb-1">
                 Choose a donation level to become a <span className="text-amber-500 font-bold">Golden Guardian</span>:
               </p>
 
               {/* Amount Selector */}
-              <div className="grid grid-cols-4 gap-2 mb-3">
+              <div className="grid grid-cols-4 gap-2">
                 {amounts.map((amount) => (
                   <button
                     key={amount}
@@ -67,7 +103,7 @@ export default function PaymentModal({
                       setSelectedAmount(amount);
                       setIsCustomAmount(false);
                     }}
-                    className={`py-3 rounded-2xl font-bold transition flex items-center justify-center text-sm md:text-base ${selectedAmount === amount && !isCustomAmount
+                    className={`py-3 rounded-2xl font-bold transition flex items-center justify-center text-sm ${selectedAmount === amount && !isCustomAmount
                       ? "bg-emerald-600 text-white shadow-md"
                       : "bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200"
                       }`}
@@ -77,10 +113,10 @@ export default function PaymentModal({
                 ))}
               </div>
 
-              <div className="mb-6">
+              <div className="mb-2">
                 <button
                   onClick={() => setIsCustomAmount(true)}
-                  className={`w-full py-3 rounded-2xl font-bold transition flex items-center justify-center text-sm md:text-base ${isCustomAmount
+                  className={`w-full py-3 rounded-2xl font-bold transition flex items-center justify-center text-sm ${isCustomAmount
                     ? "bg-emerald-600 text-white shadow-md relative"
                     : "bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200"
                     }`}
@@ -102,7 +138,7 @@ export default function PaymentModal({
               </div>
 
               {/* Recurring Switch */}
-              <div className="flex items-center justify-between p-4 rounded-2xl bg-emerald-50 border border-emerald-100 mb-8">
+              <div className="flex items-center justify-between p-4 rounded-2xl bg-emerald-50 border border-emerald-100 mb-2">
                 <div>
                   <div className="font-bold text-slate-900 text-sm">Monthly Donation</div>
                   <div className="text-xs text-slate-600">Automate your kindness every month</div>
@@ -117,31 +153,76 @@ export default function PaymentModal({
                 </button>
               </div>
 
+              {/* Donor Info */}
+              <div className="grid gap-3 border-t pt-4 mt-2">
+                <div className="text-xs font-bold text-slate-500 uppercase">Your Information</div>
+                <label className="grid gap-1">
+                  <span className="text-[10px] font-bold text-slate-400 uppercase ml-1">Full Name</span>
+                  <input 
+                    type="text" 
+                    value={donorName}
+                    onChange={(e) => setDonorName(e.target.value)}
+                    placeholder="Ex: Maria Gomez"
+                    className="border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200 transition-all text-sm"
+                  />
+                </label>
+                <label className="grid gap-1">
+                  <span className="text-[10px] font-bold text-slate-400 uppercase ml-1">Email Address</span>
+                  <input 
+                    type="email" 
+                    value={donorEmail}
+                    onChange={(e) => setDonorEmail(e.target.value)}
+                    placeholder="maria@email.com"
+                    className="border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200 transition-all text-sm"
+                  />
+                </label>
+              </div>
+
               {/* Payment Methods */}
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-slate-900 mb-2 text-center">
-                  Select payment method:
-                </p>
+              <div className="grid gap-2 border-t pt-4 mt-2">
+                <div className="text-xs font-bold text-slate-500 uppercase mb-1">Select Payment Method</div>
                 <button
-                  onClick={() => setPaymentMethod('card')}
+                  onClick={() => {
+                    if (!donorName || !donorEmail) {
+                      alert("Por favor, ingresa tu nombre y correo para continuar.");
+                      return;
+                    }
+                    setPaymentMethod('card');
+                  }}
                   className="w-full flex items-center justify-center gap-3 bg-slate-900 text-white hover:bg-slate-800 rounded-2xl py-4 font-semibold shadow-sm transition group"
                 >
                   <span className="text-xl group-hover:scale-110 transition">💳</span> Credit / Debit Card
                 </button>
                 <button
-                  onClick={() => setPaymentMethod('paypal')}
-                  className="w-full flex items-center justify-center gap-3 bg-[#0070BA] text-white hover:bg-[#003087] rounded-2xl py-4 font-semibold shadow-sm transition group"
+                  onClick={async () => {
+                    if (!donorName || !donorEmail) {
+                      alert("Por favor, ingresa tu nombre y correo para continuar.");
+                      return;
+                    }
+                    const ok = await handleNotifyDonation('paypal');
+                    if (ok) setPaymentMethod('paypal');
+                  }}
+                  disabled={isSubmitting}
+                  className="w-full flex items-center justify-center gap-3 bg-[#0070BA] text-white hover:bg-[#003087] rounded-2xl py-4 font-semibold shadow-sm transition group disabled:opacity-50"
                 >
-                  <span className="text-xl group-hover:scale-110 transition">🅿️</span> PayPal
+                  <span className="text-xl group-hover:scale-110 transition">🅿️</span> {isSubmitting ? 'Processing...' : 'PayPal'}
                 </button>
                 <button
-                  onClick={() => setPaymentMethod('zelle')}
-                  className="w-full flex items-center justify-center gap-3 bg-[#6329A8] text-white hover:bg-[#4E2184] rounded-2xl py-4 font-semibold shadow-sm transition group"
+                  onClick={async () => {
+                    if (!donorName || !donorEmail) {
+                      alert("Por favor, ingresa tu nombre y correo para continuar.");
+                      return;
+                    }
+                    const ok = await handleNotifyDonation('zelle');
+                    if (ok) setPaymentMethod('zelle');
+                  }}
+                  disabled={isSubmitting}
+                  className="w-full flex items-center justify-center gap-3 bg-[#6329A8] text-white hover:bg-[#4E2184] rounded-2xl py-4 font-semibold shadow-sm transition group disabled:opacity-50"
                 >
-                  <span className="text-xl group-hover:scale-110 transition">💸</span> Zelle
+                  <span className="text-xl group-hover:scale-110 transition">💸</span> {isSubmitting ? 'Processing...' : 'Zelle'}
                 </button>
               </div>
-            </>
+            </div>
           ) : (
             <div className="animate-in slide-in-from-right-4 duration-300">
               {paymentMethod === 'card' && (
@@ -164,8 +245,17 @@ export default function PaymentModal({
                       <input className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="123" />
                     </label>
                   </div>
-                  <button className="w-full mt-4 rounded-2xl bg-emerald-600 py-4 text-white font-black shadow-lg shadow-emerald-200 hover:brightness-110">
-                    Pay Now
+                  <button 
+                    onClick={async () => {
+                      const ok = await handleNotifyDonation('card');
+                      if (ok) {
+                        alert("Simulación: Datos enviados a la fundación. En un entorno real, aquí se procesaría el pago.");
+                      }
+                    }}
+                    disabled={isSubmitting}
+                    className="w-full mt-4 rounded-2xl bg-emerald-600 py-4 text-white font-black shadow-lg shadow-emerald-200 hover:brightness-110 disabled:opacity-50"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Pay Now'}
                   </button>
                 </div>
               )}

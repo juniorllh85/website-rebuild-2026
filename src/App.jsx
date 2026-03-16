@@ -39,10 +39,28 @@ export default function App() {
   const handleOpenFormModal = (type) => setFormModalType(type);
   const handleCloseFormModal = () => setFormModalType(null);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    alert("Thank you! We have successfully received your information. We will contact you very soon.");
-    handleCloseFormModal();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: formModalType, data }),
+      });
+
+      if (response.ok) {
+        alert("¡Gracias! Hemos recibido tu información exitosamente. Nos pondremos en contacto contigo muy pronto.");
+        handleCloseFormModal();
+      } else {
+        alert("Hubo un error al enviar la información. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert("Error de conexión. Por favor verifica tu internet e intenta de nuevo.");
+    }
   };
 
   return (

@@ -37,26 +37,26 @@ export default function FormModal({ type, onClose, onSubmit }) {
                 <div className="grid md:grid-cols-2 gap-4">
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Full Name *</span>
-                    <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Ex: Maria Gonzalez" />
+                    <input name="fullName" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Ex: Maria Gonzalez" />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Company / Entity (Optional)</span>
-                    <input className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="If you denote on behalf of a company..." />
+                    <input name="company" className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="If you denote on behalf of a company..." />
                   </label>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Email *</span>
-                    <input type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="you@email.com" />
+                    <input name="email" type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="you@email.com" />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Phone / WhatsApp *</span>
-                    <input type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="+1 (305)..." />
+                    <input name="phone" type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="+1 (305)..." />
                   </label>
                 </div>
                 <label className="grid gap-2">
                   <span className="text-sm font-semibold">What product(s) do you want to donate? *</span>
-                  <select required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200 bg-white">
+                  <select name="productType" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200 bg-white">
                     <option value="">Select the type of product...</option>
                     <option value="alimentos">Non-perishable food (boxes, cans, grains)</option>
                     <option value="higiene">Personal hygiene products (diapers, soap)</option>
@@ -66,7 +66,7 @@ export default function FormModal({ type, onClose, onSubmit }) {
                 </label>
                 <label className="grid gap-2">
                   <span className="text-sm font-semibold">Details and Approximate Quantity *</span>
-                  <textarea required className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Ex: 50 cans of tuna, 5 packs of size L diapers..." />
+                  <textarea name="details" required className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Ex: 50 cans of tuna, 5 packs of size L diapers..." />
                 </label>
               </>
             )}
@@ -80,26 +80,26 @@ export default function FormModal({ type, onClose, onSubmit }) {
                 <div className="grid md:grid-cols-2 gap-4">
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Full Name *</span>
-                    <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Your name" />
+                    <input name="fullName" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Your name" />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Age *</span>
-                    <input type="number" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Min 18 years" />
+                    <input name="age" type="number" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Min 18 years" />
                   </label>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Email *</span>
-                    <input type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="you@email.com" />
+                    <input name="email" type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="you@email.com" />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Phone *</span>
-                    <input type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="+1..." />
+                    <input name="phone" type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="+1..." />
                   </label>
                 </div>
                 <label className="grid gap-2">
                   <span className="text-sm font-semibold">Availability *</span>
-                  <select required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200 bg-white">
+                  <select name="availability" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200 bg-white">
                     <option value="">Select your availability...</option>
                     <option value="fines">Weekends only</option>
                     <option value="semana">During the week (Morning/Afternoon)</option>
@@ -109,7 +109,7 @@ export default function FormModal({ type, onClose, onSubmit }) {
                 </label>
                 <label className="grid gap-2">
                   <span className="text-sm font-semibold">Why do you want to join us?</span>
-                  <textarea className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-amber-200" placeholder="Tell us a bit about your motivation..." />
+                  <textarea name="motivation" className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-amber-200" placeholder="Tell us a bit about your motivation..." />
                 </label>
               </>
             )}
@@ -123,21 +123,21 @@ export default function FormModal({ type, onClose, onSubmit }) {
                 <div className="grid md:grid-cols-2 gap-4">
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Company / Institution *</span>
-                    <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Legal name" />
+                    <input name="company" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Legal name" />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Contact Person *</span>
-                    <input required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Name and Title" />
+                    <input name="contactPerson" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="Name and Title" />
                   </label>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Work Email *</span>
-                    <input type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="corp@company.com" />
+                    <input name="email" type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300" placeholder="corp@company.com" />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold">Type of Alliance *</span>
-                    <select required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300 bg-white">
+                    <select name="allianceType" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-300 bg-white">
                       <option value="">Select a purpose...</option>
                       <option value="financiamiento">Direct funding / Matching grants</option>
                       <option value="logistica">Logistical support / Supplies</option>
@@ -148,7 +148,7 @@ export default function FormModal({ type, onClose, onSubmit }) {
                 </div>
                 <label className="grid gap-2">
                   <span className="text-sm font-semibold">Proposal / Comments</span>
-                  <textarea className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-slate-300" placeholder="Tell us how you would like to support or if you need specific documents..." />
+                  <textarea name="proposal" className="border rounded-xl px-4 py-3 min-h-[100px] outline-none focus:ring-2 focus:ring-slate-300" placeholder="Tell us how you would like to support or if you need specific documents..." />
                 </label>
               </>
             )}

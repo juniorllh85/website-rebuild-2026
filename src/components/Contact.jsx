@@ -49,12 +49,13 @@ export default function Contact({ onSubmit }) {
             </label>
 
             <label className="grid gap-2">
-              <span className="text-sm font-semibold">Phone or email</span>
+              <span className="text-sm font-semibold">Email</span>
               <input
-                name="contact"
+                name="email"
+                type="email"
                 required
                 className="border rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200"
-                placeholder="How to contact you"
+                placeholder="you@email.com"
               />
             </label>
 

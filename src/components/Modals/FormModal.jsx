@@ -44,16 +44,10 @@ export default function FormModal({ type, onClose, onSubmit }) {
                     <input name="company" className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="If you denote on behalf of a company..." />
                   </label>
                 </div>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <label className="grid gap-2">
-                    <span className="text-sm font-semibold">Email *</span>
-                    <input name="email" type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="you@email.com" />
-                  </label>
-                  <label className="grid gap-2">
-                    <span className="text-sm font-semibold">Phone / WhatsApp *</span>
-                    <input name="phone" type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="+1 (305)..." />
-                  </label>
-                </div>
+                <label className="grid gap-2">
+                  <span className="text-sm font-semibold">Email *</span>
+                  <input name="email" type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200" placeholder="you@email.com" />
+                </label>
                 <label className="grid gap-2">
                   <span className="text-sm font-semibold">What product(s) do you want to donate? *</span>
                   <select name="productType" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-200 bg-white">
@@ -87,16 +81,10 @@ export default function FormModal({ type, onClose, onSubmit }) {
                     <input name="age" type="number" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="Min 18 years" />
                   </label>
                 </div>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <label className="grid gap-2">
-                    <span className="text-sm font-semibold">Email *</span>
-                    <input name="email" type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="you@email.com" />
-                  </label>
-                  <label className="grid gap-2">
-                    <span className="text-sm font-semibold">Phone *</span>
-                    <input name="phone" type="tel" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="+1..." />
-                  </label>
-                </div>
+                <label className="grid gap-2">
+                  <span className="text-sm font-semibold">Email *</span>
+                  <input name="email" type="email" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200" placeholder="you@email.com" />
+                </label>
                 <label className="grid gap-2">
                   <span className="text-sm font-semibold">Availability *</span>
                   <select name="availability" required className="border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-200 bg-white">

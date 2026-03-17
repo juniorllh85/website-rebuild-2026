@@ -269,7 +269,14 @@ export default function PaymentModal({
                   <p className="text-sm text-slate-600 mb-8">
                     Click continue to securely login to your <strong className="text-slate-900">PayPal</strong> account and complete your {isRecurring ? 'monthly donation' : 'donation'} of <strong className="text-emerald-600">${isCustomAmount ? customAmountValue : selectedAmount}</strong>.
                   </p>
-                  <button onClick={() => window.open('https://www.paypal.com', '_blank')} className="w-full rounded-2xl bg-[#0070BA] py-4 text-white font-black shadow-lg shadow-blue-200 hover:bg-[#003087]">
+                  <button 
+                    onClick={() => {
+                      const amount = isCustomAmount ? customAmountValue : selectedAmount;
+                      const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=thegoldenyearsfoundation@gmail.com&amount=${amount}&currency_code=USD&item_name=Donation+to+The+Golden+Years+Foundation`;
+                      window.open(paypalUrl, '_blank');
+                    }} 
+                    className="w-full rounded-2xl bg-[#0070BA] py-4 text-white font-black shadow-lg shadow-blue-200 hover:bg-[#003087]"
+                  >
                     Continue to PayPal
                   </button>
                 </div>

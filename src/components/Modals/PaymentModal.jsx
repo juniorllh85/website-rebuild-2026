@@ -26,7 +26,7 @@ export default function PaymentModal({
 
   const handleNotifyDonation = async (method) => {
     if (!donorName || !donorEmail) {
-      alert("Por favor, ingresa tu nombre y correo para identificarte con la causa.");
+      alert("Please enter your name and email to identify your donation.");
       return false;
     }
     
@@ -184,7 +184,7 @@ export default function PaymentModal({
                 <button
                   onClick={() => {
                     if (!donorName || !donorEmail) {
-                      alert("Por favor, ingresa tu nombre y correo para continuar.");
+                      alert("Please enter your name and email before continuing.");
                       return;
                     }
                     setPaymentMethod('card');
@@ -196,7 +196,7 @@ export default function PaymentModal({
                 <button
                   onClick={async () => {
                     if (!donorName || !donorEmail) {
-                      alert("Por favor, ingresa tu nombre y correo para continuar.");
+                      alert("Please enter your name and email before continuing.");
                       return;
                     }
                     const ok = await handleNotifyDonation('paypal');
@@ -210,7 +210,7 @@ export default function PaymentModal({
                 <button
                   onClick={async () => {
                     if (!donorName || !donorEmail) {
-                      alert("Por favor, ingresa tu nombre y correo para continuar.");
+                      alert("Please enter your name and email before continuing.");
                       return;
                     }
                     const ok = await handleNotifyDonation('zelle');
@@ -249,7 +249,7 @@ export default function PaymentModal({
                     onClick={async () => {
                       const ok = await handleNotifyDonation('card');
                       if (ok) {
-                        alert("Simulación: Datos enviados a la fundación. En un entorno real, aquí se procesaría el pago.");
+                        alert("Simulation: Data sent to the foundation. In a real environment, the payment would be processed here.");
                       }
                     }}
                     disabled={isSubmitting}

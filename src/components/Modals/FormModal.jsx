@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function FormModal({ type, onClose, onSubmit }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   if (!type) return null;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    await onSubmit(e);
+    setIsSubmitting(false);
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8 overflow-y-auto w-full h-full bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
@@ -26,7 +35,7 @@ export default function FormModal({ type, onClose, onSubmit }) {
 
         {/* Dynamic Body */}
         <div className="p-6 md:p-8 overflow-y-auto max-h-[75vh]">
-          <form onSubmit={onSubmit} className="grid gap-6">
+          <form onSubmit={handleSubmit} className="grid gap-6">
 
             {/* ---------- FORM 1: IN-KIND DONATION ---------- */}
             {type === "donacion_especie" && (
@@ -143,12 +152,13 @@ export default function FormModal({ type, onClose, onSubmit }) {
 
             <button
               type="submit"
-              className={`rounded-2xl py-4 font-bold text-white shadow-lg transition-all duration-300 hover:brightness-110 active:scale-95 ${type === 'voluntariado' ? 'bg-amber-600 shadow-amber-200' :
+              disabled={isSubmitting}
+              className={`rounded-2xl py-4 font-bold text-white shadow-lg transition-all duration-300 hover:brightness-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed ${type === 'voluntariado' ? 'bg-amber-600 shadow-amber-200' :
                 type === 'alianza' ? 'bg-slate-900 shadow-slate-200' :
                   'bg-emerald-600 shadow-emerald-200'
                 }`}
             >
-              Send Information
+              {isSubmitting ? 'Sending...' : 'Send Information'}
             </button>
           </form>
         </div>

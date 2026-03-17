@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Contact({ onSubmit }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    await onSubmit(e, 'contacto');
+    setIsSubmitting(false);
+  };
   return (
     <section id="contacto" className="border-t bg-white">
       <div className="mx-auto max-w-6xl px-4 py-20 grid lg:grid-cols-2 gap-12">
@@ -35,7 +43,7 @@ export default function Contact({ onSubmit }) {
 
         <div className="rounded-3xl border bg-white p-8 shadow-sm">
           <form
-            onSubmit={(e) => onSubmit(e, 'contacto')}
+            onSubmit={handleSubmit}
             className="grid gap-4"
           >
             <label className="grid gap-2">
@@ -69,8 +77,12 @@ export default function Contact({ onSubmit }) {
               />
             </label>
 
-            <button className="rounded-2xl bg-slate-900 text-white px-6 py-3 font-semibold hover:bg-slate-800">
-              Send
+            <button 
+              type="submit"
+              disabled={isSubmitting}
+              className="rounded-2xl bg-slate-900 text-white px-6 py-3 font-semibold hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'Sending...' : 'Send'}
             </button>
 
             <p className="text-xs text-slate-500">

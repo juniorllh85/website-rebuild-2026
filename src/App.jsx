@@ -53,15 +53,15 @@ export default function App() {
       });
 
       if (response.ok) {
-        alert("¡Gracias! Hemos recibido tu información exitosamente. Nos pondremos en contacto contigo muy pronto.");
+        alert("Thank you! We have successfully received your information. We will contact you very soon.");
         if (!overrideType) handleCloseFormModal();
         e.target.reset(); // Clear common form
       } else {
-        alert("Hubo un error al enviar la información. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.");
+        alert("There was an error sending the information. Please try again or contact us via WhatsApp.");
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert("Error de conexión. Por favor verifica tu internet e intenta de nuevo.");
+      alert("Connection error. Please check your internet and try again.");
     }
   };
 

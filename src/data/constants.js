@@ -30,7 +30,7 @@ export const helpCards = [
     title: "Personal Hygiene",
     desc: "Hygiene kits to maintain health, dignity, and daily well-being.",
     icon: "🧼",
-    image: "/images/hygiene.png",
+    image: "/images/hygiene_donations.png",
   },
 ];
 

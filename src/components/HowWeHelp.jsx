@@ -17,7 +17,7 @@ export default function HowWeHelp() {
             key={c.title}
             className="group overflow-hidden rounded-3xl border bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col"
           >
-            <div className="h-56 w-full overflow-hidden relative">
+            <div className="h-72 sm:h-80 w-full overflow-hidden relative">
               <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition duration-300 z-10" />
               <img src={c.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
             </div>

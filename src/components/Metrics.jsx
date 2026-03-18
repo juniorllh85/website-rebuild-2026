@@ -114,14 +114,11 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer lg:col-span-2" style={{ minHeight: '28rem' }} onClick={handleCardClick}>
             <ImageCarousel
               images={[
-                "/images/festivo_1.png",
-                "/images/festivo_2.png",
-                "/images/festivo_3.png",
-                "/images/mothers_day_1.png",
-                "/images/mothers_day_2.png",
-                "/images/mothers_day_3.png"
+                "/images/events_thanksgiving.png",
+                "/images/events_mothers_day.png",
+                "/images/events_gathering.png"
               ]}
-              overlayTexts={["Great Thanksgiving Dinner", "Creating Community Ties", "Unforgettable Gatherings", "Happy Mother's Day!", "A Mother, Our Treasure", "Roses, Love & Joy"]}
+              overlayTexts={["Great Thanksgiving Dinner", "Happy Mother's Day!", "Unforgettable Gatherings"]}
               interval={4000}
             />
             <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.97) 0%, rgba(5,10,20,0.5) 50%, rgba(5,10,20,0.15) 100%)' }} />

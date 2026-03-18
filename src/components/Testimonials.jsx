@@ -72,16 +72,6 @@ export default function Testimonials({ onDonateClick }) {
       image: "/images/volunteer_white_logo.png",
       badge: "🤝 Volunteer Visit",
       color: "teal"
-    },
-    {
-      id: 8,
-      name: "Luz V., 82 years",
-      initials: "LV",
-      location: "Pilot Building · Miami-Dade",
-      text: "I immigrated to the US 40 years ago and worked my whole life. In my old age I ended up alone, not speaking much English, afraid to leave my floor. The Golden Years Foundation brought people to me. Now I have a community again — in my own building. I feel like a person again, not a forgotten relic. My will to live came back with every knock on my door.",
-      image: "/images/events_gathering.png",
-      badge: "🌟 Community Event",
-      color: "amber"
     }
   ];
 

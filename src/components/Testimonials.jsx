@@ -69,7 +69,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "FG",
       location: "Pilot Building · Miami-Dade",
       text: "After my wife passed away, I stopped talking. Weeks went by without a single conversation. A volunteer named Carlos started visiting every Thursday. We play chess. We talk about baseball. Now I count the days to Thursday. He doesn't know it, but he saved my life. A man at 79 needs to feel he still matters.",
-      image: "/images/volunteer.png",
+      image: "/images/volunteer_white_logo.png",
       badge: "🤝 Volunteer Visit",
       color: "teal"
     },

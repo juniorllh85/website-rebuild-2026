@@ -47,7 +47,7 @@ export const supportCards = [
     desc: "Help with deliveries, organization, and companionship. Your time changes lives.",
     icon: "🤝",
     type: "voluntariado",
-    image: "/images/volunteer.png"
+    image: "/images/volunteer_white_logo.png"
   },
   {
     title: "Partnerships",

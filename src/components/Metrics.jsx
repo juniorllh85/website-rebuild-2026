@@ -144,14 +144,14 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
           </div>
 
           {/* 8 - Volunteer Network */}
-          <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }}>
-            <img src="/images/donation.png" alt="Volunteer Network" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+          <div className="group relative rounded-3xl overflow-hidden cursor-pointer lg:col-span-3" style={{ minHeight: '28rem' }}>
+            <img src="/images/volunteer_network_gyf.png" alt="Volunteer Network" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(99,102,241,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
-            <div className="absolute inset-0 p-7 flex flex-col justify-end">
-              <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 transform group-hover:-translate-y-1 transition-transform duration-300" style={{ background: 'rgba(99,102,241,0.2)', border: '1px solid rgba(165,180,252,0.3)', boxShadow: '0 0 20px rgba(99,102,241,0.3)' }}>🤝</div>
-              <h3 className="text-lg font-extrabold text-white mb-2">Volunteer Network</h3>
-              <p className="text-sm leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500" style={{ color: 'rgba(148,163,184,0.9)' }}>Building a network of empathetic volunteers, measuring the enormous human value they inject into each visit.</p>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(99,102,241,0.25) 0%, transparent 60%)' }} />
+            <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-end">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 transform group-hover:-translate-y-1 transition-transform duration-300" style={{ background: 'rgba(99,102,241,0.2)', border: '1px solid rgba(165,180,252,0.3)', boxShadow: '0 0 25px rgba(99,102,241,0.3)' }}>🤝</div>
+              <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Volunteer Network</h3>
+              <p className="text-sm sm:text-base leading-relaxed max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500" style={{ color: 'rgba(203,213,225,0.85)' }}>Building a magnificent network of empathetic volunteers, measuring the enormous human value they inject into each distribution route and visit.</p>
             </div>
           </div>
 

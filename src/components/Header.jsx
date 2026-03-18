@@ -4,7 +4,8 @@ export default function Header({ onDonateClick }) {
   return (
     <header className="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
-        <div className="font-extrabold tracking-tight text-lg sm:text-xl">
+        <div className="font-extrabold tracking-tight text-lg sm:text-xl flex items-center gap-3">
+          <img src="/logo.png" alt="The Golden Years Foundation Logo" className="h-12 w-12 object-contain rounded-full border border-slate-100 shadow-sm" />
           <span className="hidden sm:inline">The Golden Years Foundation</span>
           <span className="sm:hidden">TGYF</span>
         </div>

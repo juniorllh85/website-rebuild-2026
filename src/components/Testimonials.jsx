@@ -8,7 +8,7 @@ export default function Testimonials({ onDonateClick }) {
       text: "When they knocked on my door with flowers on Mother's Day, I hadn't left my apartment in three weeks. I thought no one remembered I existed. That hug from the volunteer changed everything. I started looking forward to mornings again, waiting to see who would visit me next. For the first time in years, I felt like someone's mother again — not just an old woman forgotten by the world.",
       initials: "MR",
       location: "Pilot Building · Miami-Dade",
-      image: "/images/mothers_day_1.png",
+      image: "/images/events_mothers_day.png",
       badge: "🌹 Mother's Day Event",
       color: "amber"
     },
@@ -28,7 +28,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "JM",
       location: "Pilot Building · Miami-Dade",
       text: "I had spent four Thanksgivings alone watching TV with a frozen dinner. At the foundation's dinner I laughed so much my cheeks hurt. I met Doña Carmen, now my best friend — we knock on each other's doors every morning. Loneliness was killing me silently. Not anymore.",
-      image: "/images/festivo_3.png",
+      image: "/images/events_thanksgiving.png",
       badge: "🎉 Thanksgiving",
       color: "violet"
     },
@@ -79,7 +79,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "LV",
       location: "Pilot Building · Miami-Dade",
       text: "I immigrated to the US 40 years ago and worked my whole life. In my old age I ended up alone, not speaking much English, afraid to leave my floor. The Golden Years Foundation brought people to me. Now I have a community again — in my own building. I feel like a person again, not a forgotten relic. My will to live came back with every knock on my door.",
-      image: "/images/mothers_day_3.png",
+      image: "/images/events_gathering.png",
       badge: "🌟 Community Event",
       color: "amber"
     }

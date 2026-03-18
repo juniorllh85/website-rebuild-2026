@@ -58,7 +58,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "CM",
       location: "Pilot Building · Miami-Dade",
       text: "I turned 90 believing no one would notice. Then they knocked on my door with balloons, a cake, and ten neighbors I'd never properly spoken to. We sang, we told stories, we laughed until we cried. My doctor had told my son I was showing signs of early depression from isolation. After that birthday, something in me reignited. I started leaving my apartment daily. My son says I look 10 years younger. I tell him — I feel like I have a reason to be here again.",
-      image: "/images/festivo_1.png",
+      image: "/images/carmen_birthday_custom.png",
       badge: "🎂 Birthday Celebration",
       color: "pink",
       wide: true

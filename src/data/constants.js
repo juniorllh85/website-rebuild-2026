@@ -60,10 +60,9 @@ export const supportCards = [
 
 export const heroCarouselImages = [
   "/images/hero.png",
-  "/images/mothers_day_1.png",
-  "/images/festivo_1.png",
-  "/images/mothers_day_3.png",
-  "/images/festivo_3.png"
+  "/images/events_thanksgiving.png",
+  "/images/events_mothers_day.png",
+  "/images/events_gathering.png"
 ];
 
 export const miniImpactStats = [

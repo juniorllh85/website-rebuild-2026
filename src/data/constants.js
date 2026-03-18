@@ -24,7 +24,7 @@ export const helpCards = [
     title: "Medicine Support",
     desc: "Support for access and continuity of medications, reducing preventable crises.",
     icon: "💊",
-    image: "/images/medicine.png",
+    image: "/images/vitamins.png",
   },
   {
     title: "Personal Hygiene",

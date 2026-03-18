@@ -69,7 +69,7 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
 
           {/* 4 - Medical Continuity */}
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }}>
-            <img src="/images/medicine.png" alt="Medical Continuity" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+            <img src="/images/vitamins.png" alt="Medical Continuity" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(239,68,68,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
             <div className="absolute inset-0 p-7 flex flex-col justify-end">

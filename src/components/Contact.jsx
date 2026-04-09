@@ -30,7 +30,7 @@ export default function Contact({ onSubmit }) {
             <div className="rounded-2xl bg-slate-50 p-4">
               <div className="text-sm font-semibold">✉️ Email</div>
               <div className="text-sm text-slate-600 mt-1 font-bold">
-                thegoldenyearsfoundation@gmail.com
+                info@thegoldenyearsfoundation.com
               </div>
             </div>
             <div className="rounded-2xl bg-slate-50 p-4">

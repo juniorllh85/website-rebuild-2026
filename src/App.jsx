@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
 import PaymentModal from "./components/Modals/PaymentModal";
 import FormModal from "./components/Modals/FormModal";
+import PrivacyPolicyModal from "./components/Modals/PrivacyPolicyModal";
 
 export default function App() {
   // Payment Modal State
@@ -25,7 +26,10 @@ export default function App() {
   const [customAmountValue, setCustomAmountValue] = useState("");
 
   // Form Modal State
-  const [formModalType, setFormModalType] = useState(null); 
+  const [formModalType, setFormModalType] = useState(null);
+
+  // Privacy Policy Modal State
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   // Payment Modal Handlers
   const handleOpenModal = (amount) => {
@@ -55,7 +59,7 @@ export default function App() {
       if (response.ok) {
         alert("Thank you! We have successfully received your information. We will contact you very soon.");
         if (!overrideType) handleCloseFormModal();
-        e.target.reset(); // Clear common form
+        e.target.reset();
       } else {
         alert("There was an error sending the information. Please try again or contact us via WhatsApp.");
       }
@@ -87,10 +91,10 @@ export default function App() {
           <Contact onSubmit={handleFormSubmit} />
         </main>
 
-        <Footer onDonateClick={handleOpenModal} />
+        <Footer onDonateClick={handleOpenModal} onPrivacyClick={() => setIsPrivacyOpen(true)} />
       </div>
 
-      <PaymentModal 
+      <PaymentModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         selectedAmount={selectedAmount}
@@ -101,10 +105,15 @@ export default function App() {
         setCustomAmountValue={setCustomAmountValue}
       />
 
-      <FormModal 
+      <FormModal
         type={formModalType}
         onClose={handleCloseFormModal}
         onSubmit={handleFormSubmit}
+      />
+
+      <PrivacyPolicyModal
+        isOpen={isPrivacyOpen}
+        onClose={() => setIsPrivacyOpen(false)}
       />
     </>
   );

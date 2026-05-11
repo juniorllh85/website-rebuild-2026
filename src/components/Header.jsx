@@ -9,7 +9,7 @@ export default function Header({ onDonateClick }) {
     { href: '#metricas', label: 'Metrics' },
     { href: '#porque', label: 'Why Us' },
     { href: '#ayuda', label: 'How We Help' },
-    { href: '#vision', label: 'Vision' },
+    { href: '#blog', label: 'News' },
     { href: '#donar', label: 'Donate' },
     { href: '#contacto', label: 'Contact' },
   ];

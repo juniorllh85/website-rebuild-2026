@@ -14,6 +14,7 @@ import DonationSection from "./components/DonationSection";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
+import Blog from "./components/Blog";
 import PaymentModal from "./components/Modals/PaymentModal";
 import FormModal from "./components/Modals/FormModal";
 import PrivacyPolicyModal from "./components/Modals/PrivacyPolicyModal";
@@ -85,6 +86,7 @@ export default function App() {
           <Impact />
           <Metrics onFormModalOpen={handleOpenFormModal} onDonateClick={handleOpenModal} />
           <Testimonials onDonateClick={handleOpenModal} />
+          <Blog />
           <PitchDeck />
           <HowWeHelp />
           <Vision />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
 
-export default function Footer({ onDonateClick, onPrivacyClick }) {
+export default function Footer({ onDonateClick, onPrivacyClick, onTermsClick }) {
   const navSections = [
     {
       title: 'Our Mission',
@@ -123,6 +123,13 @@ export default function Footer({ onDonateClick, onPrivacyClick }) {
               className="transition-colors hover:text-emerald-400"
             >
               Privacy Policy
+            </button>
+            <span>•</span>
+            <button
+              onClick={onTermsClick}
+              className="transition-colors hover:text-emerald-400"
+            >
+              Terms of Service
             </button>
           </div>
         </div>

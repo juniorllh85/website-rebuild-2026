@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thegoldenyearsfoundation.com/sitemap.xml

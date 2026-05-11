@@ -17,6 +17,7 @@ import Testimonials from "./components/Testimonials";
 import PaymentModal from "./components/Modals/PaymentModal";
 import FormModal from "./components/Modals/FormModal";
 import PrivacyPolicyModal from "./components/Modals/PrivacyPolicyModal";
+import TermsOfServiceModal from "./components/Modals/TermsOfServiceModal";
 
 export default function App() {
   // Payment Modal State
@@ -30,6 +31,9 @@ export default function App() {
 
   // Privacy Policy Modal State
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+
+  // Terms of Service Modal State
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
 
   // Payment Modal Handlers
   const handleOpenModal = (amount) => {
@@ -91,7 +95,7 @@ export default function App() {
           <Contact onSubmit={handleFormSubmit} />
         </main>
 
-        <Footer onDonateClick={handleOpenModal} onPrivacyClick={() => setIsPrivacyOpen(true)} />
+        <Footer onDonateClick={handleOpenModal} onPrivacyClick={() => setIsPrivacyOpen(true)} onTermsClick={() => setIsTermsOpen(true)} />
       </div>
 
       <PaymentModal
@@ -114,6 +118,11 @@ export default function App() {
       <PrivacyPolicyModal
         isOpen={isPrivacyOpen}
         onClose={() => setIsPrivacyOpen(false)}
+      />
+
+      <TermsOfServiceModal
+        isOpen={isTermsOpen}
+        onClose={() => setIsTermsOpen(false)}
       />
     </>
   );

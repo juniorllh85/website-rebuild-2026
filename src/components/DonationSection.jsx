@@ -162,13 +162,21 @@ export default function DonationSection({ onDonateClick, onFormModalOpen }) {
         </div>
 
         {/* PAYMENT NOTICE */}
-        <div className="mt-14 rounded-3xl p-8 flex flex-col sm:flex-row gap-6 items-center text-center sm:text-left" style={{ background: 'rgba(251,191,36,0.08)', border: '1px solid rgba(251,191,36,0.2)' }}>
-          <div className="text-4xl flex-shrink-0">💳</div>
-          <div>
-            <div className="text-sm font-bold text-white">Donate Now — Online payments coming soon</div>
-            <p className="mt-2 text-sm" style={{ color: 'rgba(148,163,184,0.8)' }}>
-              We are integrating Stripe, PayPal, and Zelle. In the meantime, fill out the form and we will contact you immediately to process your donation.
+        <div className="mt-14 rounded-3xl p-8 flex flex-col sm:flex-row gap-6 items-center text-center sm:text-left" style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)' }}>
+          <div className="text-4xl flex-shrink-0">🔒</div>
+          <div className="flex-1">
+            <div className="text-sm font-black text-white mb-1">Secure Online Donations — 100% Safe</div>
+            <p className="text-sm" style={{ color: 'rgba(148,163,184,0.8)' }}>
+              We accept <strong className="text-white">credit & debit cards</strong> securely via Stripe. Your payment information is encrypted and never stored on our servers. All donations are tax-deductible — you'll receive a receipt instantly.
             </p>
+          </div>
+          <div className="flex flex-col gap-2 items-center flex-shrink-0">
+            <div className="flex gap-2 items-center">
+              {['💳', '🅿️'].map(icon => (
+                <span key={icon} className="text-2xl">{icon}</span>
+              ))}
+            </div>
+            <span className="text-xs font-bold" style={{ color: '#34d399' }}>EIN: 35-2905128</span>
           </div>
         </div>
 

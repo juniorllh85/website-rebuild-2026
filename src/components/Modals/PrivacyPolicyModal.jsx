@@ -24,7 +24,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
         <div className="space-y-5 text-sm text-slate-700 leading-relaxed">
           <section>
             <h3 className="font-bold text-slate-900 mb-1">1. Who We Are</h3>
-            <p>The Golden Years Foundation is a 501(c)(3) nonprofit organization (EIN: 35-2905128) based in Miami-Dade County, Florida. We are committed to protecting the dignity, health, and well-being of isolated seniors. Contact: <strong>info@thegoldenyearsfoundation.com</strong>.</p>
+            <p>The Golden Years Foundation is a 501(c)(3) nonprofit organization (EIN: 35-2905128) based in Miami-Dade County, Florida. We are committed to protecting the dignity, health, and well-being of isolated seniors. Contact: <strong>thegoldenyearsfoundation@gmail.com</strong>.</p>
           </section>
 
           <section>
@@ -66,7 +66,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
 
           <section>
             <h3 className="font-bold text-slate-900 mb-1">7. Your Rights</h3>
-            <p>You have the right to access, correct, or delete your personal data. Contact us at <strong>info@thegoldenyearsfoundation.com</strong>.</p>
+            <p>You have the right to access, correct, or delete your personal data. Contact us at <strong>thegoldenyearsfoundation@gmail.com</strong>.</p>
           </section>
 
           <section>
@@ -79,7 +79,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
             <p>
               <strong>The Golden Years Foundation</strong><br />
               Miami-Dade County, Florida<br />
-              Email: info@thegoldenyearsfoundation.com<br />
+              Email: thegoldenyearsfoundation@gmail.com<br />
               EIN: 35-2905128
             </p>
           </section>

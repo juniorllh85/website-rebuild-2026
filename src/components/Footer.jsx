@@ -113,8 +113,8 @@ export default function Footer({ onDonateClick, onPrivacyClick, onTermsClick }) 
             <span className="font-bold text-white/40">EIN: 35-2905128</span>
           </div>
           <div className="flex items-center gap-4">
-            <a href="mailto:info@thegoldenyearsfoundation.com" className="transition-colors hover:text-emerald-400">
-              info@thegoldenyearsfoundation.com
+            <a href="mailto:thegoldenyearsfoundation@gmail.com" className="transition-colors hover:text-emerald-400">
+              thegoldenyearsfoundation@gmail.com
             </a>
             <span>•</span>
             <button

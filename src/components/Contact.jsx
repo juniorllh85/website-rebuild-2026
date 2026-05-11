@@ -24,8 +24,8 @@ export default function Contact({ onSubmit }) {
     {
       icon: '✉️',
       title: 'Email',
-      lines: ['info@thegoldenyearsfoundation.com'],
-      link: 'mailto:info@thegoldenyearsfoundation.com',
+      lines: ['thegoldenyearsfoundation@gmail.com'],
+      link: 'mailto:thegoldenyearsfoundation@gmail.com',
     },
     {
       icon: '💬',

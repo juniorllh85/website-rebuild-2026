@@ -88,7 +88,7 @@ export default function TermsOfServiceModal({ isOpen, onClose }) {
             <p>
               <strong>The Golden Years Foundation</strong><br />
               Miami-Dade County, Florida<br />
-              Email: info@thegoldenyearsfoundation.com<br />
+              Email: thegoldenyearsfoundation@gmail.com<br />
               EIN: 35-2905128
             </p>
           </section>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
 
 export default function Contact({ onSubmit }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,7 +38,6 @@ export default function Contact({ onSubmit }) {
   const socials = [
     { icon: FaFacebookF, href: 'https://www.facebook.com/profile.php?id=61589653498767', label: 'Facebook' },
     { icon: FaInstagram, href: 'https://www.instagram.com/thegoldenyearsfoundation', label: 'Instagram' },
-    { icon: FaTiktok, href: '#', label: 'TikTok' },
     { icon: FaYoutube, href: 'https://www.youtube.com/@THEGOLDENYEARSFOUNDATION', label: 'YouTube' },
     { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/the-golden-years-foundation-non-profit-0a868040a', label: 'LinkedIn' },
   ];

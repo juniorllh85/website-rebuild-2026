@@ -182,16 +182,18 @@ export default function PaymentModal({
               <div className="grid gap-2 border-t pt-4 mt-2">
                 <div className="text-xs font-bold text-slate-500 uppercase mb-1">Select Payment Method</div>
                 <button
-                  onClick={() => {
+                  onClick={async () => {
                     if (!donorName || !donorEmail) {
                       alert("Please enter your name and email before continuing.");
                       return;
                     }
-                    setPaymentMethod('card');
+                    await handleNotifyDonation('card');
+                    window.open('https://square.link/u/QzwHjl0K', '_blank');
                   }}
-                  className="w-full flex items-center justify-center gap-3 bg-slate-900 text-white hover:bg-slate-800 rounded-2xl py-4 font-semibold shadow-sm transition group"
+                  disabled={isSubmitting}
+                  className="w-full flex items-center justify-center gap-3 bg-slate-900 text-white hover:bg-slate-800 rounded-2xl py-4 font-semibold shadow-sm transition group disabled:opacity-50"
                 >
-                  <span className="text-xl group-hover:scale-110 transition">💳</span> Credit / Debit Card
+                  <span className="text-xl group-hover:scale-110 transition">💳</span> {isSubmitting ? 'Processing...' : 'Credit / Debit Card'}
                 </button>
                 <button
                   onClick={async () => {

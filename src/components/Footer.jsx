@@ -26,7 +26,7 @@ export default function Footer({ onDonateClick, onPrivacyClick }) {
   ];
 
   const socials = [
-    { icon: FaFacebookF, href: '#', label: 'Facebook' },
+    { icon: FaFacebookF, href: 'https://www.facebook.com/profile.php?id=61589653498767', label: 'Facebook' },
     { icon: FaInstagram, href: '#', label: 'Instagram' },
     { icon: FaTiktok, href: '#', label: 'TikTok' },
     { icon: FaYoutube, href: 'https://www.youtube.com/@THEGOLDENYEARSFOUNDATION', label: 'YouTube' },

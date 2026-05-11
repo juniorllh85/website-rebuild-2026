@@ -61,6 +61,46 @@ const posts = [
     image: '/images/events_gathering.png',
     readTime: '5 min read',
   },
+  {
+    id: 7,
+    date: 'May 1, 2025',
+    category: 'Resources',
+    title: 'Medicare 2025: Key Changes Every Senior Needs to Know',
+    excerpt:
+      'The 2025 Medicare updates bring significant changes: a new $2,000 cap on out-of-pocket drug costs, expanded mental health coverage, and broader Medicare Advantage benefits. Here is what every senior needs to know to make the most of their benefits this year.',
+    image: '/images/medicine.png',
+    readTime: '5 min read',
+  },
+  {
+    id: 8,
+    date: 'April 15, 2025',
+    category: 'Resources',
+    title: 'Social Security 2025: COLA Increase and What It Means for You',
+    excerpt:
+      'Social Security recipients received a 2.5% Cost-of-Living Adjustment (COLA) in 2025. Learn how this affects your monthly benefits, the new earnings limits, and how Medicare Part B premiums impact your take-home income this year.',
+    image: '/images/vitamins.png',
+    readTime: '4 min read',
+  },
+  {
+    id: 9,
+    date: 'March 10, 2025',
+    category: 'Resources',
+    title: 'Medicaid vs. Medicare: Understanding the Difference',
+    excerpt:
+      'Many seniors confuse Medicare and Medicaid, but they are very different programs. This guide breaks down what each covers, who qualifies, and how "dual eligible" seniors in Florida can use both programs together to minimize out-of-pocket healthcare costs.',
+    image: '/images/hygiene_donations.png',
+    readTime: '6 min read',
+  },
+  {
+    id: 10,
+    date: 'February 20, 2025',
+    category: 'Resources',
+    title: 'Free and Low-Cost Resources for Seniors in Miami-Dade',
+    excerpt:
+      'From prescription assistance to free meals and transportation, Miami-Dade County offers many programs for seniors. This guide covers the Alliance for Aging, Extra Help, SNAP, SHINE counseling, and more — all available at no cost.',
+    image: '/images/food.png',
+    readTime: '5 min read',
+  },
 ];
 
 const categoryColors = {
@@ -69,6 +109,7 @@ const categoryColors = {
   Impact: { bg: 'rgba(99,102,241,0.12)', text: '#818cf8' },
   Volunteer: { bg: 'rgba(236,72,153,0.12)', text: '#ec4899' },
   Mission: { bg: 'rgba(14,165,233,0.12)', text: '#38bdf8' },
+  Resources: { bg: 'rgba(239,68,68,0.12)', text: '#f87171' },
 };
 
 export default function Blog() {

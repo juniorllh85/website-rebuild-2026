@@ -6,10 +6,8 @@ export default function Header({ onDonateClick }) {
   const navLinks = [
     { href: '#inicio', label: 'Home' },
     { href: '#impacto', label: 'Impact' },
-    { href: '#metricas', label: 'Metrics' },
-    { href: '#porque', label: 'Why Us' },
-    { href: '#ayuda', label: 'How We Help' },
     { href: '#blog', label: 'News' },
+    { href: '#noticias', label: '📡 Live Feed' },
     { href: '#donar', label: 'Donate' },
     { href: '#contacto', label: 'Contact' },
   ];

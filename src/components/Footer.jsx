@@ -112,24 +112,18 @@ export default function Footer({ onDonateClick, onPrivacyClick, onTermsClick }) 
             <span className="hidden sm:inline">•</span>
             <span className="font-bold text-white/40">EIN: 35-2905128</span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 text-xs">
             <a href="mailto:thegoldenyearsfoundation@gmail.com" className="transition-colors hover:text-emerald-400">
               thegoldenyearsfoundation@gmail.com
             </a>
             <span>•</span>
-            <button
-              onClick={onPrivacyClick}
-              className="transition-colors hover:text-emerald-400"
-            >
+            <a href="/privacy-policy" className="transition-colors hover:text-emerald-400">
               Privacy Policy
-            </button>
+            </a>
             <span>•</span>
-            <button
-              onClick={onTermsClick}
-              className="transition-colors hover:text-emerald-400"
-            >
+            <a href="/terms-of-service" className="transition-colors hover:text-emerald-400">
               Terms of Service
-            </button>
+            </a>
           </div>
         </div>
       </div>

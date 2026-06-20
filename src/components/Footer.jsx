@@ -113,8 +113,12 @@ export default function Footer({ onDonateClick, onPrivacyClick, onTermsClick }) 
             <span className="font-bold text-white/40">EIN: 35-2905128</span>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-xs">
-            <a href="mailto:thegoldenyearsfoundation@gmail.com" className="transition-colors hover:text-emerald-400">
-              thegoldenyearsfoundation@gmail.com
+            <a href="tel:+17864425540" className="transition-colors hover:text-emerald-400">
+              📞 786-442-5540
+            </a>
+            <span>•</span>
+            <a href="mailto:info@thegoldenyearsfoundation.com" className="transition-colors hover:text-emerald-400">
+              info@thegoldenyearsfoundation.com
             </a>
             <span>•</span>
             <a href="/privacy-policy" className="transition-colors hover:text-emerald-400">

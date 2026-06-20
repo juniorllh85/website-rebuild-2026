@@ -1,10 +1,13 @@
 export const WHATSAPP_PHONE = "13054174092";
 export const WHATSAPP_MESSAGE = "Hola, quisiera apoyar a The Golden Years Foundation...";
+export const CONTACT_EMAIL = "info@thegoldenyearsfoundation.com";
+export const CONTACT_PHONE = "786-442-5540";
+export const CONTACT_PHONE_LINK = "tel:+17864425540";
 
 export const whatsappInfo = {
   number: WHATSAPP_PHONE,
   message: WHATSAPP_MESSAGE,
-  email: "thegoldenyearsfoundation@gmail.com"
+  email: "info@thegoldenyearsfoundation.com"
 };
 
 export const impactStats = [

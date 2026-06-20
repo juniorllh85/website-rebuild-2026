@@ -24,8 +24,14 @@ export default function Contact({ onSubmit }) {
     {
       icon: '✉️',
       title: 'Email',
-      lines: ['thegoldenyearsfoundation@gmail.com'],
-      link: 'mailto:thegoldenyearsfoundation@gmail.com',
+      lines: ['info@thegoldenyearsfoundation.com'],
+      link: 'mailto:info@thegoldenyearsfoundation.com',
+    },
+    {
+      icon: '📞',
+      title: 'Phone',
+      lines: ['786-442-5540'],
+      link: 'tel:+17864425540',
     },
     {
       icon: '💬',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
 
-export default function Footer({ onDonateClick, onPrivacyClick, onTermsClick }) {
+export default function Footer({ onDonateClick }) {
   const navSections = [
     {
       title: 'Our Mission',
@@ -53,7 +53,7 @@ export default function Footer({ onDonateClick, onPrivacyClick, onTermsClick }) 
 
             {/* Socials */}
             <div className="flex gap-3 mb-8">
-              {socials.map(({ icon: Icon, href, label }) => (
+              {socials.map(({ icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
@@ -63,7 +63,7 @@ export default function Footer({ onDonateClick, onPrivacyClick, onTermsClick }) 
                   className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:brightness-125"
                   style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(209,213,219,0.8)' }}
                 >
-                  <Icon size={15} />
+                  {React.createElement(icon, { size: 15 })}
                 </a>
               ))}
             </div>

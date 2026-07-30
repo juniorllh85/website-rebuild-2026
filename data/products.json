@@ -1,0 +1,79 @@
+[
+  {
+    "id": "anillo-eternidad",
+    "name": "Anillo Eternidad Diamante",
+    "category": "Anillos",
+    "price": 5040,
+    "badge": "Nuevo",
+    "description": "Solitario de diamantes con montura en oro 18K.",
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    "materials": "Diamante + Oro 18K",
+    "isNew": true
+  },
+  {
+    "id": "collar-gargantilla",
+    "name": "Collar Gargantilla Vintage",
+    "category": "Collares",
+    "price": 11311,
+    "badge": "Top",
+    "description": "Cadena de oro con colgante de estilo atemporal.",
+    "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80",
+    "materials": "Oro 18K",
+    "isNew": false
+  },
+  {
+    "id": "pulsera-esclava",
+    "name": "Pulsera Esclava Elegante",
+    "category": "Pulseras",
+    "price": 12120,
+    "badge": "Nuevo",
+    "description": "Pulsera delicada con brillo sutil para uso diario.",
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80",
+    "materials": "Oro 18K + Diamante",
+    "isNew": true
+  },
+  {
+    "id": "aretes-rubi",
+    "name": "Aretes Rubí Imperial",
+    "category": "Aretes",
+    "price": 8320,
+    "badge": "Favorito",
+    "description": "Aretes con rubíes intensos y diseño sofisticado.",
+    "image": "https://images.unsplash.com/photo-1519241047957-be31d7379a5d?w=800&q=80",
+    "materials": "Rubí + Oro 18K",
+    "isNew": false
+  },
+  {
+    "id": "anillo-solitario",
+    "name": "Anillo Solitario Brillante",
+    "category": "Anillos",
+    "price": 6890,
+    "badge": "Exclusivo",
+    "description": "Un clásico moderno con un diamante central impecable.",
+    "image": "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?w=800&q=80",
+    "materials": "Diamante + Oro 18K",
+    "isNew": false
+  },
+  {
+    "id": "collar-encanto",
+    "name": "Collar Encanto Doble",
+    "category": "Collares",
+    "price": 9200,
+    "badge": "Premium",
+    "description": "Doble cadena con detalle en cuarzo natural.",
+    "image": "https://images.unsplash.com/photo-1500167646034-7d6b5ce8d1af?w=800&q=80",
+    "materials": "Oro 18K + Cuarzo",
+    "isNew": false
+  },
+  {
+    "id": "pulsera-tres",
+    "name": "Pulsera Tres Oros",
+    "category": "Pulseras",
+    "price": 7540,
+    "badge": "Top",
+    "description": "Combinación de oro amarillo, blanco y rosa.",
+    "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5d9?w=800&q=80",
+    "materials": "Oro 18K",
+    "isNew": false
+  }
+]

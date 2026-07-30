@@ -11,7 +11,9 @@ export default function Contact({ onSubmit }) {
     try {
       await onSubmit(e, 'contacto');
       setSubmitted(true);
-    } catch (_) {}
+    } catch (err) {
+      console.error('Contact form submit error:', err);
+    }
     setIsSubmitting(false);
   };
 
@@ -111,7 +113,7 @@ export default function Contact({ onSubmit }) {
             <div className="rounded-2xl p-5" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)' }}>
               <div className="text-sm font-black text-white mb-4">🌐 Follow Our Mission</div>
               <div className="flex gap-3">
-                {socials.map(({ icon: Icon, href, label }) => (
+                {socials.map(({ icon, href, label }) => (
                   <a
                     key={label}
                     href={href}
@@ -121,7 +123,7 @@ export default function Contact({ onSubmit }) {
                     className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:brightness-110"
                     style={{ background: 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(209,213,219,0.85)' }}
                   >
-                    <Icon size={16} />
+                    {React.createElement(icon, { size: 16 })}
                   </a>
                 ))}
               </div>

@@ -3,6 +3,16 @@ import { Link } from '../router';
 
 const posts = [
   {
+    id: 15,
+    date: 'October 13, 2026',
+    category: 'Events',
+    title: 'Thanksgiving 2026: Help Us Bring a Warm Meal to Every Senior',
+    excerpt:
+      'Every year we celebrate Thanksgiving with the seniors of our pilot complex, and this November we want no one left out. We are now collecting donations for meals and holiday kits and recruiting volunteers to help serve, deliver and share time with residents who would otherwise spend the holiday alone.',
+    image: '/images/events_thanksgiving.webp',
+    readTime: '2 min read',
+  },
+  {
     id: 14,
     date: 'October 10, 2026',
     category: 'Resources',
@@ -31,16 +41,6 @@ const posts = [
       'Hurricane season in South Florida runs through November 30. We share a simple preparedness checklist for older adults: a two-week medication supply, copies of documents, water and food, and registering with the Miami-Dade Emergency & Evacuation Assistance Program.',
     image: '/images/hygiene.webp',
     readTime: '5 min read',
-  },
-  {
-    id: 11,
-    date: 'July 15, 2026',
-    category: 'Impact',
-    title: 'Mid-Year Update: Our Pilot Program in 2026',
-    excerpt:
-      'Halfway through the year, our volunteers continue weekly visits to the pilot building, with food, hygiene kits and medicine support. Our next goal is expanding to the remaining two buildings in the complex — and your support makes that possible.',
-    image: '/images/volunteer_network_gyf.webp',
-    readTime: '3 min read',
   },
   {
     id: 1,

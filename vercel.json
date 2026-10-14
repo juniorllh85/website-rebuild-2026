@@ -21,7 +21,14 @@
     }
   ],
   "rewrites": [
-    { "source": "/(about|mission|programs|news|volunteer|contact|donate|request-help)", "destination": "/index.html" }
+    { "source": "/about", "destination": "/" },
+    { "source": "/mission", "destination": "/" },
+    { "source": "/programs", "destination": "/" },
+    { "source": "/news", "destination": "/" },
+    { "source": "/volunteer", "destination": "/" },
+    { "source": "/contact", "destination": "/" },
+    { "source": "/donate", "destination": "/" },
+    { "source": "/request-help", "destination": "/" }
   ],
   "crons": [
     {

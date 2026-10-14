@@ -37,7 +37,7 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
 
           {/* 1 - Lives Reached */}
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }} onClick={handleCardClick}>
-            <img src="/images/hero.png" alt="Lives Reached" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+            <img src="/images/hero.webp" alt="Lives Reached" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(16,185,129,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
             <div className="absolute inset-0 p-7 flex flex-col justify-end">
@@ -50,7 +50,7 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
 
           {/* 2 - Safe Nutrition */}
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }} onClick={handleCardClick}>
-            <img src="/images/food.png" alt="Safe Nutrition" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+            <img src="/images/food.webp" alt="Safe Nutrition" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(245,158,11,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
             <div className="absolute inset-0 p-7 flex flex-col justify-end">
@@ -63,7 +63,7 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
 
           {/* 3 - Dignity Kits */}
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }} onClick={handleCardClick}>
-            <img src="/images/hygiene.png" alt="Dignity Kits" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+            <img src="/images/hygiene.webp" alt="Dignity Kits" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(59,130,246,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
             <div className="absolute inset-0 p-7 flex flex-col justify-end">
@@ -75,7 +75,7 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
 
           {/* 4 - Medical Continuity */}
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }} onClick={handleCardClick}>
-            <img src="/images/vitamins.png" alt="Medical Continuity" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+            <img src="/images/vitamins.webp" alt="Medical Continuity" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(239,68,68,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
             <div className="absolute inset-0 p-7 flex flex-col justify-end">
@@ -114,9 +114,9 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer lg:col-span-2" style={{ minHeight: '28rem' }} onClick={handleCardClick}>
             <ImageCarousel
               images={[
-                "/images/events_thanksgiving.png",
-                "/images/events_mothers_day.png",
-                "/images/events_gathering.png"
+                "/images/events_thanksgiving.webp",
+                "/images/events_mothers_day.webp",
+                "/images/events_gathering.webp"
               ]}
               overlayTexts={["Great Thanksgiving Dinner", "Happy Mother's Day!", "Unforgettable Gatherings"]}
               interval={4000}
@@ -136,7 +136,7 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
 
           {/* 7 - Reported Wellness */}
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer" style={{ minHeight: '24rem' }} onClick={handleCardClick}>
-            <img src="/images/volunteers_white.png" alt="Reported Wellness" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+            <img src="/images/volunteers_white.webp" alt="Reported Wellness" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(20,184,166,0.25) 0%, rgba(5,10,20,0.5) 100%)' }} />
             <div className="absolute inset-0 p-7 flex flex-col justify-end">
@@ -148,7 +148,7 @@ export default function Metrics({ onFormModalOpen, onDonateClick }) {
 
           {/* 8 - Volunteer Network */}
           <div className="group relative rounded-3xl overflow-hidden cursor-pointer lg:col-span-3" style={{ minHeight: '28rem' }} onClick={handleCardClick}>
-            <img src="/images/volunteer_network_gyf.png" alt="Volunteer Network" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+            <img src="/images/volunteer_network_gyf.webp" alt="Volunteer Network" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 transition-all duration-500" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.96) 0%, rgba(5,10,20,0.45) 50%, rgba(5,10,20,0.2) 100%)' }} />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(99,102,241,0.25) 0%, transparent 60%)' }} />
             <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-end">

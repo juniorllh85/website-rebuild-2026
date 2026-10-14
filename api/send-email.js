@@ -1,5 +1,3 @@
-/* global process */
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -9,29 +7,18 @@ export default async function handler(req, res) {
   const BREVO_API_KEY = process.env.BREVO_API_KEY;
 
   if (!BREVO_API_KEY) {
-    console.warn('BREVO_API_KEY is not set; returning success in local/dev mode');
-    // Persist the message locally so admin can review it
-    try {
-      const fs = await import('fs');
-      const path = await import('path');
-      const p = path.resolve(process.cwd(), 'data', 'messages.json');
-      const existingRaw = await fs.promises.readFile(p, 'utf8').catch(() => '[]');
-      const existing = JSON.parse(existingRaw || '[]');
-      existing.push({ type, data, receivedAt: new Date().toISOString() });
-      await fs.promises.writeFile(p, JSON.stringify(existing, null, 2), 'utf8');
-    } catch (err) {
-      console.error('Failed to persist local message:', err);
-    }
-    return res.status(200).json({ success: true, mode: 'local-simulated' });
+    console.error('BREVO_API_KEY is not set');
+    return res.status(500).json({ error: 'Mail server configuration missing' });
   }
 
   // Determine email subject and content based on type
   let subject = '';
   let htmlContent = '';
 
+  const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const formatData = (obj) => {
-    return Object.entries(obj)
-      .map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`)
+    return Object.entries(obj || {})
+      .map(([key, value]) => `<li><strong>${esc(key)}:</strong> ${esc(value)}</li>`)
       .join('');
   };
 
@@ -48,8 +35,11 @@ export default async function handler(req, res) {
     case 'donacion_dinero':
       subject = 'New Monetary Donation Intent - TGYF';
       break;
-    case 'contacto_sahira':
-      subject = 'New Jewelry Inquiry - Sahira Gold';
+    case 'solicitud_ayuda':
+      subject = 'NEW HELP REQUEST from a senior - TGYF';
+      break;
+    case 'contacto':
+      subject = 'New Contact Message - TGYF';
       break;
     default:
       subject = 'New Website Notification - TGYF';
@@ -84,7 +74,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         sender: { name: "The Golden Years Foundation", email: "thegoldenyearsfoundation@gmail.com" },
-        to: [{ email: "thegoldenyearsfoundation@gmail.com" }],
+        to: [{ email: "info@thegoldenyearsfoundation.com" }, { email: "thegoldenyearsfoundation@gmail.com" }],
         subject: subject,
         htmlContent: htmlContent,
       }),

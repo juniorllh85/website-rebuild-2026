@@ -1,69 +1,98 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/webp" href="/logo.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#059669" />
 
     <!-- Primary SEO -->
-    <title>Sahira Gold | Joyería de lujo artesanal</title>
-    <meta name="description" content="Sahira Gold ofrece joyería de lujo artesanal con piezas únicas en oro, diamantes y diseños elegantes creados para perdurar en el tiempo." />
-    <meta name="keywords" content="joyería artesanal, anillos de lujo, collares de oro, joyería premium, Sahira Gold, diamantes certificados" />
+    <title>The Golden Years Foundation | Caring for Seniors in Miami-Dade</title>
+    <meta name="description" content="The Golden Years Foundation is a 501(c)(3) nonprofit (EIN 35-2905128) delivering food, medicine support, hygiene kits and companionship to isolated seniors in Miami-Dade, FL. Donate, volunteer or request help." />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Sahira Gold" />
-    <link rel="canonical" href="https://sahira-gold.vercel.app/" />
+    <meta name="author" content="The Golden Years Foundation" />
+    <link rel="canonical" href="https://thegoldenyearsfoundation.com/" />
+
+    <!-- Performance: preload the hero (LCP) image -->
+    <link rel="preload" as="image" href="/images/hero.webp" type="image/webp" fetchpriority="high" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sahira-gold.vercel.app/" />
-    <meta property="og:title" content="Sahira Gold | Joyería de lujo artesanal" />
-    <meta property="og:description" content="Descubre colecciones exclusivas de joyería artesanal con oro, diamantes y diseños que celebran la elegancia atemporal." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=1200&q=90" />
+    <meta property="og:url" content="https://thegoldenyearsfoundation.com/" />
+    <meta property="og:title" content="The Golden Years Foundation | Caring for Seniors in Miami-Dade" />
+    <meta property="og:description" content="Food, medicine support, dignity and companionship for isolated seniors in Miami-Dade. Donate, volunteer or request help." />
+    <meta property="og:image" content="https://thegoldenyearsfoundation.com/images/hero.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="es_MX" />
-    <meta property="og:site_name" content="Sahira Gold" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="The Golden Years Foundation" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://sahira-gold.vercel.app/" />
-    <meta name="twitter:title" content="Sahira Gold | Joyería de lujo artesanal" />
-    <meta name="twitter:description" content="Descubre joyería artesanal premium con diseños elegantes y piezas únicas." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=1200&q=90" />
+    <meta name="twitter:title" content="The Golden Years Foundation | Senior Care Miami" />
+    <meta name="twitter:description" content="500+ seniors reached. 2,400+ deliveries made. Help us rescue our elders from loneliness." />
+    <meta name="twitter:image" content="https://thegoldenyearsfoundation.com/images/hero.png" />
 
-    <!-- Schema.org Jewelry -->
+    <!-- Schema.org NonProfit -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "JewelryStore",
-      "name": "Sahira Gold",
-      "url": "https://sahira-gold.vercel.app",
-      "description": "Joyería de lujo artesanal con colecciones exclusivas en oro, diamantes y diseños atemporales.",
+      "@type": "NGO",
+      "name": "The Golden Years Foundation",
+      "alternateName": "TGYF",
+      "url": "https://thegoldenyearsfoundation.com",
+      "logo": "https://thegoldenyearsfoundation.com/logo.png",
+      "description": "501(c)(3) nonprofit organization dedicated to eliminating loneliness, isolation, and unmet basic needs among seniors in Miami-Dade County, Florida.",
+      "foundingDate": "2023",
+      "email": "info@thegoldenyearsfoundation.com",
+      "telephone": "+1-786-442-5540",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Ciudad de México",
-        "addressCountry": "MX"
+        "streetAddress": "17890 SW 264th Street",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33031",
+        "addressCountry": "US"
       },
-      "email": "hola@sahiragoldcollection.com",
-      "telephone": "+52-55-1234-5678"
+      "areaServed": { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+      "nonprofitStatus": "Nonprofit501c3",
+      "taxID": "35-2905128",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61589653498767",
+        "https://www.instagram.com/thegoldenyearsfoundation",
+        "https://www.youtube.com/@THEGOLDENYEARSFOUNDATION"
+      ]
     }
     </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYS6M5LG85"></script>
+    <!-- Google Analytics (loaded after page load so it never delays rendering) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-XYS6M5LG85');
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XYS6M5LG85';
+          document.head.appendChild(s);
+        }, 1500);
+      });
     </script>
-
-    <!-- Google Fonts preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static shell: paints the hero image instantly, replaced when React loads -->
+      <div style="position:relative;height:100vh;background:#050a14;overflow:hidden">
+        <img src="/images/hero.webp" alt="" width="1600" height="900" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.8" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,20,.65),rgba(5,10,20,.95))"></div>
+      </div>
+    </div>
+    <noscript>
+      <h1>The Golden Years Foundation</h1>
+      <p>501(c)(3) nonprofit (EIN 35-2905128) serving seniors in Miami-Dade, FL. Call 786-442-5540 or email info@thegoldenyearsfoundation.com.</p>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

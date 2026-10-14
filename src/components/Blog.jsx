@@ -1,6 +1,47 @@
 import React, { useState } from 'react';
+import { Link } from '../router';
 
 const posts = [
+  {
+    id: 14,
+    date: 'October 10, 2026',
+    category: 'Resources',
+    title: 'Medicare Open Enrollment Starts October 15: A Checklist for Seniors',
+    excerpt:
+      'Medicare Open Enrollment runs from October 15 to December 7. This is the one time each year when seniors can switch Medicare Advantage or Part D drug plans. Our volunteers are offering free help reviewing plan letters at our pilot complex.',
+    image: '/images/medicine.webp',
+    readTime: '4 min read',
+  },
+  {
+    id: 13,
+    date: 'September 22, 2026',
+    category: 'Volunteer',
+    title: 'Fall 2026 Volunteer Orientation: Join Our Next Group',
+    excerpt:
+      'We are welcoming a new group of volunteers this fall for grocery deliveries, friendly visits and phone check-ins. Sign up through our Volunteer page and we will contact you with the next orientation date.',
+    image: '/images/volunteers_white.webp',
+    readTime: '2 min read',
+  },
+  {
+    id: 12,
+    date: 'August 18, 2026',
+    category: 'Resources',
+    title: 'Hurricane Season Preparedness for Seniors Living Alone',
+    excerpt:
+      'Hurricane season in South Florida runs through November 30. We share a simple preparedness checklist for older adults: a two-week medication supply, copies of documents, water and food, and registering with the Miami-Dade Emergency & Evacuation Assistance Program.',
+    image: '/images/hygiene.webp',
+    readTime: '5 min read',
+  },
+  {
+    id: 11,
+    date: 'July 15, 2026',
+    category: 'Impact',
+    title: 'Mid-Year Update: Our Pilot Program in 2026',
+    excerpt:
+      'Halfway through the year, our volunteers continue weekly visits to the pilot building, with food, hygiene kits and medicine support. Our next goal is expanding to the remaining two buildings in the complex — and your support makes that possible.',
+    image: '/images/volunteer_network_gyf.webp',
+    readTime: '3 min read',
+  },
   {
     id: 1,
     date: 'November 28, 2024',
@@ -8,7 +49,7 @@ const posts = [
     title: 'Thanksgiving Celebration: Gratitude and Joy for Our Seniors',
     excerpt:
       'This Thanksgiving, our volunteers gathered to deliver warm meals, share stories, and celebrate with the seniors in our pilot complex in Miami-Dade. More than 120 elders participated in this special day of gratitude, laughter, and community.',
-    image: '/images/events_thanksgiving.png',
+    image: '/images/events_thanksgiving.webp',
     readTime: '3 min read',
   },
   {
@@ -18,7 +59,7 @@ const posts = [
     title: "Mother's Day: Honoring Every Senior Who Gave Us Life",
     excerpt:
       'We organized a special Mother\'s Day celebration to honor the incredible women in our community. Flowers, personalized cards, and heartfelt moments made this day unforgettable for dozens of seniors who are too often forgotten.',
-    image: '/images/events_mothers_day.png',
+    image: '/images/events_mothers_day.webp',
     readTime: '2 min read',
   },
   {
@@ -28,7 +69,7 @@ const posts = [
     title: 'A Birthday Worth Remembering: Carmen\'s Story',
     excerpt:
       'Carmen turned 84 years old, and thanks to our volunteers, she did not celebrate alone. This is the kind of impact we strive for every day — reminding every senior that they are seen, loved, and valued by their community.',
-    image: '/images/carmen_birthday.png',
+    image: '/images/carmen_birthday.webp',
     readTime: '3 min read',
   },
   {
@@ -38,7 +79,7 @@ const posts = [
     title: '2,400+ Deliveries and Counting: Our Journey So Far',
     excerpt:
       'From food packages and hygiene kits to medicine support and companionship — our team of dedicated volunteers has completed over 2,400 deliveries to seniors in Miami-Dade. Here\'s a look at the numbers behind our mission.',
-    image: '/images/donation.png',
+    image: '/images/donation.webp',
     readTime: '4 min read',
   },
   {
@@ -48,7 +89,7 @@ const posts = [
     title: 'Join Our Volunteer Network — Your Time Changes Lives',
     excerpt:
       'Our volunteers are the heartbeat of The Golden Years Foundation. From weekend delivery runs to companionship visits, there are many ways to get involved and make a real difference in the lives of isolated seniors.',
-    image: '/images/volunteer_white_logo.png',
+    image: '/images/volunteer_white_logo.webp',
     readTime: '3 min read',
   },
   {
@@ -58,7 +99,7 @@ const posts = [
     title: 'Why We Started: The Crisis of Senior Isolation in Miami-Dade',
     excerpt:
       'Over 40% of seniors in the United States report feeling lonely on a regular basis. In Miami-Dade, thousands of elders live without family support, adequate nutrition, or access to medicine. This is why The Golden Years Foundation exists.',
-    image: '/images/events_gathering.png',
+    image: '/images/events_gathering.webp',
     readTime: '5 min read',
   },
   {
@@ -68,7 +109,7 @@ const posts = [
     title: 'Medicare 2025: Key Changes Every Senior Needs to Know',
     excerpt:
       'The 2025 Medicare updates bring significant changes: a new $2,000 cap on out-of-pocket drug costs, expanded mental health coverage, and broader Medicare Advantage benefits. Here is what every senior needs to know to make the most of their benefits this year.',
-    image: '/images/medicine.png',
+    image: '/images/medicine.webp',
     readTime: '5 min read',
   },
   {
@@ -78,7 +119,7 @@ const posts = [
     title: 'Social Security 2025: COLA Increase and What It Means for You',
     excerpt:
       'Social Security recipients received a 2.5% Cost-of-Living Adjustment (COLA) in 2025. Learn how this affects your monthly benefits, the new earnings limits, and how Medicare Part B premiums impact your take-home income this year.',
-    image: '/images/vitamins.png',
+    image: '/images/vitamins.webp',
     readTime: '4 min read',
   },
   {
@@ -88,7 +129,7 @@ const posts = [
     title: 'Medicaid vs. Medicare: Understanding the Difference',
     excerpt:
       'Many seniors confuse Medicare and Medicaid, but they are very different programs. This guide breaks down what each covers, who qualifies, and how "dual eligible" seniors in Florida can use both programs together to minimize out-of-pocket healthcare costs.',
-    image: '/images/hygiene_donations.png',
+    image: '/images/hygiene_donations.webp',
     readTime: '6 min read',
   },
   {
@@ -98,7 +139,7 @@ const posts = [
     title: 'Free and Low-Cost Resources for Seniors in Miami-Dade',
     excerpt:
       'From prescription assistance to free meals and transportation, Miami-Dade County offers many programs for seniors. This guide covers the Alliance for Aging, Extra Help, SNAP, SHINE counseling, and more — all available at no cost.',
-    image: '/images/food.png',
+    image: '/images/food.webp',
     readTime: '5 min read',
   },
 ];
@@ -112,12 +153,13 @@ const categoryColors = {
   Resources: { bg: 'rgba(239,68,68,0.12)', text: '#f87171' },
 };
 
-export default function Blog() {
+export default function Blog({ limit }) {
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState('All');
 
   const categories = ['All', ...Array.from(new Set(posts.map(p => p.category)))];
-  const filtered = filter === 'All' ? posts : posts.filter(p => p.category === filter);
+  const all = filter === 'All' ? posts : posts.filter(p => p.category === filter);
+  const filtered = limit ? all.slice(0, limit) : all;
 
   if (selected) {
     const post = posts.find(p => p.id === selected);
@@ -132,14 +174,14 @@ export default function Blog() {
           >
             ← Back to News
           </button>
-          <img src={post.image} alt={post.title} className="w-full h-72 object-cover rounded-3xl mb-8" />
+          <img src={post.image} alt={post.title} width="1200" height="600" decoding="async" className="w-full h-72 object-cover rounded-3xl mb-8" />
           <span
             className="text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full"
             style={{ background: cat.bg, color: cat.text }}
           >
             {post.category}
           </span>
-          <h1 className="text-3xl font-extrabold text-white mt-4 mb-3 leading-tight">{post.title}</h1>
+          <h2 className="text-3xl font-extrabold text-white mt-4 mb-3 leading-tight">{post.title}</h2>
           <p className="text-sm mb-8" style={{ color: 'rgba(148,163,184,0.6)' }}>{post.date} · {post.readTime}</p>
           <div className="text-base leading-relaxed" style={{ color: 'rgba(203,213,225,0.85)' }}>
             <p className="mb-4">{post.excerpt}</p>
@@ -150,7 +192,7 @@ export default function Blog() {
               We are a 501(c)(3) nonprofit organization (EIN: 35-2905128) committed to long-term, sustainable impact. With your support — whether through donations, volunteering, or simply spreading the word — we can continue to reach more seniors every day.
             </p>
             <p>
-              Want to get involved? Reach out at <a href="mailto:thegoldenyearsfoundation@gmail.com" style={{ color: '#34d399' }}>thegoldenyearsfoundation@gmail.com</a> or follow us on social media to stay updated on our latest events and stories.
+              Want to get involved? <Link to="/volunteer" style={{ color: '#34d399' }}>Volunteer</Link>, <Link to="/donate" style={{ color: '#34d399' }}>donate</Link>, or reach out at <a href="mailto:info@thegoldenyearsfoundation.com" style={{ color: '#34d399' }}>info@thegoldenyearsfoundation.com</a>.
             </p>
           </div>
         </div>
@@ -183,7 +225,7 @@ export default function Blog() {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap gap-2 justify-center mb-12">
+        <div className={`flex flex-wrap gap-2 justify-center mb-12 ${limit ? 'hidden' : ''}`}>
           {categories.map(cat => (
             <button
               key={cat}
@@ -215,6 +257,10 @@ export default function Blog() {
                   <img
                     src={post.image}
                     alt={post.title}
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(5,10,20,0.7) 0%, transparent 60%)' }} />
@@ -241,6 +287,13 @@ export default function Blog() {
             );
           })}
         </div>
+        {limit && (
+          <div className="text-center mt-12">
+            <Link to="/news" id="home-all-news" className="inline-block rounded-full px-8 py-3 font-bold text-white border border-emerald-400/40 hover:bg-emerald-500/10 transition">
+              See all news & updates →
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

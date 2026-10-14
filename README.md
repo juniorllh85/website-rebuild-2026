@@ -14,3 +14,14 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Deployment Notes
+
+- Set `ADMIN_SECRET` in your production environment to secure admin API access.
+- On Vercel, add `ADMIN_SECRET` to Project Settings > Environment Variables.
+- The app uses serverless functions under `api/` and rewrites `/admin` and `/admin/login` to `index.html` for client-side routing.
+
+### Local build
+
+- `npm run build` builds the static site.
+- `npm run preview` serves the production build locally.

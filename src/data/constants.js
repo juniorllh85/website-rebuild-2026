@@ -21,19 +21,19 @@ export const helpCards = [
     title: "Food Security",
     desc: "Regular delivery of essential groceries to protect nutrition and stability.",
     icon: "🍱",
-    image: "/images/food.png",
+    image: "/images/food.webp",
   },
   {
     title: "Medicine Support",
     desc: "Support for access and continuity of medications, reducing preventable crises.",
     icon: "💊",
-    image: "/images/vitamins.png",
+    image: "/images/vitamins.webp",
   },
   {
     title: "Personal Hygiene",
     desc: "Hygiene kits to maintain health, dignity, and daily well-being.",
     icon: "🧼",
-    image: "/images/hygiene_donations.png",
+    image: "/images/hygiene_donations.webp",
   },
 ];
 
@@ -43,14 +43,14 @@ export const supportCards = [
     desc: "Your contribution fuels food deliveries, medicine support, and hygiene kits.",
     icon: "❤️",
     type: "donacion_especie",
-    image: "/images/donation.png"
+    image: "/images/donation.webp"
   },
   {
     title: "Volunteering",
     desc: "Help with deliveries, organization, and companionship. Your time changes lives.",
     icon: "🤝",
     type: "voluntariado",
-    image: "/images/volunteer_white_logo.png"
+    image: "/images/volunteer_white_logo.webp"
   },
   {
     title: "Partnerships",
@@ -62,10 +62,10 @@ export const supportCards = [
 ];
 
 export const heroCarouselImages = [
-  "/images/hero.png",
-  "/images/events_thanksgiving.png",
-  "/images/events_mothers_day.png",
-  "/images/events_gathering.png"
+  "/images/hero.webp",
+  "/images/events_thanksgiving.webp",
+  "/images/events_mothers_day.webp",
+  "/images/events_gathering.webp"
 ];
 
 export const miniImpactStats = [

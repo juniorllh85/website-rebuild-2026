@@ -16,7 +16,12 @@ export default function ImageCarousel({ images, overlayTexts, interval = 4000 })
         <img
           key={img}
           src={img}
-          alt={`Dynamic image ${index + 1}`}
+          alt={index === 0 ? 'Seniors supported by The Golden Years Foundation in Miami-Dade' : ''}
+          width="1600"
+          height="900"
+          decoding="async"
+          loading={index === 0 ? 'eager' : 'lazy'}
+          fetchPriority={index === 0 ? 'high' : 'low'}
           className={`absolute inset-0 w-full h-full object-cover transform transition-all duration-1000 ease-in-out ${index === currentIndex ? 'opacity-80 group-hover:opacity-100 group-hover:scale-105 z-0' : 'opacity-0 scale-100 -z-10'
             }`}
         />

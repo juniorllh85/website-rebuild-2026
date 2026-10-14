@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { donationAmounts, whatsappInfo } from '../../data/constants';
-import useAdminSettings from '../../hooks/useAdminSettings';
-import { formatCurrencyUSD } from '../../utils/currency';
 
 export default function PaymentModal({
   isOpen,
@@ -18,8 +16,6 @@ export default function PaymentModal({
   const [donorName, setDonorName] = useState('');
   const [donorEmail, setDonorEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const admin = useAdminSettings();
 
   if (!isOpen) return null;
 
@@ -46,7 +42,7 @@ export default function PaymentModal({
           data: {
             name: donorName,
             email: donorEmail,
-            amount: admin.currency === 'USD' ? formatCurrencyUSD(amount) : `${amount} ${admin.currency}`,
+            amount: `${amount} USD`,
             recurring: isRecurring ? 'Monthly' : 'One-time',
             method: method.charAt(0).toUpperCase() + method.slice(1)
           }
@@ -272,13 +268,13 @@ export default function PaymentModal({
                     <span className="text-4xl text-[#0070BA]">🅿️</span>
                   </div>
                   <h4 className="text-xl font-bold mb-2">PayPal Checkout</h4>
-                      <p className="text-sm text-slate-600 mb-8">
-                    Click continue to securely login to your <strong className="text-slate-900">PayPal</strong> account and complete your {isRecurring ? 'monthly donation' : 'donation'} of <strong className="text-emerald-600">{admin.currency === 'USD' ? formatCurrencyUSD(isCustomAmount ? customAmountValue : selectedAmount) : `${isCustomAmount ? customAmountValue : selectedAmount} ${admin.currency}`}</strong>.
+                  <p className="text-sm text-slate-600 mb-8">
+                    Click continue to securely login to your <strong className="text-slate-900">PayPal</strong> account and complete your {isRecurring ? 'monthly donation' : 'donation'} of <strong className="text-emerald-600">${isCustomAmount ? customAmountValue : selectedAmount}</strong>.
                   </p>
                   <button 
                     onClick={() => {
                       const amount = isCustomAmount ? customAmountValue : selectedAmount;
-                      const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=thegoldenyearsfoundation@gmail.com&amount=${amount}&currency_code=${admin.currency}&item_name=Donation+to+The+Golden+Years+Foundation`;
+                      const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=thegoldenyearsfoundation@gmail.com&amount=${amount}&currency_code=USD&item_name=Donation+to+The+Golden+Years+Foundation`;
                       window.open(paypalUrl, '_blank');
                     }} 
                     className="w-full rounded-2xl bg-[#0070BA] py-4 text-white font-black shadow-lg shadow-blue-200 hover:bg-[#003087]"

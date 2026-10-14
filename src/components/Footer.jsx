@@ -1,101 +1,76 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { Link } from '../router';
+import { ORG, SOCIALS, fullAddress } from '../data/site';
 
-export default function Footer({ onDonateClick }) {
-  const navSections = [
-    {
-      title: 'Our Mission',
-      links: [
-        { href: '#inicio', label: 'Home' },
-        { href: '#impacto', label: 'Impact' },
-        { href: '#metricas', label: 'Metrics' },
-        { href: '#porque', label: 'Why Us' },
-        { href: '#ayuda', label: 'How We Help' },
-      ],
-    },
-    {
-      title: 'Get Involved',
-      links: [
-        { href: '#vision', label: 'Our Vision' },
-        { href: '#plan', label: 'Our Plan' },
-        { href: '#piloto', label: 'Pilot Project' },
-        { href: '#donar', label: 'Donate' },
-        { href: '#contacto', label: 'Contact Us' },
-      ],
-    },
-  ];
+const ICONS = { facebook: FaFacebookF, instagram: FaInstagram, youtube: FaYoutube, whatsapp: FaWhatsapp };
 
-  const socials = [
-    { icon: FaFacebookF, href: 'https://www.facebook.com/profile.php?id=61589653498767', label: 'Facebook' },
-    { icon: FaInstagram, href: 'https://www.instagram.com/thegoldenyearsfoundation', label: 'Instagram' },
-    { icon: FaYoutube, href: 'https://www.youtube.com/@THEGOLDENYEARSFOUNDATION', label: 'YouTube' },
-    { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/the-golden-years-foundation-non-profit-0a868040a', label: 'LinkedIn' },
-    { icon: FaWhatsapp, href: 'https://wa.me/13054174092', label: 'WhatsApp' },
-  ];
+const sections = [
+  {
+    title: 'Organization',
+    links: [
+      { href: '/about', label: 'About Us' },
+      { href: '/mission', label: 'Our Mission' },
+      { href: '/programs', label: 'Programs & Services' },
+      { href: '/news', label: 'News & Updates' },
+    ],
+  },
+  {
+    title: 'Get Involved',
+    links: [
+      { href: '/donate', label: 'Donate' },
+      { href: '/volunteer', label: 'Volunteer' },
+      { href: '/request-help', label: 'Request Help' },
+      { href: '/contact', label: 'Contact Us' },
+    ],
+  },
+];
 
+export default function Footer() {
+  const muted = { color: 'rgba(148,163,184,0.85)' };
   return (
     <footer className="border-t" style={{ background: '#050a14', borderColor: 'rgba(255,255,255,0.08)' }}>
       <div className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
-          {/* Brand column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <img src="/logo.png" alt="The Golden Years Foundation" className="h-12 w-12 object-contain rounded-full border" style={{ borderColor: 'rgba(16,185,129,0.3)' }} />
+              <img src="/logo.webp" alt="" width="48" height="48" loading="lazy" className="h-12 w-12 object-contain rounded-full border" style={{ borderColor: 'rgba(16,185,129,0.3)' }} />
               <div>
                 <div className="font-extrabold text-white text-base leading-tight">The Golden Years</div>
-                <div className="font-extrabold text-sm" style={{ color: '#34d399' }}>Foundation</div>
+                <div className="font-extrabold text-sm text-emerald-400">Foundation</div>
               </div>
             </div>
-            <p className="text-sm leading-relaxed max-w-sm mb-6" style={{ color: 'rgba(148,163,184,0.75)' }}>
-              Rescuing seniors from loneliness, isolation, and unmet needs — one delivery, one smile, one hug at a time. Based in Miami-Dade, FL.
+            <p className="text-sm leading-relaxed max-w-sm mb-6" style={muted}>
+              A {ORG.legalStatus} serving isolated and low-income seniors in {ORG.county}, Florida with food, medicine support, hygiene essentials and companionship.
             </p>
 
-            {/* Socials */}
-            <div className="flex gap-3 mb-8">
-              {socials.map(({ icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:brightness-125"
-                  style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(209,213,219,0.8)' }}
-                >
-                  {React.createElement(icon, { size: 15 })}
-                </a>
-              ))}
-            </div>
+            <address className="not-italic text-sm space-y-2 mb-6" style={muted}>
+              <div className="flex items-start gap-2"><FaMapMarkerAlt className="mt-1 text-emerald-400 flex-shrink-0" /> {fullAddress()}</div>
+              <div className="flex items-center gap-2"><FaPhoneAlt className="text-emerald-400" /> <a href={ORG.phoneLink} className="hover:text-emerald-400">{ORG.phone}</a></div>
+              <div className="flex items-center gap-2"><FaEnvelope className="text-emerald-400" /> <a href={`mailto:${ORG.email}`} className="hover:text-emerald-400">{ORG.email}</a></div>
+            </address>
 
-            {/* Donate Button */}
-            <button
-              onClick={() => onDonateClick(50)}
-              className="rounded-xl px-6 py-3 text-sm font-black text-white transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5"
-              style={{ background: 'linear-gradient(135deg, #059669, #0d9488)', boxShadow: '0 6px 25px rgba(16,185,129,0.35)' }}
-            >
-              ❤️ Donate Now
-            </button>
+            <div className="flex gap-3">
+              {SOCIALS.map(({ key, href, label }) => {
+                const Icon = ICONS[key];
+                return (
+                  <a key={key} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+                    className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:text-emerald-400"
+                    style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(209,213,219,0.85)' }}>
+                    <Icon size={16} />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Nav columns */}
-          {navSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="text-xs font-black uppercase tracking-widest mb-5" style={{ color: '#34d399' }}>
-                {section.title}
-              </h3>
+          {sections.map((s) => (
+            <div key={s.title}>
+              <h2 className="text-xs font-black uppercase tracking-widest mb-5 text-emerald-400">{s.title}</h2>
               <ul className="flex flex-col gap-3">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className="text-sm transition-colors"
-                      style={{ color: 'rgba(148,163,184,0.75)' }}
-                      onMouseEnter={e => e.currentTarget.style.color = '#34d399'}
-                      onMouseLeave={e => e.currentTarget.style.color = 'rgba(148,163,184,0.75)'}
-                    >
-                      {link.label}
-                    </a>
+                {s.links.map((l) => (
+                  <li key={l.href}>
+                    <Link to={l.href} className="text-sm transition-colors hover:text-emerald-400" style={muted}>{l.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -103,31 +78,14 @@ export default function Footer({ onDonateClick }) {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.08)', color: 'rgba(148,163,184,0.55)' }}>
-          <div className="flex flex-col sm:flex-row gap-1 sm:gap-3 text-center sm:text-left">
-            <span>© {new Date().getFullYear()} The Golden Years Foundation</span>
-            <span className="hidden sm:inline">•</span>
-            <span>501(c)(3) Nonprofit</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="font-bold text-white/40">EIN: 35-2905128</span>
+        <div className="mt-14 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.08)', color: 'rgba(148,163,184,0.7)' }}>
+          <div className="text-center md:text-left">
+            © {new Date().getFullYear()} {ORG.name} · {ORG.legalStatus} ·{' '}
+            <strong className="text-white/70">EIN: {ORG.ein}</strong> · Donations are tax-deductible to the extent allowed by law.
           </div>
-          <div className="flex flex-wrap items-center gap-3 text-xs">
-            <a href="tel:+17864425540" className="transition-colors hover:text-emerald-400">
-              📞 786-442-5540
-            </a>
-            <span>•</span>
-            <a href="mailto:info@thegoldenyearsfoundation.com" className="transition-colors hover:text-emerald-400">
-              info@thegoldenyearsfoundation.com
-            </a>
-            <span>•</span>
-            <a href="/privacy-policy" className="transition-colors hover:text-emerald-400">
-              Privacy Policy
-            </a>
-            <span>•</span>
-            <a href="/terms-of-service" className="transition-colors hover:text-emerald-400">
-              Terms of Service
-            </a>
+          <div className="flex gap-4">
+            <a href="/privacy-policy" className="hover:text-emerald-400">Privacy Policy</a>
+            <a href="/terms-of-service" className="hover:text-emerald-400">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function Testimonials({ onDonateClick }) {
       text: "When they knocked on my door with flowers on Mother's Day, I hadn't left my apartment in three weeks. I thought no one remembered I existed. That hug from the volunteer changed everything. I started looking forward to mornings again, waiting to see who would visit me next. For the first time in years, I felt like someone's mother again — not just an old woman forgotten by the world.",
       initials: "MR",
       location: "Pilot Building · Miami-Dade",
-      image: "/images/events_mothers_day.png",
+      image: "/images/events_mothers_day.webp",
       badge: "🌹 Mother's Day Event",
       color: "amber"
     },
@@ -18,7 +18,7 @@ export default function Testimonials({ onDonateClick }) {
       text: "I used to skip meals to make my medication copay last. Since the foundation started bringing groceries, I no longer have to choose between eating and my heart medicine. I've gained back 8 pounds and my doctor says my labs are the best in five years. I feel like I have a future again.",
       initials: "AG",
       location: "Pilot Building · Miami-Dade",
-      image: "/images/food.png",
+      image: "/images/food.webp",
       badge: "🍱 Nutrition Program",
       color: "emerald"
     },
@@ -28,7 +28,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "JM",
       location: "Pilot Building · Miami-Dade",
       text: "I had spent four Thanksgivings alone watching TV with a frozen dinner. At the foundation's dinner I laughed so much my cheeks hurt. I met Doña Carmen, now my best friend — we knock on each other's doors every morning. Loneliness was killing me silently. Not anymore.",
-      image: "/images/events_thanksgiving.png",
+      image: "/images/events_thanksgiving.webp",
       badge: "🎉 Thanksgiving",
       color: "violet"
     },
@@ -38,7 +38,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "ER",
       location: "Pilot Building · Miami-Dade",
       text: "At 88, arthritis makes it hard to shop. When they brought the hygiene kit to my door, I cried. Not from sadness — from gratitude. I feel clean, cared for, and dignified. My daughter lives far away and those small packages give me the same feeling as when she used to take care of me. Thank you from the bottom of my heart.",
-      image: "/images/hygiene.png",
+      image: "/images/hygiene.webp",
       badge: "🧼 Dignity Kits",
       color: "amber"
     },
@@ -48,7 +48,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "RP",
       location: "Pilot Building · Miami-Dade",
       text: "My insulin was costing me $240 a month. I was rationing my doses — which my doctor told me was extremely dangerous. The foundation stepped in and covered the gap. Three months later my A1C dropped from 9.8 to 7.1. My doctor said it's like I have a personal advocate watching over me. I do — and I thank God for them every day.",
-      image: "/images/medicine.png",
+      image: "/images/medicine.webp",
       badge: "💊 Medicine Support",
       color: "rose"
     },
@@ -58,7 +58,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "CM",
       location: "Pilot Building · Miami-Dade",
       text: "I turned 90 believing no one would notice. Then they knocked on my door with balloons, a cake, and ten neighbors I'd never properly spoken to. We sang, we told stories, we laughed until we cried. My doctor had told my son I was showing signs of early depression from isolation. After that birthday, something in me reignited. I started leaving my apartment daily. My son says I look 10 years younger. I tell him — I feel like I have a reason to be here again.",
-      image: "/images/carmen_birthday_custom.png",
+      image: "/images/carmen_birthday_custom.webp",
       badge: "🎂 Birthday Celebration",
       color: "pink",
       wide: true
@@ -69,7 +69,7 @@ export default function Testimonials({ onDonateClick }) {
       initials: "FG",
       location: "Pilot Building · Miami-Dade",
       text: "After my wife passed away, I stopped talking. Weeks went by without a single conversation. A volunteer named Carlos started visiting every Thursday. We play chess. We talk about baseball. Now I count the days to Thursday. He doesn't know it, but he saved my life. A man at 79 needs to feel he still matters.",
-      image: "/images/volunteer_white_logo.png",
+      image: "/images/volunteer_white_logo.webp",
       badge: "🤝 Volunteer Visit",
       color: "teal"
     }

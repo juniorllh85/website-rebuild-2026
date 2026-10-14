@@ -36,9 +36,9 @@ export default function About() {
           help them understand a Medicare letter and remind them that they still matter.
         </p>
         <p>
-          Today our pilot program serves a residential complex of roughly 400–500 seniors, with more than 2,400 deliveries of food, hygiene kits and medicine
-          support completed by volunteers. Our goal is to expand to all three buildings in the complex — reaching 1,200 to 1,500 older adults — and then replicate
-          the model across {ORG.county}.
+          Today we serve all three buildings of a senior residential complex, delivering food, hygiene kits and medicine support directly to each
+          apartment door — so residents never have to travel to a food bank. Our volunteers have completed more than 2,400 deliveries. Our next goal is
+          to replicate this door-to-door model across {ORG.county}.
         </p>
 
         <h2 className="text-3xl font-extrabold text-slate-900 pt-6">What makes us different</h2>

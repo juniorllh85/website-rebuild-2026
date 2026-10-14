@@ -3,14 +3,24 @@ import { Link } from '../router';
 
 const posts = [
   {
-    id: 15,
+    id: 16,
     date: 'October 13, 2026',
     category: 'Events',
-    title: 'Thanksgiving 2026: Help Us Bring a Warm Meal to Every Senior',
+    title: 'Help Us Give Our Seniors an Unforgettable Thanksgiving Dinner',
     excerpt:
-      'Every year we celebrate Thanksgiving with the seniors of our pilot complex, and this November we want no one left out. We are now collecting donations for meals and holiday kits and recruiting volunteers to help serve, deliver and share time with residents who would otherwise spend the holiday alone.',
+      'This November we want to bring an unforgettable Thanksgiving dinner to the seniors of all three buildings we serve — many of whom would otherwise spend the holiday alone. We are seeking sponsors, donations and volunteers to cover the meals, set the tables, serve the food and share an evening of gratitude and company. Every contribution helps put a warm plate and a smile in front of a senior who gave so much to our community.',
     image: '/images/events_thanksgiving.webp',
     readTime: '2 min read',
+  },
+  {
+    id: 15,
+    date: 'October 11, 2026',
+    category: 'Impact',
+    title: 'Door-to-Door: Donations Delivered to Every Senior in Our Three Buildings',
+    excerpt:
+      'This past weekend our volunteers held donation and assistance events across the three residential buildings we serve, delivering help directly to the door of each senior’s apartment. No one had to travel to a food bank, wait in line or carry heavy bags — the support came to them. For many residents with limited mobility, this is the difference between having what they need and going without.',
+    image: '/images/hygiene_donations.webp',
+    readTime: '3 min read',
   },
   {
     id: 14,

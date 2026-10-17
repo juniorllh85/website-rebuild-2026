@@ -20,16 +20,6 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ],
-  "rewrites": [
-    { "source": "/about", "destination": "/" },
-    { "source": "/mission", "destination": "/" },
-    { "source": "/programs", "destination": "/" },
-    { "source": "/news", "destination": "/" },
-    { "source": "/volunteer", "destination": "/" },
-    { "source": "/contact", "destination": "/" },
-    { "source": "/donate", "destination": "/" },
-    { "source": "/request-help", "destination": "/" }
-  ],
   "crons": [
     {
       "path": "/api/news",

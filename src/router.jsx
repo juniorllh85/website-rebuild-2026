@@ -3,6 +3,10 @@ import { useEffect, useState } from 'react';
 
 // Tiny client-side router (no dependency). Works with Vercel rewrites to /index.html.
 const listeners = new Set();
+const isServer = typeof window === 'undefined';
+
+// Set by entry-server.jsx during build-time prerendering.
+export const ssrState = { path: '/', seo: null };
 
 export function navigate(to) {
   if (to === window.location.pathname + window.location.hash) return;
@@ -12,7 +16,7 @@ export function navigate(to) {
 }
 
 export function usePath() {
-  const [path, setPath] = useState(() => normalize(window.location.pathname));
+  const [path, setPath] = useState(() => (isServer ? ssrState.path : normalize(window.location.pathname)));
   useEffect(() => {
     const update = () => setPath(normalize(window.location.pathname));
     listeners.add(update);
@@ -47,6 +51,7 @@ export function Link({ to, children, onClick, ...rest }) {
 
 // Per-page SEO: title, description, canonical.
 export function useSeo({ title, description, path }) {
+  if (isServer) ssrState.seo = { title, description, path };
   useEffect(() => {
     document.title = title;
     const set = (selector, attr, value) => {

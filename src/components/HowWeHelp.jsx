@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { helpCards } from '../data/constants';
+import { useT } from '../router';
 
 export default function HowWeHelp() {
   const [lightboxImage, setLightboxImage] = useState(null);
+  const t = useT();
   return (
     <section id="ayuda" className="border-t bg-emerald-50/50">
       <div className="mx-auto max-w-6xl px-4 py-20 text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight">How We Help</h2>
+        <h2 className="text-3xl font-extrabold tracking-tight">{t('How We Help', 'Cómo ayudamos')}</h2>
         <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-          Targeted and consistent interventions that go straight to the basic needs of seniors living alone.
+          {t('Targeted and consistent interventions that go straight to the basic needs of seniors living alone.', 'Ayuda concreta y constante que va directo a las necesidades básicas de los adultos mayores que viven solos.')}
         </p>
       </div>
 
@@ -23,26 +25,26 @@ export default function HowWeHelp() {
               onClick={() => setLightboxImage(c.image)}
             >
               <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition duration-300 z-10 pointer-events-none" />
-              <img src={c.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+              <img src={c.image} alt={t(c.title, c.titleEs)} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
             </div>
             <div className="p-8 flex-1 flex flex-col">
               <div className="flex items-center gap-3">
                 <div className="text-3xl">{c.icon}</div>
-                <h3 className="text-xl font-bold text-slate-900">{c.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900">{t(c.title, c.titleEs)}</h3>
               </div>
-              <p className="mt-4 text-slate-600 leading-relaxed flex-1">{c.desc}</p>
+              <p className="mt-4 text-slate-600 leading-relaxed flex-1">{t(c.desc, c.descEs)}</p>
               <ul className="mt-6 space-y-3 text-sm text-slate-600 border-t pt-6">
                 <li className="flex gap-3 items-start">
                   <span className="text-emerald-600 shrink-0">✓</span>
-                  <span>Periodic and organized deliveries</span>
+                  <span>{t('Periodic and organized deliveries', 'Entregas periódicas y organizadas')}</span>
                 </li>
                 <li className="flex gap-3 items-start">
                   <span className="text-emerald-600 shrink-0">✓</span>
-                  <span>Focus on continuity and prevention</span>
+                  <span>{t('Focus on continuity and prevention', 'Enfoque en la continuidad y la prevención')}</span>
                 </li>
                 <li className="flex gap-3 items-start">
                   <span className="text-emerald-600 shrink-0">✓</span>
-                  <span>Simple and measurable tracking</span>
+                  <span>{t('Simple and measurable tracking', 'Seguimiento sencillo y medible')}</span>
                 </li>
               </ul>
             </div>
@@ -60,13 +62,13 @@ export default function HowWeHelp() {
             <button 
               className="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white bg-slate-800/50 hover:bg-slate-800 rounded-full p-3 transition pointer-events-auto"
               onClick={() => setLightboxImage(null)}
-              aria-label="Close fullscreen image"
+              aria-label={t('Close fullscreen image', 'Cerrar imagen ampliada')}
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             <img 
               src={lightboxImage} 
-              alt="Expanded view" 
+              alt={t('Expanded view', 'Vista ampliada')} 
               className="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.5)] animate-in zoom-in-95 duration-300 pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
             />

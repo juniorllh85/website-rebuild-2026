@@ -20,13 +20,13 @@ export const fullAddress = () =>
   [ORG.street, `${ORG.city}, ${ORG.state}${ORG.zip ? ' ' + ORG.zip : ''}`].filter(Boolean).join(', ');
 
 export const NAV_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/mission', label: 'Mission' },
-  { href: '/programs', label: 'Programs' },
-  { href: '/news', label: 'News' },
-  { href: '/volunteer', label: 'Volunteer' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'Home', es: 'Inicio' },
+  { href: '/about', label: 'About Us', es: 'Nosotros' },
+  { href: '/mission', label: 'Mission', es: 'Misión' },
+  { href: '/programs', label: 'Programs', es: 'Programas' },
+  { href: '/news', label: 'News', es: 'Noticias' },
+  { href: '/volunteer', label: 'Volunteer', es: 'Voluntariado' },
+  { href: '/contact', label: 'Contact', es: 'Contacto' },
 ];
 
 export const SOCIALS = [

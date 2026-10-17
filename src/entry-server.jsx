@@ -3,9 +3,15 @@
 import React from 'react';
 import { prerenderToNodeStream } from 'react-dom/static';
 import App from './App.jsx';
-import { ssrState } from './router.jsx';
+import { ssrState, localize } from './router.jsx';
 
-export const ROUTES = ['/', '/about', '/mission', '/programs', '/news', '/volunteer', '/contact', '/donate', '/request-help'];
+const BASE_ROUTES = ['/', '/about', '/mission', '/programs', '/news', '/volunteer', '/contact', '/donate', '/request-help'];
+
+// English + Spanish (/es/...) versions of every page.
+export const ROUTES = BASE_ROUTES.flatMap((r) => [
+  { path: r, route: r, lang: 'en' },
+  { path: localize(r, 'es'), route: r, lang: 'es' },
+]);
 
 export async function render(path) {
   ssrState.path = path;

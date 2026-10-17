@@ -1,32 +1,32 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import { Link } from '../router';
+import { Link, useT } from '../router';
 import { ORG, SOCIALS, fullAddress } from '../data/site';
 
 const ICONS = { facebook: FaFacebookF, instagram: FaInstagram, youtube: FaYoutube, whatsapp: FaWhatsapp };
 
-const sections = [
-  {
-    title: 'Organization',
-    links: [
-      { href: '/about', label: 'About Us' },
-      { href: '/mission', label: 'Our Mission' },
-      { href: '/programs', label: 'Programs & Services' },
-      { href: '/news', label: 'News & Updates' },
-    ],
-  },
-  {
-    title: 'Get Involved',
-    links: [
-      { href: '/donate', label: 'Donate' },
-      { href: '/volunteer', label: 'Volunteer' },
-      { href: '/request-help', label: 'Request Help' },
-      { href: '/contact', label: 'Contact Us' },
-    ],
-  },
-];
-
 export default function Footer() {
+  const t = useT();
+  const sections = [
+    {
+      title: t('Organization', 'Organización'),
+      links: [
+        { href: '/about', label: t('About Us', 'Quiénes Somos') },
+        { href: '/mission', label: t('Our Mission', 'Nuestra Misión') },
+        { href: '/programs', label: t('Programs & Services', 'Programas y Servicios') },
+        { href: '/news', label: t('News & Updates', 'Noticias y Novedades') },
+      ],
+    },
+    {
+      title: t('Get Involved', 'Participe'),
+      links: [
+        { href: '/donate', label: t('Donate', 'Donar') },
+        { href: '/volunteer', label: t('Volunteer', 'Voluntariado') },
+        { href: '/request-help', label: t('Request Help', 'Solicitar Ayuda') },
+        { href: '/contact', label: t('Contact Us', 'Contáctenos') },
+      ],
+    },
+  ];
   const muted = { color: 'rgba(148,163,184,0.85)' };
   return (
     <footer className="border-t" style={{ background: '#050a14', borderColor: 'rgba(255,255,255,0.08)' }}>
@@ -41,7 +41,10 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed max-w-sm mb-6" style={muted}>
-              A {ORG.legalStatus} serving isolated and low-income seniors in {ORG.county}, Florida with food, medicine support, hygiene essentials and companionship.
+              {t(
+                `A ${ORG.legalStatus} serving isolated and low-income seniors in ${ORG.county}, Florida with food, medicine support, hygiene essentials and companionship.`,
+                `Una organización ${ORG.legalStatus} que sirve a adultos mayores aislados y de bajos ingresos en ${ORG.county}, Florida, con alimentos, apoyo con medicamentos, artículos de higiene y compañía.`
+              )}
             </p>
 
             <address className="not-italic text-sm space-y-2 mb-6" style={muted}>
@@ -81,11 +84,11 @@ export default function Footer() {
         <div className="mt-14 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.08)', color: 'rgba(148,163,184,0.7)' }}>
           <div className="text-center md:text-left">
             © {new Date().getFullYear()} {ORG.name} · {ORG.legalStatus} ·{' '}
-            <strong className="text-white/70">EIN: {ORG.ein}</strong> · Donations are tax-deductible to the extent allowed by law.
+            <strong className="text-white/70">EIN: {ORG.ein}</strong> · {t('Donations are tax-deductible to the extent allowed by law.', 'Las donaciones son deducibles de impuestos en la medida permitida por la ley.')}
           </div>
           <div className="flex gap-4">
-            <a href="/privacy-policy" className="hover:text-emerald-400">Privacy Policy</a>
-            <a href="/terms-of-service" className="hover:text-emerald-400">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-emerald-400">{t('Privacy Policy', 'Política de Privacidad')}</Link>
+            <Link to="/terms-of-service" className="hover:text-emerald-400">{t('Terms of Service', 'Términos de Servicio')}</Link>
           </div>
         </div>
       </div>

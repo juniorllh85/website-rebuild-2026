@@ -1,8 +1,10 @@
 import React from 'react';
 import ImageCarousel from './ImageCarousel';
 import { heroCarouselImages, miniImpactStats, servicePills } from '../data/constants';
+import { useT } from '../router';
 
 export default function Hero({ onDonateClick }) {
+  const t = useT();
   return (
     <section id="inicio" className="relative min-h-screen overflow-hidden flex flex-col">
       {/* === BACKGROUND: Rotating image carousel === */}
@@ -26,7 +28,7 @@ export default function Hero({ onDonateClick }) {
         <div className="flex justify-center pt-12 sm:pt-16">
           <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-bold border" style={{ background: 'rgba(255,255,255,0.08)', borderColor: 'rgba(255,255,255,0.18)', backdropFilter: 'blur(12px)', color: 'rgba(255,255,255,0.85)' }}>
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            501(c)(3) Nonprofit · Embracing Miami-Dade, FL
+            {t('501(c)(3) Nonprofit · Embracing Miami-Dade, FL', 'Organización sin fines de lucro 501(c)(3) · Al servicio de Miami-Dade, FL')}
           </div>
         </div>
 
@@ -39,17 +41,17 @@ export default function Hero({ onDonateClick }) {
 
           {/* MAIN HEADLINE */}
           <h1 className="max-w-5xl text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-white">
-            Rescuing from oblivion{' '}
+            {t('Rescuing from oblivion', 'Rescatando del olvido')}{' '}
             <br className="hidden sm:block" />
-            the generation that{' '}
+            {t('the generation that', 'a la generación que')}{' '}
             <span style={{ background: 'linear-gradient(90deg, #34d399 0%, #2dd4bf 50%, #fbbf24 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-              gave it all.
+              {t('gave it all.', 'lo dio todo.')}
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed" style={{ color: 'rgba(203,213,225,0.85)' }}>
-            We rescue our seniors from <strong className="text-white">loneliness, isolation, and depression</strong>. Through food, medicine, dignity, and love — we transform gray homes into spaces of celebration and true joy.
+            {t('We rescue our seniors from ', 'Rescatamos a nuestros adultos mayores de ')}<strong className="text-white">{t('loneliness, isolation, and depression', 'la soledad, el aislamiento y la depresión')}</strong>{t('. Through food, medicine, dignity, and love — we transform gray homes into spaces of celebration and true joy.', '. Con alimentos, medicinas, dignidad y amor, transformamos hogares grises en espacios de celebración y verdadera alegría.')}
           </p>
 
           {/* CTA Buttons */}
@@ -61,7 +63,7 @@ export default function Hero({ onDonateClick }) {
             >
               <span className="flex items-center gap-2">
                 <span>❤️</span>
-                Give Them Their Smile Back
+                {t('Give Them Their Smile Back', 'Devuélvales la sonrisa')}
               </span>
             </button>
 
@@ -72,7 +74,7 @@ export default function Hero({ onDonateClick }) {
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.18)'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.10)'; }}
             >
-              See Our Impact →
+              {t('See Our Impact →', 'Vea nuestro impacto →')}
             </a>
           </div>
 
@@ -83,7 +85,7 @@ export default function Hero({ onDonateClick }) {
                 <span className="text-xl">{s.emoji}</span>
                 <div className="text-left">
                   <div className="text-lg font-black text-white leading-none">{s.value}</div>
-                  <div className="text-xs mt-0.5" style={{ color: 'rgba(148,163,184,0.8)' }}>{s.label}</div>
+                  <div className="text-xs mt-0.5" style={{ color: 'rgba(148,163,184,0.8)' }}>{t(s.label, s.labelEs)}</div>
                 </div>
               </div>
             ))}
@@ -95,7 +97,7 @@ export default function Hero({ onDonateClick }) {
           <div className="flex flex-wrap justify-center gap-3 max-w-2xl">
             {servicePills.map(tag => (
               <span key={tag.label} className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-semibold" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.14)', color: 'rgba(226,232,240,0.85)', backdropFilter: 'blur(8px)' }}>
-                <span>{tag.icon}</span> {tag.label}
+                <span>{tag.icon}</span> {t(tag.label, tag.labelEs)}
               </span>
             ))}
           </div>
@@ -105,13 +107,13 @@ export default function Hero({ onDonateClick }) {
         <div className="absolute bottom-14 right-6 sm:right-12 max-w-xs rounded-3xl p-5 hidden lg:block" style={{ background: 'rgba(255,255,255,0.09)', border: '1px solid rgba(255,255,255,0.18)', backdropFilter: 'blur(20px)', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}>
           <div className="text-amber-400 mb-3" style={{ fontSize: '28px', lineHeight: 1 }}>"</div>
           <p className="text-sm font-semibold text-white leading-snug italic">
-            Our masterpiece is not built with handouts, it is built with pure love, empathy, and human hope.
+            {t('Our masterpiece is not built with handouts, it is built with pure love, empathy, and human hope.', 'Nuestra obra maestra no se construye con limosnas, se construye con amor puro, empatía y esperanza humana.')}
           </p>
           <div className="mt-4 flex items-center gap-2 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}>
             <div className="h-8 w-8 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: 'linear-gradient(135deg, #059669, #0d9488)' }}>GYF</div>
             <div>
-              <div className="text-xs font-bold text-white">Emotional Mission</div>
-              <div className="text-xs" style={{ color: '#34d399' }}>The Foundation</div>
+              <div className="text-xs font-bold text-white">{t('Emotional Mission', 'Misión emocional')}</div>
+              <div className="text-xs" style={{ color: '#34d399' }}>{t('The Foundation', 'La Fundación')}</div>
             </div>
           </div>
         </div>

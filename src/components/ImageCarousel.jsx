@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useT } from '../router';
 
 export default function ImageCarousel({ images, overlayTexts, interval = 4000 }) {
+  const t = useT();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -16,7 +18,7 @@ export default function ImageCarousel({ images, overlayTexts, interval = 4000 })
         <img
           key={img}
           src={img}
-          alt={index === 0 ? 'Seniors supported by The Golden Years Foundation in Miami-Dade' : ''}
+          alt={index === 0 ? t('Seniors supported by The Golden Years Foundation in Miami-Dade', 'Adultos mayores apoyados por The Golden Years Foundation en Miami-Dade') : ''}
           width="1600"
           height="900"
           decoding="async"

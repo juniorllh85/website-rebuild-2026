@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import PaymentModal from "./components/Modals/PaymentModal";
 import FormModal from "./components/Modals/FormModal";
 import Home from "./pages/Home";
-import { usePath } from "./router";
+import { usePath, splitPath, useT, Link } from "./router";
 
 // Secondary pages are code-split so the home page loads faster.
 const routes = {
@@ -20,7 +20,8 @@ const routes = {
 };
 
 export default function App() {
-  const path = usePath();
+  const { lang, route: path } = splitPath(usePath());
+  const t = useT();
 
   // Payment Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,7 +40,7 @@ export default function App() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target).entries());
+    const data = { ...Object.fromEntries(new FormData(e.target).entries()), language: lang === "es" ? "ES (Spanish)" : "EN" };
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
@@ -47,15 +48,15 @@ export default function App() {
         body: JSON.stringify({ type: formModalType, data }),
       });
       if (response.ok) {
-        alert("Thank you! We have received your information and will contact you very soon.");
+        alert(t("Thank you! We have received your information and will contact you very soon.", "¡Gracias! Hemos recibido su información y nos comunicaremos con usted muy pronto."));
         setFormModalType(null);
         e.target.reset();
       } else {
-        alert("There was an error sending the information. Please call 786-442-5540.");
+        alert(t("There was an error sending the information. Please call 786-442-5540.", "Hubo un error al enviar la información. Por favor llame al 786-442-5540."));
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Connection error. Please check your internet and try again.");
+      alert(t("Connection error. Please check your internet and try again.", "Error de conexión. Por favor revise su internet e inténtelo de nuevo."));
     }
   };
 
@@ -64,7 +65,7 @@ export default function App() {
   return (
     <>
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded">
-        Skip to content
+        {t("Skip to content", "Saltar al contenido")}
       </a>
       <WhatsAppFloatingButton />
 
@@ -100,11 +101,12 @@ export default function App() {
 }
 
 function NotFound() {
+  const t = useT();
   return (
     <section className="mx-auto max-w-xl px-4 py-32 text-center">
-      <h1 className="text-4xl font-extrabold mb-4">Page not found</h1>
-      <p className="text-slate-600 mb-8">The page you are looking for does not exist.</p>
-      <a href="/" className="rounded-xl px-6 py-3 font-bold text-white bg-emerald-600">Go to Home</a>
+      <h1 className="text-4xl font-extrabold mb-4">{t("Page not found", "Página no encontrada")}</h1>
+      <p className="text-slate-600 mb-8">{t("The page you are looking for does not exist.", "La página que busca no existe.")}</p>
+      <Link to="/" className="rounded-xl px-6 py-3 font-bold text-white bg-emerald-600">{t("Go to Home", "Ir al inicio")}</Link>
     </section>
   );
 }

@@ -138,7 +138,7 @@ export default function DonationSection({ onDonateClick, onFormModalOpen }) {
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center" style={{ background: 'linear-gradient(135deg, rgba(30,41,59,0.8), rgba(15,23,42,0.9))' }}>
                       <span className="text-5xl mb-2 opacity-60">{c.icon}</span>
-                      <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'rgba(148,163,184,0.5)' }}>{t('Coming Soon', 'Próximamente')}</span>
+                      <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'rgba(148,163,184,0.5)' }}>{t(c.title, c.titleEs)}</span>
                     </div>
                   )}
                   {/* Icon overlay at bottom left of image */}

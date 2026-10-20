@@ -69,7 +69,7 @@ export const supportCards = [
     descEs: "Empresas e instituciones pueden apoyar con recursos, logística y donaciones equivalentes.",
     icon: "🏢",
     type: "alianza",
-    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "/images/volunteer_network_gyf.webp"
   },
 ];
 

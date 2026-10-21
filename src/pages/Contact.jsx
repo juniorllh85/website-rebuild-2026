@@ -8,7 +8,7 @@ export default function Contact() {
   const t = useT();
   useSeo({
     path: '/contact',
-    title: t('Contact Us | The Golden Years Foundation – Miami, FL', 'Contáctenos | The Golden Years Foundation – Miami, FL'),
+    title: t('Contact Us | The Golden Years Foundation – Homestead, FL', 'Contáctenos | The Golden Years Foundation – Homestead, FL'),
     description: t(
       `Contact The Golden Years Foundation in Miami-Dade. Call ${ORG.phone}, email ${ORG.email} or send us a message. 501(c)(3) EIN ${ORG.ein}.`,
       `Comuníquese con The Golden Years Foundation en Miami-Dade. Llámenos al ${ORG.phone}, escríbanos a ${ORG.email} o envíenos un mensaje. 501(c)(3) EIN ${ORG.ein}.`
